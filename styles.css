@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Moderat Black';
+  src: url('Moderat-Black.woff');
+}
+@font-face {
+  font-family: 'Moderat Regular';
+  src: url('Moderat-Regular.woff');
+}
+:root {
+  --main-background: rgb(248, 245, 243);
+}
+body {
+  font-family: "Moderat Regular";
+  letter-spacing: 0.5px;
+  background-color: var(--main-background);
+}
+.home-nav {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+.home-nav div {
+  padding: 2vh 6vw 0 5vw;
+}
+
+.home-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+.projects {
+  padding: 0 6vw 5vh 5vw;
+  float: right;
+}
+.projects img {
+  max-width: 18px;
+}
