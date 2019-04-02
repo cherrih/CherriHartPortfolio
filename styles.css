@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Moderat Black';
-  src: url('Moderat-Black.woff');
+  src: url('fonts/Moderat-Black.woff');
 }
 @font-face {
   font-family: 'Moderat Regular';
-  src: url('Moderat-Regular.woff');
+  src: url('fonts/Moderat-Regular.woff');
 }
 :root {
   --main-background: rgb(248, 245, 243);

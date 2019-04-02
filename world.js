@@ -36,39 +36,10 @@ function drawWorld(){
       } else {
         el.innerHTML +=`<div class="world-char">${char}</div>`;
       }        
-      // pac = document.getElementById('pac'); 
-      // pac.style.left = `${pacX}vw`;
-      // pac.style.top = `${pacY}vh`;
     })
     el.innerHTML += '<br/>'
   })
 }
-
-// function drawWorld(){
-//   text.forEach(row => {
-//     const textArr = row.split(' ');
-//     textArr.forEach(word => {
-//       if (word === '1') {
-//         el.innerHTML += '<div class="cherry"><img src="images/cherry.png"></div><div class="space"></div>';
-//       } else if (word === '2') {
-//         el.innerHTML = '<div class="space"></div><div id="pac"><img src="images/pac.png"></div><div class="space"></div>';
-//       } else {
-//         let divString = '<div class="world-text">';
-//         charArr = word.split('');
-//         charArr.forEach(char => {
-//           divString += `<span class="world-char">${char}</span>`;
-//         })
-//         divString += '</div>';
-//         el.innerHTML += divString + '<div class="space"></div>';
-//       }
-//     })
-//     el.innerHTML += '<br/>'
-    
-//     // pac = document.getElementById('pac'); 
-//     // pac.style.left = `${pacX}vw`;
-//     // pac.style.top = `${pacY}vh`;
-//   })
-// }
 drawWorld();
 
 document.onkeydown = function(e) {
@@ -81,7 +52,7 @@ document.onkeydown = function(e) {
     drawWorld();
   }
   // move pac right
-  if (e.keyCode === 39) {
+  if (e.keyCode === 39 && pacX < textMatrix[pacY].length - 1) {
     console.log('right')
 
     textMatrix[pacY][pacX] = '3';
@@ -90,7 +61,7 @@ document.onkeydown = function(e) {
     drawWorld();
   }
   // move pac up 
-  if (e.keyCode === 38) {
+  if (e.keyCode === 38 && pacY > 0) {
     textMatrix[pacY][pacX] = '3';
     pacY -= 1;
     textMatrix[pacY][pacX] = '2';
@@ -104,27 +75,3 @@ document.onkeydown = function(e) {
     drawWorld();
   }
 }
-
-
-// document.onkeydown = function(e) {
-//   // move pac left
-//   if (e.keyCode === 37) {
-//     pacX -= 2;
-//     pac.style.left = `${pacX}vw`;
-//   }
-//   // move pac right
-//   if (e.keyCode === 39) {
-//     pacX += 2;
-//     pac.style.left = `${pacX}vw`;
-//   }
-//   // move pac up
-//   if (e.keyCode === 38) {
-//     pacY -= 2;
-//     pac.style.top = `${pacY}vh`;
-//   }
-//   // move pac down
-//   if (e.keyCode === 40) {
-//     pacY += 2;
-//     pac.style.top = `${pacY}vh`;
-//   }
-// }
