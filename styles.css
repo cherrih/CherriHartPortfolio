@@ -43,7 +43,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10vh;
-  font-size: 40px;
+  font-size: 48px;
+}
+
+.pac {
+  display: inline-block;
+  position: absolute;
+  left: 9vw;
+  height: 60px;
 }
 
 .cherry {

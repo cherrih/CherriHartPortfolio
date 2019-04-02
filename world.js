@@ -3,7 +3,7 @@ const text = "Hailing from 1 the land of sheep and kiwis (New Zealand), I am a S
 const textArr = text.split(' ');
 
 function drawWorld(){
-  el.innerHTML = '';
+  el.innerHTML = '<div class="pac"><img src="images/pac.png"></div>';
   textArr.forEach(word => {
     if (word === '1') {
       el.innerHTML += '<div class="cherry"><img src="images/cherry.png"></div><div class="space"></div>';
