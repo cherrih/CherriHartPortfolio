@@ -46,10 +46,12 @@ body {
   font-size: 48px;
 }
 
-.pac {
+#pac {
   display: inline-block;
   position: absolute;
-  left: 9vw;
+}
+
+#pac img {
   height: 60px;
 }
 
