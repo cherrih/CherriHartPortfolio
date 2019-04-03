@@ -31,8 +31,10 @@ function drawWorld(){
         el.innerHTML += '<div class="cherry"><img src="images/cherry.png"></div><div class="space"></div>';
       } else if (char === '2') {
         el.innerHTML += '<div class="space"></div><div id="pac"><img src="images/pac.png"></div><div class="space"></div>';
-      } else if (char === ' ' || char === '3') {
+      } else if (char === ' ') {
         el.innerHTML += '<div class="space"></div>';
+      } else if (char === '3') {
+        el.innerHTML += '<div class="eaten"></div>'
       } else {
         el.innerHTML +=`<div class="world-char">${char}</div>`;
       }        
@@ -43,6 +45,7 @@ function drawWorld(){
 drawWorld();
 
 document.onkeydown = function(e) {
+  e.preventDefault();
   // move pac left
   if (e.keyCode === 37 && pacX > 0) {
     console.log('left');
@@ -53,8 +56,6 @@ document.onkeydown = function(e) {
   }
   // move pac right
   if (e.keyCode === 39 && pacX < textMatrix[pacY].length - 1) {
-    console.log('right')
-
     textMatrix[pacY][pacX] = '3';
     pacX += 1;
     textMatrix[pacY][pacX] = '2';

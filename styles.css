@@ -22,15 +22,27 @@ body {
 .home-nav div {
   padding: 2vh 6vw 0 5vw;
 }
-
+/* ---------FOOTER----------- */
 .home-footer {
   position: fixed;
   bottom: 0;
   width: 100vw;
+  display: flex;
+  justify-content: space-between;
 }
+.lives {
+  padding: 0 6vw 5vh 5vw;
+}
+.score {
+  color: rgb(222, 210, 192);
+  text-align: center;
+}
+#points {
+  font-size: 24px;
+}
+
 .projects {
   padding: 0 6vw 5vh 5vw;
-  float: right;
 }
 .projects img {
   max-width: 18px;
@@ -68,5 +80,9 @@ body {
   display: inline-block;
 }
 .world-char {
+  display: inline-block;
+}
+.eaten {
+  width: 25px;
   display: inline-block;
 }
