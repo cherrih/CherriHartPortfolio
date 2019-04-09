@@ -3,8 +3,8 @@ import Row from './Row.jsx'
 
 const World = (props) => {
   return (
-    <div id="world" tabIndex="0" onKeyDown={props.handleKeyDown}>
-    {props.matrix.map(row => <Row row={row} key={row} left={props.left}/>)}
+    <div id="world" >
+    {props.matrix.map((row, i) => <Row row={row} key={`row${i}`} rowIndex={i} left={props.left}/>)}
     </div>
   )
 }

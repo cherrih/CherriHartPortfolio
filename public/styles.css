@@ -36,6 +36,7 @@ body {
 .score {
   color: rgb(222, 210, 192);
   text-align: center;
+  transition: (all)
 }
 #points {
   font-size: 24px;
@@ -51,7 +52,7 @@ body {
 /* ---- WORLD STYLES ---- */
 
 #world {
-  width: 70vw;
+  width: 60vw;
   height: 70vh;
   margin-left: auto;
   margin-right: auto;
@@ -80,10 +81,13 @@ body {
   width: 10px;
   display: inline-block;
 }
-.world-char {
+.world-letter {
   display: inline-block;
 }
 .eaten {
   width: 25px;
+  display: inline-block;
+}
+.world-char {
   display: inline-block;
 }

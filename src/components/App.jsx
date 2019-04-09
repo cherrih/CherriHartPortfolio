@@ -8,7 +8,8 @@ class App extends React.Component {
       matrix: [],
       pacX: 0,
       pacY: 0,
-      left: false
+      left: false,
+      score: 0
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
@@ -31,16 +32,26 @@ class App extends React.Component {
       matrix: textMatrix
     })
   }
+  componentWillMount() {
+    window.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+  }
+
   handleKeyDown(e) {
     e.preventDefault();
     let textMatrix = this.state.matrix;
     let x = this.state.pacX;
     let y = this.state.pacY;
+    let pieceToEat;
     // move pac left
     if (e.keyCode === 37 && x > 0) {
       this.state.left = true;
       textMatrix[y][x] = '3';
       this.state.pacX -= 1;
+      pieceToEat = textMatrix[y][x - 1];
       textMatrix[y][x - 1] = '2';
     }
     // move pac right
@@ -48,6 +59,7 @@ class App extends React.Component {
       this.state.left = false;
       textMatrix[y][x] = '3';
       this.state.pacX += 1;
+      pieceToEat = textMatrix[y][x + 1];
       textMatrix[y][x + 1] = '2';
     }
     // move pac up 
@@ -55,6 +67,7 @@ class App extends React.Component {
       this.state.left = false;
       textMatrix[y][x] = '3';
       this.state.pacY -= 1;
+      pieceToEat = textMatrix[y - 1][x];
       textMatrix[y - 1][x] = '2';
     }
     // move pac down
@@ -62,8 +75,15 @@ class App extends React.Component {
       this.state.left = false;
       textMatrix[y][x] = '3';
       this.state.pacY += 1;
+      pieceToEat = textMatrix[y + 1][x];
       textMatrix[y + 1][x] = '2';
     }
+    if (pieceToEat === '1') {
+      this.state.score += 10
+    } else if (pieceToEat !== '3') {
+      this.state.score += 2
+    }
+    pieceToEat = '2';
     this.setState({
       matrix: textMatrix
     })
@@ -76,14 +96,14 @@ class App extends React.Component {
           <div>Cherri Hartigan</div>
           <div>About</div>
         </nav>
-        <World matrix={this.state.matrix} handleKeyDown={this.handleKeyDown} left={this.state.left}/>
+        <World matrix={this.state.matrix} left={this.state.left}/>
         <div className="home-footer">
           <div className="lives">
             <img src="images/life.png"/>
             <img src="images/life.png"/>
           </div>
           <div className="score">
-            <div id="points">0</div>
+            <div id="points">{this.state.score}</div>
             <div>points</div>
           </div>
           <div className="projects">Projects <img src="images/arrow.png"/></div>
