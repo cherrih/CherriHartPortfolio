@@ -6,7 +6,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       matrix: [],
-      pacX: 0,
+      pacX: 6,
       pacY: 0,
       left: false,
       score: 0
@@ -15,17 +15,19 @@ class App extends React.Component {
   }
   componentDidMount() {
     const text = 
-      ["2 Hailing from 1 the land of",
-      "sheep and kiwis (New Zealand),", 
-      "I am a San Francisco-based 1", 
-      "Full-Stack developer, Creator and",
-      "Collaborator. 1 Currently seeking a", 
-      "user-focused Creative Technologist /", 
-      "Front-End Developer role. 1", 
-      "Fancy a collaboration or interested", 
-      "in chatting? Let's talk!"];
+      ["3333332 Hailing from 1 the land of333333",
+      "333333sheep and kiwis (New Zealand),333333", 
+      "333333I am a San Francisco-based 1333333", 
+      "333333Full-Stack developer, Creator and333333",
+      "333333Collaborator. 1 Currently seeking a333333", 
+      "333333user-focused Creative Technologist /333333", 
+      "333333Front-End Developer role. 1333333", 
+      "333333Fancy a collaboration or interested333333", 
+      "333333in chatting? Let's talk!333333"];
+    
     const textMatrix = [];
     text.forEach(line => {
+      console.log(line, line.length)
       textMatrix.push(line.split(''))
     });
     this.setState({
@@ -80,7 +82,7 @@ class App extends React.Component {
     }
     if (pieceToEat === '1') {
       this.state.score += 10
-    } else if (pieceToEat !== '3') {
+    } else if (pieceToEat && pieceToEat !== '3') {
       this.state.score += 2
     }
     pieceToEat = '2';
