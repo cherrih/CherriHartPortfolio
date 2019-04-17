@@ -22,10 +22,10 @@ class App extends React.Component {
       "333333Full-Stack developer, Creator and333333333",
       "333333Collaborator. 1 Currently seeking a3333333", 
       "333333user-focused Creative Technologist /333333", 
-      "333333Front-End Developer role. 1333333333333333", 
+      "333333Front-End Developer role. 1333333333373333", 
       "333333Fancy a collaboration or interested3333333", 
-      "333333in chatting? Let's talk!333333333733333333",
-      "333333333333833333333333333333333333333333333333"];
+      "333333in chatting? Let's talk!333333333333333333",
+      "333333333333333333333333333333383333333333333333"];
     
     const textMatrix = [];
     text.forEach(line => {
@@ -83,10 +83,12 @@ class App extends React.Component {
       textMatrix[y + 1][x] = '2';
     }
     if (pieceToEat === '1') {
-      this.state.score += 10
+      this.state.score += 10;
+    } else if (pieceToEat === '7' || pieceToEat === '8' || pieceToEat === '9'){
+      this.state.score += 20;
     } else if (pieceToEat && pieceToEat !== '3') {
-      this.state.score += 2
-    }
+      this.state.score += 2;
+    } 
     this.setState({
       matrix: textMatrix
     })
