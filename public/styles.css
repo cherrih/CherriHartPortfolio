@@ -52,10 +52,10 @@ body {
 /* ---- WORLD STYLES ---- */
 
 #world {
+  width: 90vw;
   height: 70vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
   font-size: 48px;
 }
 
@@ -65,6 +65,12 @@ body {
 }
 
 #pac img {
+  height: 50px;
+}
+.ghost {
+  display: inline-block;
+}
+.ghost img {
   height: 50px;
 }
 

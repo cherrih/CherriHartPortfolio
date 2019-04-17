@@ -7,7 +7,7 @@ class App extends React.Component {
     this.state = {
       matrix: [],
       pacX: 6,
-      pacY: 0,
+      pacY: 1,
       left: false,
       score: 0
     };
@@ -15,15 +15,17 @@ class App extends React.Component {
   }
   componentDidMount() {
     const text = 
-      ["3333332 Hailing from 1 the land of333333",
-      "333333sheep and kiwis (New Zealand),333333", 
-      "333333I am a San Francisco-based 1333333", 
-      "333333Full-Stack developer, Creator and333333",
-      "333333Collaborator. 1 Currently seeking a333333", 
+      ["333333333333333333333333333333333333333333333333",
+      "3333332 Hailing from 1 the land of33333333339333",
+      "333333sheep and kiwis (New Zealand),333333333333", 
+      "333333I am a San Francisco-based 133333333333333", 
+      "333333Full-Stack developer, Creator and333333333",
+      "333333Collaborator. 1 Currently seeking a3333333", 
       "333333user-focused Creative Technologist /333333", 
-      "333333Front-End Developer role. 1333333", 
-      "333333Fancy a collaboration or interested333333", 
-      "333333in chatting? Let's talk!333333"];
+      "333333Front-End Developer role. 1333333333333333", 
+      "333333Fancy a collaboration or interested3333333", 
+      "333333in chatting? Let's talk!333333333733333333",
+      "333333333333833333333333333333333333333333333333"];
     
     const textMatrix = [];
     text.forEach(line => {
@@ -73,7 +75,7 @@ class App extends React.Component {
       textMatrix[y - 1][x] = '2';
     }
     // move pac down
-    if (e.keyCode === 40 && y < 8) {
+    if (e.keyCode === 40 && y < 10) {
       this.state.left = false;
       textMatrix[y][x] = '3';
       this.state.pacY += 1;
@@ -85,7 +87,6 @@ class App extends React.Component {
     } else if (pieceToEat && pieceToEat !== '3') {
       this.state.score += 2
     }
-    pieceToEat = '2';
     this.setState({
       matrix: textMatrix
     })
@@ -98,7 +99,9 @@ class App extends React.Component {
           <div>Cherri Hartigan</div>
           <div>About</div>
         </nav>
-        <World matrix={this.state.matrix} left={this.state.left}/>
+        <div className="world-container">
+          <World matrix={this.state.matrix} left={this.state.left}/>
+        </div>
         <div className="home-footer">
           <div className="lives">
             <img src="images/life.png"/>
