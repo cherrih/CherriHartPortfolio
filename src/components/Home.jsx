@@ -108,7 +108,7 @@ class Home extends React.Component {
             <div id="points">{this.state.score}</div>
             <div>points</div>
           </div>
-          <div className="projects" onClick={this.props.showProjects}>Projects <img src="images/arrow.png"/></div>
+          <div className="projects" onClick={this.props.toggleProjects}>Projects <img src="images/arrow.png"/></div>
         </div>
       </div>
     )

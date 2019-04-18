@@ -45,6 +45,7 @@ const Projects = (props) => {
   return (
     <div className="projects-container">
       <div className="grid-container">{gridElements}</div>
+      <div className="projects-footer" onClick={props.toggleProjects}><img src="images/arrow.png" className="rotate-arrow"/> Back to Pac </div>
     </div>
   )
 }

@@ -10,13 +10,21 @@ class App extends React.Component {
       isProjects: false,
       isAbout: false
     };
-    this.showProjects = this.showProjects.bind(this);
+    this.toggleProjects = this.toggleProjects.bind(this);
+    this.goHome = this.goHome.bind(this);
   }
   
-  showProjects() {
+  toggleProjects() {
     this.setState({
-      isProjects: true,
-      isHome: false
+      isProjects: !this.state.isProjects,
+      isHome: !this.state.isHome
+    })
+  }
+  goHome() {
+    console.log('home')
+    this.setState({
+      isProjects: false,
+      isHome: true
     })
   }
 
@@ -24,7 +32,7 @@ class App extends React.Component {
     return (
       <>
         <nav className="home-nav">
-          <div className="cherri">Cherri Hartigan</div>
+          <div className="cherri" onClick={this.goHome}>Cherri Hartigan</div>
           <div className="about">
             <div>Resume</div>
             <div>Contact</div>
@@ -32,9 +40,9 @@ class App extends React.Component {
           </div>
         </nav>
         <div>{
-          this.state.isHome ? <Home showProjects={this.showProjects}/>
+          this.state.isHome ? <Home toggleProjects={this.toggleProjects}/>
           :
-          <Projects />
+          <Projects toggleProjects={this.toggleProjects}/>
         }
         </div>
       </>
