@@ -29,7 +29,6 @@ class Home extends React.Component {
     
     const textMatrix = [];
     text.forEach(line => {
-      console.log(line, line.length)
       textMatrix.push(line.split(''))
     });
     this.setState({

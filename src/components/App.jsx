@@ -21,7 +21,6 @@ class App extends React.Component {
     })
   }
   goHome() {
-    console.log('home')
     this.setState({
       isProjects: false,
       isHome: true
