@@ -34,7 +34,7 @@ class App extends React.Component {
         <nav className="home-nav">
           <div className="cherri" onClick={this.goHome}>Cherri Hartigan</div>
           <div className="about">
-            <div>Resume</div>
+            <div><a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank">Resume</a></div>
             <div>Contact</div>
             <div>About</div>
           </div>
