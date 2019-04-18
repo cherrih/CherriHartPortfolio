@@ -96,10 +96,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <nav className="home-nav">
-          <div className="cherri">Cherri Hartigan</div>
-          <div className="about">About</div>
-        </nav>
         <div className="world-container">
           <World matrix={this.state.matrix} left={this.state.left}/>
         </div>

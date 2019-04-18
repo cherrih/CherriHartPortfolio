@@ -21,13 +21,22 @@ nav {
   width: 100vw;
   justify-content: space-between;
 }
-nav div {
+nav {
   padding: 2vh 6vw 0 5vw;
 }
-nav div:hover {
+.cherri:hover, .about div:hover {
   font-weight: 800;
   cursor: pointer;
 }
+.about {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10vw;
+}
+.about div {
+  padding-right: 20px;
+}
+
 .projects:hover {
   font-weight: 800;
   cursor: pointer;

@@ -22,12 +22,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>{
-        this.state.isHome ? <Home showProjects={this.showProjects}/>
-        :
-        <Projects />
-      }
-      </div>
+      <>
+        <nav className="home-nav">
+          <div className="cherri">Cherri Hartigan</div>
+          <div className="about">
+            <div>Resume</div>
+            <div>Contact</div>
+            <div>About</div>
+          </div>
+        </nav>
+        <div>{
+          this.state.isHome ? <Home showProjects={this.showProjects}/>
+          :
+          <Projects />
+        }
+        </div>
+      </>
     )
   }
 }

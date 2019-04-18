@@ -44,10 +44,6 @@ const Projects = (props) => {
   })
   return (
     <div className="projects-container">
-      <nav className="projects-nav">
-        <div className="resume">Resume</div>
-        <div className="contact">Contact</div>
-      </nav>
       <div className="grid-container">{gridElements}</div>
     </div>
   )
