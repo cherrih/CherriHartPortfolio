@@ -148,3 +148,6 @@ h1 {
   transform: rotate(180deg);
   max-width: 18px;
 }
+.tech-stack {
+  color: rgb(73,74,79);
+}

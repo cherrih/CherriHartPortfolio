@@ -5,40 +5,40 @@ const Projects = (props) => {
     {
       title: 'Rogue',
       description: 'LAUNCHING SOON: Experiential "low fashion" magazine',
-      techStack: 'React, Javascript, HTML, CSS, Matter.js, Webpack'
+      techStack: 'Javascript, React, HTML, CSS, Matter.js, Webpack'
     },
     {
       title: 'Queertrip',
-      description: 'Lorem ipsum dolor amet 3 wolf moon magna whatever',
-      techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack',
+      description: 'Full-stack travel app for the LGBTQIA+ community',
+      techStack: 'Javascript, React, HTML, CSS, MongoDB, Express, Node.js, Webpack, Google Maps API',
     },
     {
       title: 'Watch.io',
-      description: 'Full stack retail product app for watch company',
-      techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack'
+      description: 'Full-stack retail product app for watch company',
+      techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme'
     },
     {
       title: 'FindTables',
-      description: 'Lorem ipsum dolor amet 3 wolf moon magna whatever',
-      techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack',
+      description: 'System design of an online restaurant reservation service',
+      techStack: 'Javascript, MongoDB, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io',
     },
     {
       title: 'Belen Tenorio Portfolio',
-      description: 'Lorem ipsum dolor amet 3 wolf moon magna whatever',
-      techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack',
+      description: 'Portfolio development for product/brand designer Belen Tenorio',
+      techStack: 'Vanilla Javascript, HTML, CSS, Sketch',
     },
     {
       title: 'Anna Degenaar Portfolio',
-      description: 'Lorem ipsum dolor amet 3 wolf moon magna whatever',
-      techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack',
+      description: 'Portfolio design and development for photographer/writer Anna Degenaar',
+      techStack: 'Javascript, jQuery, HTML, CSS, Sketch',
     }
   ]
   const gridElements = projects.map((project) => {
     return (
       <div key={project.title} className="grid-child">
         <h1>{project.title}</h1>
-        <p>{project.techStack}</p>
         <p>{project.description}</p>
+        <p className="tech-stack">{project.techStack}</p>
       </div>
     )
   })
