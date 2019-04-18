@@ -20,6 +20,7 @@ nav {
   display: flex;
   width: 100vw;
   justify-content: space-between;
+  position: fixed;
 }
 nav {
   padding: 2vh 6vw 0 5vw;
@@ -132,13 +133,15 @@ h1 {
   justify-content: space-evenly;
 }
 .grid-child {
-  padding: 10px 0px;
+  padding: 20px 20px;
 }
 .grid-child p {
   margin: 5px 0;
 }
 .projects-footer {
   padding: 2vh 6vw 0 5vw;
+  position: fixed;
+  bottom: 5vh;
 }
 .projects-footer:hover {
   font-weight: 800;
