@@ -113,9 +113,18 @@ nav div:hover {
 .project-container {
   background-color: var(--main-background);
 }
-
+h1 {
+  margin: 10px 0;
+}
 .grid-container {
+  padding: 10vh 10vw;
   display: grid;
-  grid-template-columns: 35% 35%;
-  justify-content: center;
+  grid-template-columns: 25% 25%;
+  justify-content: space-evenly;
+}
+.grid-child {
+  padding: 10px 0px;
+}
+.grid-child p {
+  margin: 5px 0;
 }
