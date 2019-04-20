@@ -137,7 +137,7 @@ h1 {
   display: grid;
   grid-template-columns: 25% 25%;
   justify-content: center;
-  grid-gap: 0 10vw;
+  grid-gap: 0 5vw;
 }
 .grid-element {
   height: 320px;
