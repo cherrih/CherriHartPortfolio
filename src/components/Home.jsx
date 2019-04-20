@@ -15,17 +15,17 @@ class Home extends React.Component {
   }
   componentDidMount() {
     const text = 
-      ["333333333333333333333333333333333333333333333333",
-      "3333332 Hailing from 1 the land of33333333339333",
-      "333333sheep and kiwis (New Zealand),333333333333", 
-      "333333I am a San Francisco-based 133333333333333", 
-      "333333Full-Stack developer, Creator and333333333",
-      "333333Collaborator. 1 Currently seeking a3333333", 
-      "333333user-focused Creative Technologist /333333", 
-      "333333Front-End Developer role.31333333333373333", 
-      "333333Fancy a collaboration or interested3333333", 
-      "333333in chatting? Let's talk!333333333333333333",
-      "333333333333333333333333333333383333333333333333"];
+      ["33333333333333333333333333333333333333333333",
+      "3333332 Hailing from 1 the land of3333333339",
+      "333333sheep and kiwis (New Zealand),33333333", 
+      "333333I am a San Francisco-based 13333333333", 
+      "333333Full-Stack developer, Creator and33333",
+      "333333Collaborator. 1 Currently seeking a333", 
+      "333333user-focused Creative Technologist /33", 
+      "333333Front-End Developer role.3133333333373", 
+      "333333Fancy a collaboration or interested333", 
+      "333333in chatting? Let's talk!33333333333333",
+      "33333333333333333333333333333338333333333333"];
     
     const textMatrix = [];
     text.forEach(line => {

@@ -79,12 +79,13 @@ nav {
 
 /* ---- WORLD STYLES ---- */
 
+.world-container {
+  display: flex;
+  justify-content: center;
+}
 #world {
-  width: 90vw;
-  height: 70vh;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 48px;
+  margin-top: 6vh;
 }
 
 #pac {
