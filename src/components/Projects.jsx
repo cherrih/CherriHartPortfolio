@@ -41,9 +41,9 @@ class Projects extends React.Component {
     }
     this.mouseEnterProject = this.mouseEnterProject.bind(this);
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
+    this.showProject = this.showProject.bind(this);
   }
   mouseEnterProject(e) {
-    console.log(e.target.className)
     let background = 'none';
     if (e.target.className === 'Belen Tenorio Portfolio' || e.target.className === 'Belen Tenorio Portfolio grid-element') {
       background = 'url(../../../../public/images/BelenTenorioPortfolio.png)';
@@ -72,6 +72,9 @@ class Projects extends React.Component {
       background: 'none'
     })
   }
+  showProject(e) {
+    console.log(e.target.className.split(' ')[0])
+  }
 
   render () {
     const { projects, background } = this.state;
@@ -83,7 +86,7 @@ class Projects extends React.Component {
     }
     return (
       <div className="projects-container" style={projectsStyle}>
-        <Grid projects={projects} mouseEnterProject={this.mouseEnterProject} mouseLeaveProject={this.mouseLeaveProject}/>
+        <Grid projects={projects} mouseEnterProject={this.mouseEnterProject} mouseLeaveProject={this.mouseLeaveProject} showProject={this.showProject}/>
         <div className="projects-footer" onClick={this.props.toggleProjects}><img src="images/arrow.png" className="rotate-arrow"/> Back to Pac </div>
       </div>
     )
