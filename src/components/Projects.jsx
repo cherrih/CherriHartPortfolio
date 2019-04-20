@@ -36,13 +36,51 @@ class Projects extends React.Component {
           description: 'Portfolio design and development for photographer/writer',
           techStack: 'Javascript, jQuery, HTML, CSS, Sketch',
         }
-      ]
+      ],
+      background: 'none',
     }
+    this.mouseEnterProject = this.mouseEnterProject.bind(this);
+    this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
   }
+  mouseEnterProject(e) {
+    console.log(e.target.id)
+    let background = this.state.background;
+    if (e.target.id === 'Belen Tenorio Portfolio') {
+      background = 'url(../../../../public/images/BelenTenorioPortfolio.png)';
+    }
+    if (e.target.id === 'Anna Degenaar Portfolio') {
+      background = 'url(../../../../public/images/AnnaDegenaarPortfolio.png)';      
+    }
+    if (e.target.id === 'FindTables') {
+      background = 'url(../../../../public/images/FindTables.png)';      
+    }
+    if (e.target.id === 'Rogue') {
+      background = 'url(../../../../public/images/Rogue.png)';      
+    }
+    if (e.target.id === 'Queertrip') {
+      background = 'url(../../../../public/images/QueerTrip1.png)';      
+    }
+    this.setState({
+      background: background
+    })
+  }
+  mouseLeaveProject() {
+    this.setState({
+      background: 'none'
+    })
+  }
+
   render () {
+    const { projects, background } = this.state;
+    const projectsStyle = {
+      backgroundImage: background,
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center'
+    }
     return (
-      <div className="projects-container">
-        <Grid projects={this.state.projects}/>
+      <div className="projects-container" style={projectsStyle}>
+        <Grid projects={projects} mouseEnterProject={this.mouseEnterProject} mouseLeaveProject={this.mouseLeaveProject}/>
         <div className="projects-footer" onClick={this.props.toggleProjects}><img src="images/arrow.png" className="rotate-arrow"/> Back to Pac </div>
       </div>
     )

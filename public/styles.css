@@ -8,6 +8,7 @@
 }
 :root {
   --main-background: rgb(248, 245, 243);
+  --main-green: rgb(39, 211, 0);
 }
 body {
   font-family: "Moderat Regular";
@@ -131,16 +132,29 @@ h1 {
   margin: 10px 0;
 }
 .grid-container {
-  padding: 5vh 10vw;
+  padding-top: 10vh;
   display: grid;
   grid-template-columns: 25% 25%;
-  justify-content: space-evenly;
+  justify-content: center;
+  grid-gap: 0 10vw;
 }
-.grid-child {
-  padding: 20px 20px;
+.grid-element {
+  height: 320px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  margin-top: -80px;
 }
-.grid-child p {
+.grid-element p {
   margin: 5px 0;
+}
+.grid-element:hover {
+  border-radius: 100%;
+  background-color: var(--main-background);
+  cursor: pointer;
+  color: var(--main-green);
 }
 .projects-footer {
   padding: 2vh 6vw 0 5vw;
@@ -154,7 +168,4 @@ h1 {
 .rotate-arrow {
   transform: rotate(180deg);
   max-width: 18px;
-}
-.tech-stack {
-  color: rgb(73,74,79);
 }
