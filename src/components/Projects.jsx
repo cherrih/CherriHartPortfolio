@@ -43,22 +43,25 @@ class Projects extends React.Component {
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
   }
   mouseEnterProject(e) {
-    console.log(e.target.id)
-    let background = this.state.background;
-    if (e.target.id === 'Belen Tenorio Portfolio') {
+    console.log(e.target.className)
+    let background = 'none';
+    if (e.target.className === 'Belen Tenorio Portfolio' || e.target.className === 'Belen Tenorio Portfolio grid-element') {
       background = 'url(../../../../public/images/BelenTenorioPortfolio.png)';
     }
-    if (e.target.id === 'Anna Degenaar Portfolio') {
+    if (e.target.className === 'Anna Degenaar Portfolio' || e.target.className === 'Anna Degenaar Portfolio grid-element') {
       background = 'url(../../../../public/images/AnnaDegenaarPortfolio.png)';      
     }
-    if (e.target.id === 'FindTables') {
+    if (e.target.className === 'FindTables' || e.target.className === 'FindTables grid-element') {
       background = 'url(../../../../public/images/FindTables.png)';      
     }
-    if (e.target.id === 'Rogue') {
+    if (e.target.className === 'Rogue' || e.target.className === 'Rogue grid-element') {
       background = 'url(../../../../public/images/Rogue.png)';      
     }
-    if (e.target.id === 'Queertrip') {
+    if (e.target.className === 'Queertrip' || e.target.className === 'Queertrip grid-element') {
       background = 'url(../../../../public/images/QueerTrip1.png)';      
+    }
+    if (e.target.className === 'Watch.io' || e.target.className === 'Watch.io grid-element') {
+      background = 'url(../../../../public/images/Watch.io1.png)';      
     }
     this.setState({
       background: background
@@ -74,7 +77,7 @@ class Projects extends React.Component {
     const { projects, background } = this.state;
     const projectsStyle = {
       backgroundImage: background,
-      backgroundSize: 'contain',
+      backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center'
     }
