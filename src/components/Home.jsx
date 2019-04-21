@@ -60,7 +60,8 @@ class Home extends React.Component {
   handleKeyDown(e) {
     e.preventDefault();
     let pieceToEat;
-    let { g7, g8, g9, matrix, pac, score } = this.state;
+    let score = 0;
+    let { g7, g8, g9, matrix, pac } = this.state;
     if (e.keyCode === 37) {
       // move pac left
       if (pac.x > 0) {
@@ -182,6 +183,7 @@ class Home extends React.Component {
     } 
     
     this.setState({
+      score: this.state.score += score,
       matrix: matrix
     })
   }
@@ -189,18 +191,19 @@ class Home extends React.Component {
     const { matrix, pac, score } = this.state;
     return (
       <div>
+        <div className="score">
+            <div id="points">{score}</div>
+            <div id="points-text">points</div>
+          </div>
         <div className="world-container">
           <World matrix={matrix} left={pac.left}/>
         </div>
         <div className="home-footer">
           <div className="lives">
-            <img src="images/life.png"/>
-            <img src="images/life.png"/>
+            <div><a href="https://linkedin.com/in/cherri-hartigan" target="_blank">LinkedIn</a></div>
+            <div>GitHub</div>
           </div>
-          <div className="score">
-            <div id="points">{score}</div>
-            <div>points</div>
-          </div>
+          <div className="designed">designed by <a href="http://belentenorio.com" target="_blank">Belen Tenorio</a></div>
           <div className="projects" onClick={this.props.toggleProjects}>Projects <img src="images/arrow.png"/></div>
         </div>
       </div>

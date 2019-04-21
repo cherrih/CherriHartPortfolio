@@ -20,6 +20,10 @@ a {
   text-decoration: none;
   color: black;
 }
+a:hover {
+  font-weight: 800;
+  color: var(--main-green);
+}
 /* ---- NAV ------- */
 
 nav {
@@ -63,20 +67,30 @@ nav {
 .score {
   color: rgb(222, 210, 192);
   text-align: center;
-  transition: (all)
 }
 #points {
   font-size: 24px;
+  padding-top: 10px;
 }
-
+#points-text {
+  line-height: 0.5;
+}
 .projects {
   padding: 0 6vw 5vh 5vw;
 }
 .projects img {
   max-width: 18px;
 }
-
-
+.designed {
+  color: rgb(222, 210, 192);
+  text-align: center;
+}
+.designed a {
+  color: rgb(222, 210, 192);  
+}
+.designed a:hover {
+  color: var(--main-green);
+}
 
 /* ---- WORLD STYLES ---- */
 
@@ -86,7 +100,7 @@ nav {
 }
 #world {
   font-size: 48px;
-  margin-top: 6vh;
+  margin-top: 1vh;
 }
 
 #pac {

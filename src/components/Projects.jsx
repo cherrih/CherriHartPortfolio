@@ -1,5 +1,6 @@
 import React from 'react';
-import Grid from './Grid.jsx';
+import Rogue from './Rogue.jsx';
+import ProjectsHome from './ProjectsHome.jsx';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class Projects extends React.Component {
         }
       ],
       background: 'none',
+      currentView: 'projectsHome'
     }
     this.mouseEnterProject = this.mouseEnterProject.bind(this);
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
@@ -73,11 +75,14 @@ class Projects extends React.Component {
     })
   }
   showProject(e) {
-    console.log(e.target.className.split(' ')[0])
+    const currentView = e.target.className.split(' ')[0];
+    this.setState({
+      currentView: currentView
+    })
   }
 
   render () {
-    const { projects, background } = this.state;
+    const { projects, background, currentView } = this.state;
     const projectsStyle = {
       backgroundImage: background,
       backgroundSize: 'cover',
@@ -85,9 +90,17 @@ class Projects extends React.Component {
       backgroundPosition: 'center'
     }
     return (
-      <div className="projects-container" style={projectsStyle}>
-        <Grid projects={projects} mouseEnterProject={this.mouseEnterProject} mouseLeaveProject={this.mouseLeaveProject} showProject={this.showProject}/>
-        <div className="projects-footer" onClick={this.props.toggleProjects}><img src="images/arrow.png" className="rotate-arrow"/> Back to Pac </div>
+      <div>
+        {currentView === 'projectsHome' && 
+          <ProjectsHome 
+            projects={projects} 
+            mouseEnterProject={this.mouseEnterProject} 
+            mouseLeaveProject={this.mouseLeaveProject}
+            projectsStyle={projectsStyle}
+            toggleProjects={this.props.toggleProjects}
+            showProject={this.showProject}
+          />}
+        {currentView === "Rogue" && <Rogue />}
       </div>
     )
   }
