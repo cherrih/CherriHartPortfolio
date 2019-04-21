@@ -61,37 +61,44 @@ class Home extends React.Component {
     e.preventDefault();
     let pieceToEat;
     let { g7, g8, g9, matrix, pac, score } = this.state;
-    // move pac left
-    if (e.keyCode === 37 && x > 0) {
-      pac.left = true;
-      matrix[y][x] = '3';
-      pac.x -= 1;
-      pieceToEat = matrix[y][x - 1];
-      matrix[y][x - 1] = '2';
+    if (e.keyCode === 37) {
+      
+      // move pac left
+      if (pac.x > 0) {
+        console.log(pac.x, pac.y)
+        pac.left = true;
+        matrix[pac.y][pac.x] = '3';
+        pac.x -= 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
+      }
     }
     // move pac right
-    if (e.keyCode === 39 && x < matrix[y].length - 1) {
+    if (e.keyCode === 39 && pac.x < matrix[pac.y].length - 1) {
+      console.log(pac.x, pac.y)
       pac.left = false;
-      matrix[y][x] = '3';
+      matrix[pac.y][pac.x] = '3';
       pac.x += 1;
-      pieceToEat = matrix[y][x + 1];
-      matrix[y][x + 1] = '2';
+      pieceToEat = matrix[pac.y][pac.x];
+      matrix[pac.y][pac.x] = '2';
     }
     // move pac up 
-    if (e.keyCode === 38 && y > 0) {
+    if (e.keyCode === 38 && pac.y > 0) {
+      console.log(pac.x, pac.y)
       pac.left = false;
-      matrix[y][x] = '3';
+      matrix[pac.y][pac.x] = '3';
       pac.y -= 1;
-      pieceToEat = matrix[y - 1][x];
-      matrix[y - 1][x] = '2';
+      pieceToEat = matrix[pac.y][pac.x];
+      matrix[pac.y][pac.x] = '2';
     }
     // move pac down
-    if (e.keyCode === 40 && y < 10) {
+    if (e.keyCode === 40 && pac.y < 10) {
+      console.log(pac.x, pac.y)
       pac.left = false;
-      matrix[y][x] = '3';
+      matrix[pac.y][pac.x] = '3';
       pac.y += 1;
-      pieceToEat = matrix[y + 1][x];
-      matrix[y + 1][x] = '2';
+      pieceToEat = matrix[pac.y][pac.x];
+      matrix[pac.y][pac.x] = '2';
     }
     if (pieceToEat === '1') {
       score += 10;
