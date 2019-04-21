@@ -62,43 +62,116 @@ class Home extends React.Component {
     let pieceToEat;
     let { g7, g8, g9, matrix, pac, score } = this.state;
     if (e.keyCode === 37) {
-      
       // move pac left
       if (pac.x > 0) {
-        console.log(pac.x, pac.y)
         pac.left = true;
         matrix[pac.y][pac.x] = '3';
         pac.x -= 1;
         pieceToEat = matrix[pac.y][pac.x];
         matrix[pac.y][pac.x] = '2';
       }
+      // move g9 right
+      if (g9.x < matrix[pac.y].length - 1 && matrix[g9.y][g9.x + 1] === '3') {
+        matrix[g9.y][g9.x] = '3';
+        g9.x += 1;
+        matrix[g9.y][g9.x] = '9';
+      }
+      // move g8 right
+      if (g8.x < matrix[pac.y].length - 1 && matrix[g8.y][g8.x + 1] === '3') {
+        matrix[g8.y][g8.x] = '3';
+        g8.x += 1;
+        matrix[g8.y][g8.x] = '8';
+      }
+      // move g7 down
+      if (g7.y < matrix.length - 1 && matrix[g7.y + 1][g7.x] === '3') {
+        matrix[g7.y][g7.x] = '3';
+        g7.y += 1;
+        matrix[g7.y][g7.x] = '7';
+      }
     }
     // move pac right
-    if (e.keyCode === 39 && pac.x < matrix[pac.y].length - 1) {
-      console.log(pac.x, pac.y)
-      pac.left = false;
-      matrix[pac.y][pac.x] = '3';
-      pac.x += 1;
-      pieceToEat = matrix[pac.y][pac.x];
-      matrix[pac.y][pac.x] = '2';
+    if (e.keyCode === 39) {
+      if (pac.x < matrix[pac.y].length - 1){
+        pac.left = false;
+        matrix[pac.y][pac.x] = '3';
+        pac.x += 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
+      }
+      // move g9 left
+      if (g9.x > 0 && matrix[g9.y][g9.x - 1] === '3') {
+        matrix[g9.y][g9.x] = '3';
+        g9.x -= 1;
+        matrix[g9.y][g9.x] = '9';
+      }
+      // move g8 left
+      if (g8.x > 0 && matrix[g8.y][g8.x - 1] === '3') {
+        matrix[g8.y][g8.x] = '3';
+        g8.x -= 1;
+        matrix[g8.y][g8.x] = '8';
+      }
+      // move g7 up
+      if (g7.y > 0 && matrix[g7.y - 1][g7.x] === '3') {
+        matrix[g7.y][g7.x] = '3';
+        g7.y -= 1;
+        matrix[g7.y][g7.x] = '7';
+      }
     }
-    // move pac up 
-    if (e.keyCode === 38 && pac.y > 0) {
-      console.log(pac.x, pac.y)
-      pac.left = false;
-      matrix[pac.y][pac.x] = '3';
-      pac.y -= 1;
-      pieceToEat = matrix[pac.y][pac.x];
-      matrix[pac.y][pac.x] = '2';
+    if (e.keyCode === 38) {
+      // move pac up 
+      if (pac.y > 0) {
+        pac.left = false;
+        matrix[pac.y][pac.x] = '3';
+        pac.y -= 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
+      }
+      // move g9 up
+      if (g9.y > 0 && matrix[g9.y - 1][g9.x] === '3') {
+        matrix[g9.y][g9.x] = '3';
+        g9.y -= 1;
+        matrix[g9.y][g9.x] = '9';
+      }
+      // move g8 down
+      if (g8.y < matrix.length - 1 && matrix[g8.y + 1][g8.x] === '3') {
+        matrix[g8.y][g8.x] = '3';
+        g8.y += 1;
+        matrix[g8.y][g8.x] = '8';
+      }
+      // move g7 right
+      if (g7.x < matrix[pac.y].length - 1 && matrix[g7.y][g7.x + 1] === '3') {
+        matrix[g7.y][g7.x] = '3';
+        g7.x += 1;
+        matrix[g7.y][g7.x] = '7';
+      }
     }
-    // move pac down
-    if (e.keyCode === 40 && pac.y < 10) {
-      console.log(pac.x, pac.y)
-      pac.left = false;
-      matrix[pac.y][pac.x] = '3';
-      pac.y += 1;
-      pieceToEat = matrix[pac.y][pac.x];
-      matrix[pac.y][pac.x] = '2';
+    if (e.keyCode === 40 ) {
+      // move pac down
+      if (pac.y < matrix.length - 1) {
+        pac.left = false;
+        matrix[pac.y][pac.x] = '3';
+        pac.y += 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
+      }
+      // move g9 down
+      if (g9.y < matrix.length - 1 && matrix[g9.y + 1][g9.x] === '3') {
+        matrix[g9.y][g9.x] = '3';
+        g9.y += 1;
+        matrix[g9.y][g9.x] = '9';
+      }
+      // move g8 up
+      if (g8.y > 0 && matrix[g8.y - 1][g8.x] === '3') {
+        matrix[g8.y][g8.x] = '3';
+        g8.y -= 1;
+        matrix[g8.y][g8.x] = '8';
+      }
+      // move g7 left
+      if (g7.x > 0 && matrix[g7.y][g7.x - 1] === '3') {
+        matrix[g7.y][g7.x] = '3';
+        g7.x -= 1;
+        matrix[g7.y][g7.x] = '7';
+      }
     }
     if (pieceToEat === '1') {
       score += 10;
