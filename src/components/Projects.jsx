@@ -10,7 +10,10 @@ class Projects extends React.Component {
         {
           title: 'Rogue',
           description: 'Launching May 2019: Experiential "low fashion" magazine',
-          techStack: 'Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL, Git'
+          techStack: 'Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL, Git',
+          photoText: [
+            'Landing page'
+          ]
         },
         {
           title: 'Queertrip',
@@ -105,7 +108,7 @@ class Projects extends React.Component {
             projectsStyle={projectsStyle}
             showProject={this.showProject}
           />}
-        {currentView === "Rogue" && <Rogue hideProject={this.hideProject}/>}
+        {currentView === "Rogue" && <Rogue hideProject={this.hideProject} project={projects[0]}/>}
       </div>
     )
   }

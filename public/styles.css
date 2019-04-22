@@ -155,6 +155,7 @@ h1 {
   grid-template-columns: 25% 25%;
   justify-content: center;
   grid-gap: 0 5vw;
+  height: 90vh;
 }
 .grid-element {
   height: 310px;
@@ -186,4 +187,35 @@ h1 {
   color: var(--main-green);
 }
 
-/* ----  */
+/* ---------- PROJECT LIGHTBOX ------- */
+
+.lightbox-container {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.lightbox-footer {
+  padding: 2vh 6vw 0 2vw;
+  position: fixed;
+  bottom: 6vh;
+  color: #ffffff;
+}
+.lightbox-footer:hover {
+  color: var(--main-green);
+  font-weight: 800;
+  cursor: pointer;
+}
+.lightbox-hero {
+  margin: 10vh 2vw;
+  max-width: 70vw;
+}
+.lightbox-text {
+  color: #fff;
+  padding: 7.5vh 2vw 0;
+  width: 25vw;
+}
+.lightbox-text h1 {
+  font-size: 3em;
+  font-weight: 400;
+}

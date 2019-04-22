@@ -204,8 +204,8 @@ class Home extends React.Component {
             <div><a href="https://github.com/cherrih" target="_blank">GitHub</a></div>
           </div>
           <div className="designed">
-            <div>site is a collaboration with <a href="http://belentenorio.com" target="_blank">Belen Tenorio</a></div>
-            {/* <div>code by Cherri Hartigan</div>   */}
+            <div>design and concept by <a href="http://belentenorio.com" target="_blank">Belen Tenorio</a></div>
+            <div>code by Cherri Hartigan</div>  
           </div>
           <div className="projects" onClick={this.props.toggleProjects}>Projects <img src="images/arrow.png"/></div>
         </div>
