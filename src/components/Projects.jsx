@@ -44,6 +44,7 @@ class Projects extends React.Component {
     this.mouseEnterProject = this.mouseEnterProject.bind(this);
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
     this.showProject = this.showProject.bind(this);
+    this.hideProject = this.hideProject.bind(this);
   }
   mouseEnterProject(e) {
     let background = 'none';
@@ -80,6 +81,11 @@ class Projects extends React.Component {
       currentView: currentView
     })
   }
+  hideProject() {
+    this.setState({
+      currentView: 'projectsHome'
+    })
+  }
 
   render () {
     const { projects, background, currentView } = this.state;
@@ -99,7 +105,7 @@ class Projects extends React.Component {
             projectsStyle={projectsStyle}
             showProject={this.showProject}
           />}
-        {currentView === "Rogue" && <Rogue />}
+        {currentView === "Rogue" && <Rogue hideProject={this.hideProject}/>}
       </div>
     )
   }

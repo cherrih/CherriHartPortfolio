@@ -157,13 +157,14 @@ h1 {
   grid-gap: 0 5vw;
 }
 .grid-element {
-  height: 320px;
-  width: 280px;
+  height: 310px;
+  width: 270px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 50px;
   margin-top: -80px;
+  padding-right: 10px;
 }
 .grid-element p {
   margin: 5px 0;
@@ -184,7 +185,5 @@ h1 {
   cursor: pointer;
   color: var(--main-green);
 }
-.rotate-arrow {
-  transform: rotate(180deg);
-  max-width: 18px;
-}
+
+/* ----  */

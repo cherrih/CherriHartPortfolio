@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Rogue = (props) => {
+const Rogue = ({ hideProject }) => {
   return (
     <div>
-      
+      <div className="projects-footer" onClick={hideProject}>Back</div>
     </div>
   )
 }
