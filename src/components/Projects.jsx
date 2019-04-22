@@ -97,7 +97,6 @@ class Projects extends React.Component {
             mouseEnterProject={this.mouseEnterProject} 
             mouseLeaveProject={this.mouseLeaveProject}
             projectsStyle={projectsStyle}
-            toggleProjects={this.props.toggleProjects}
             showProject={this.showProject}
           />}
         {currentView === "Rogue" && <Rogue />}

@@ -40,7 +40,7 @@ class App extends React.Component {
         <div>{
           this.state.isHome ? <Home toggleProjects={this.toggleProjects}/>
           :
-          <Projects toggleProjects={this.toggleProjects}/>
+          <Projects />
         }
         </div>
       </>

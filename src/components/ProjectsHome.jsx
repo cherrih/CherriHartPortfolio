@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from './Grid.jsx';
 
-const ProjectsHome = ({projects, mouseEnterProject, mouseLeaveProject, showProject, toggleProjects, projectsStyle}) => {
+const ProjectsHome = ({projects, mouseEnterProject, mouseLeaveProject, showProject, projectsStyle}) => {
 
   return (
     <div className="projects-container" style={projectsStyle}>
