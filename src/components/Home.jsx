@@ -199,11 +199,14 @@ class Home extends React.Component {
           <World matrix={matrix} left={pac.left}/>
         </div>
         <div className="home-footer">
-          <div className="lives">
+          <div className="social">
             <div><a href="https://linkedin.com/in/cherri-hartigan" target="_blank">LinkedIn</a></div>
-            <div>GitHub</div>
+            <div><a href="https://github.com/cherrih" target="_blank">GitHub</a></div>
           </div>
-          <div className="designed">designed by <a href="http://belentenorio.com" target="_blank">Belen Tenorio</a></div>
+          <div className="designed">
+            <div>site is a collaboration with <a href="http://belentenorio.com" target="_blank">Belen Tenorio</a></div>
+            {/* <div>code by Cherri Hartigan</div>   */}
+          </div>
           <div className="projects" onClick={this.props.toggleProjects}>Projects <img src="images/arrow.png"/></div>
         </div>
       </div>
