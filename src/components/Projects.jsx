@@ -1,5 +1,6 @@
 import React from 'react';
 import Rogue from './Rogue.jsx';
+import Queertrip from './Queertrip.jsx';
 import ProjectsHome from './ProjectsHome.jsx';
 
 class Projects extends React.Component {
@@ -9,11 +10,14 @@ class Projects extends React.Component {
       projects: [
         {
           title: 'Rogue',
-          description: 'Launching May 2019: Experiential "low fashion" magazine',
+          description: 'Digital experiential "low fashion" magazine',
           techStack: 'Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL, Git',
           photoText: [
-            'Landing page'
-          ]
+            'This video shows the landing page with interactive menu items. Built in React, with physics provided by Matter.js'
+          ],
+          fullDescription: 'Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.',
+          date: 'Feb 2018 - launching May 2019',
+          team: 'Belen Tenorio (design/concept), Cherri Hartigan (development/concept), Eli Voca (model), Isioma (model)'
         },
         {
           title: 'Queertrip',
@@ -96,7 +100,7 @@ class Projects extends React.Component {
       backgroundImage: background,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
     }
     return (
       <div>
@@ -109,6 +113,7 @@ class Projects extends React.Component {
             showProject={this.showProject}
           />}
         {currentView === "Rogue" && <Rogue hideProject={this.hideProject} project={projects[0]}/>}
+        {currentView === "Queertrip" && <Queertrip hideProject={this.hideProject} project={projects[1]}/>}
       </div>
     )
   }
