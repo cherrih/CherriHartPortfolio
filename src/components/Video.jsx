@@ -14,7 +14,7 @@ const Video = ({ project, hideProject }) => {
         <p>{project.photoText[0]}</p>
         <p>Full tech-stack: {project.techStack}</p>
         <p>Team: {project.team}</p>
-        <p><a href={project.link.link}>Link to {project.title} {project.link.location}</a></p>
+        <p><u><a href={project.link.link} target="_blank">Link to project {project.link.location}</a></u></p>
       </div>
       <div className="lightbox-footer" onClick={hideProject}>Back</div>
     </div>

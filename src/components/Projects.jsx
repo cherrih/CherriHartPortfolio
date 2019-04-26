@@ -33,7 +33,7 @@ class Projects extends React.Component {
           photoText: [
             'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance'
           ],
-          team: 'Belen Tenorio (design/concept), Cherri Hartigan (development/concept)',
+          team: 'Belen Tenorio (design/concept), Cherri Hartigan (concept/full-stack engineer)',
           link: {
             link: 'https://github.com/cherrih/hrsf107-mvp',
             location: 'on GitHub'
@@ -45,7 +45,7 @@ class Projects extends React.Component {
           title: 'Watch.io',
           description: 'Full-stack retail product app for watch company',
           techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
-          date: '',
+          date: 'Dec 2018 - Jan 2019',
           fullDescription: '',
           photoText: [''],
           team: 'Aaron Deane (full-stack engineer, photo component), Cherri Hartigan (full-stack engineer, summary/cart component), George Qian (full-stack engineer, details component), Linden Chiu (full-stack engineer, reviews component)',
@@ -60,7 +60,7 @@ class Projects extends React.Component {
           title: 'FindTables',
           description: 'System design of an online restaurant reservation service',
           techStack: 'Javascript, MongoDB, Mongoose.js, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io, Git',
-          date: '',
+          date: 'Jan 2019 - Feb 2019',
           fullDescription: '',
           photoText: [''],
           team: '',
@@ -77,8 +77,8 @@ class Projects extends React.Component {
           techStack: 'Vanilla Javascript, HTML, CSS, Sketch',
           date: '',
           fullDescription: '',
-          photoText: [''],
-          team: '',
+          photoText: ['We architected responsive design to ensure user-friendly interaction across multiple devices. Created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'],
+          team: 'Belen Tenorio (concept/design/development), Cherri Hartigan (front end engineer)',
           link: {
             link: 'http://belentenorio.com',
             location: ''
@@ -95,7 +95,7 @@ class Projects extends React.Component {
           photoText: [''],
           team: '',
           link: {
-            link: 'http://annadegenaar.com',
+            link: 'http://www.annadegenaar.com',
             location: ''
           },
           video: 'annadegenaar',
@@ -159,6 +159,7 @@ class Projects extends React.Component {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
     }
+    console.log(currentView)
     return (
       <div>
         {currentView === 'projectsHome' && 
@@ -171,6 +172,8 @@ class Projects extends React.Component {
           />}
         {currentView === "Rogue" && <Video hideProject={this.hideProject} project={projects[0]}/>}
         {currentView === "Queertrip" && <Video hideProject={this.hideProject} project={projects[1]}/>}
+        {currentView === "Watch.io" && <Video hideProject={this.hideProject} project={projects[2]}/>}
+        {currentView === "FindTables" && <Video hideProject={this.hideProject} project={projects[3]}/>}        
         {currentView === "Belen" && <Video hideProject={this.hideProject} project={projects[4]}/>}
         {currentView === "Anna" && <Video hideProject={this.hideProject} project={projects[5]}/>}
       </div>
