@@ -18,7 +18,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 a:hover {
   font-weight: 800;
@@ -214,10 +214,20 @@ h1 {
 }
 .lightbox-text {
   color: #fff;
-  padding: 7.5vh 2vw 0;
+  padding: 4vh 4vw 0 2vw;
   width: 25vw;
 }
 .lightbox-text h1 {
+  padding-top: 2vh;
   font-size: 3em;
   font-weight: 400;
+}
+.light-box-exit {
+  text-align: right;
+  font-size: 40px;
+  padding-right: 10px;
+}
+.light-box-exit:hover {
+  color: var(--main-green);
+  cursor: pointer;
 }
