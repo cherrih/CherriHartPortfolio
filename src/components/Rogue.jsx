@@ -3,7 +3,7 @@ import React from 'react';
 const Rogue = ({ hideProject, project }) => {
   return (
     <div className="lightbox-container">
-      <video src="../../public/images/RogueHome.mov" autoPlay="true" className="lightbox-hero" loop="true">
+      <video src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/RogueHome.mov" autoPlay="true" className="lightbox-hero" loop="true">
       <img className="lightbox-hero" src="../../public/images/Rogue.png"/>
       </video>
       <div className="lightbox-text">
