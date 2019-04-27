@@ -60,11 +60,16 @@ class Home extends React.Component {
     }
   }
   moveDown(g) {
-    console.log('D')
+    let { matrix } = this.state;
+    if (g.y < matrix.length - 1 && matrix[g.y + 1][g.x] === '3') {
+      matrix[g.y][g.x] = '3';
+      g.y += 1;
+      matrix[g.y][g.x] = g.n;
+    }
   }
   moveGhost(g) {
     const dir = `move${this.getRandomDirection()}`;
-    this.moveUp(g);
+    this.moveDown(g);
     // this[dir](g);
     // console.log(this.getRandomDirection());
     this.forceUpdate();
