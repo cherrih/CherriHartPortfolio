@@ -27,6 +27,25 @@ class Home extends React.Component {
     }
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
+  getRandomDirection() {
+  }
+  moveRight(g) {
+    matrix[g.y][g.x] = '3';
+    g.x += 1;
+    matrix[g.y][g.x] = '9';
+  }
+  moveLeft(g) {
+
+  }
+  moveUp(g) {
+
+  }
+  moveDown(g) {
+
+  }
+  moveGhost() {
+    console.log('moving');
+  }
   componentDidMount() {
     const text = 
       ["33333333333333333333333333333333333333333333",
@@ -48,6 +67,10 @@ class Home extends React.Component {
     this.setState({
       matrix: matrix
     })
+    let { g7, g8, g9 } = this.state;
+    this.interval = setInterval(() => this.moveGhost(g7), 1000);
+    this.interval = setInterval(() => this.moveGhost(g8), 1000);
+    this.interval = setInterval(() => this.moveGhost(g9), 1000);
   }
   componentWillMount() {
     window.addEventListener('keydown', this.handleKeyDown);
@@ -55,6 +78,7 @@ class Home extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyDown);
+    clearInterval(this.interval);
   }
 
   handleKeyDown(e) {
