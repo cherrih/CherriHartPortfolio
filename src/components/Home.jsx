@@ -14,37 +14,50 @@ class Home extends React.Component {
       score: 0,
       g7: {
         x: 42,
-        y: 7
+        y: 7,
+        n: '7'
       },
       g8: {
         x: 31,
-        y: 10
+        y: 10,
+        n: '8'
       },
       g9: {
         x: 43,
-        y: 1
+        y: 1,
+        n: '9'
       }
     }
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   getRandomDirection() {
+    const dir = ['Left', 'Right', 'Up', 'Down'];
+    const i = Math.floor(Math.random() * (3 + 1));
+    return dir[i];
   }
   moveRight(g) {
-    matrix[g.y][g.x] = '3';
-    g.x += 1;
-    matrix[g.y][g.x] = '9';
+    let { matrix } = this.state;
+    if (g.x < matrix[g.y].length - 1 && matrix[g.y][g.x + 1] === '3') {
+      matrix[g.y][g.x] = '3';
+      g.x += 1;
+      matrix[g.y][g.x] = g.n;
+    }
   }
   moveLeft(g) {
-
+    console.log('L')
   }
   moveUp(g) {
-
+    console.log('U')
   }
   moveDown(g) {
-
+    console.log('D')
   }
-  moveGhost() {
-    console.log('moving');
+  moveGhost(g) {
+    const dir = `move${this.getRandomDirection()}`;
+    this.moveRight(g);
+    // this[dir](g);
+    // console.log(this.getRandomDirection());
+    this.forceUpdate();
   }
   componentDidMount() {
     const text = 
