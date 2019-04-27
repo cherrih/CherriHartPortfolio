@@ -44,7 +44,12 @@ class Home extends React.Component {
     }
   }
   moveLeft(g) {
-    console.log('L')
+    let { matrix } = this.state;
+    if (g.x > 0 && matrix[g.y][g.x - 1] === '3') {
+      matrix[g.y][g.x] = '3';
+      g.x -= 1;
+      matrix[g.y][g.x] = g.n;
+    }
   }
   moveUp(g) {
     console.log('U')
@@ -54,7 +59,7 @@ class Home extends React.Component {
   }
   moveGhost(g) {
     const dir = `move${this.getRandomDirection()}`;
-    this.moveRight(g);
+    this.moveLeft(g);
     // this[dir](g);
     // console.log(this.getRandomDirection());
     this.forceUpdate();
