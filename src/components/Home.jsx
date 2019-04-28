@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import React from 'react';
 import World from './World.jsx';
 
@@ -37,6 +38,43 @@ class Home extends React.Component {
       g9Lives: true,
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  componentWillMount() {
+    window.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  componentDidMount() {
+    const text = ['33333333333333333333333333333333333333333333',
+      '3333332 Hailing from 1 the land of3333333339',
+      '333333sheep and kiwis (New Zealand),33333333',
+      '333333I am a San Francisco-based 13333333333',
+      '333333Full-Stack developer, Creator and33333',
+      '333333Collaborator. 1 Currently seeking a333',
+      '333333user-focused Creative Technologist /33',
+      '333333Front-End Developer role.3133333333373',
+      '333333Fancy a collaboration or interested333',
+      "333333in chatting? Let's talk!33333333333333",
+      '33333333333333333333333333333338333333333333'];
+
+    const matrix = [];
+    text.forEach((line) => {
+      matrix.push(line.split(''));
+    });
+    this.setState({
+      matrix,
+    });
+    const { g7, g8, g9 } = this.state;
+    this.interval1 = setInterval(() => this.moveGhost(g7), 500);
+    this.interval2 = setInterval(() => this.moveGhost(g8), 500);
+    this.interval3 = setInterval(() => this.moveGhost(g9), 500);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+    clearInterval(this.interval1);
+    clearInterval(this.interval2);
+    clearInterval(this.interval3);
   }
 
   getRandomDirection() {
@@ -154,43 +192,6 @@ class Home extends React.Component {
     this.toggleCherriMode();
     setTimeout(this.toggleCherriMode.bind(this), 5000);
     // new images for ghosts
-  }
-  
-  componentWillMount() {
-    window.addEventListener('keydown', this.handleKeyDown);
-  }
-
-  componentDidMount() {
-    const text = ['33333333333333333333333333333333333333333333',
-      '3333332 Hailing from 1 the land of3333333339',
-      '333333sheep and kiwis (New Zealand),33333333',
-      '333333I am a San Francisco-based 13333333333',
-      '333333Full-Stack developer, Creator and33333',
-      '333333Collaborator. 1 Currently seeking a333',
-      '333333user-focused Creative Technologist /33',
-      '333333Front-End Developer role.3133333333373',
-      '333333Fancy a collaboration or interested333',
-      "333333in chatting? Let's talk!33333333333333",
-      '33333333333333333333333333333338333333333333'];
-
-    const matrix = [];
-    text.forEach((line) => {
-      matrix.push(line.split(''));
-    });
-    this.setState({
-      matrix,
-    });
-    const { g7, g8, g9 } = this.state;
-    this.interval1 = setInterval(() => this.moveGhost(g7), 500);
-    this.interval2 = setInterval(() => this.moveGhost(g8), 500);
-    this.interval3 = setInterval(() => this.moveGhost(g9), 500);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeyDown);
-    clearInterval(this.interval1);
-    clearInterval(this.interval2);
-    clearInterval(this.interval3);
   }
 
   killPac() {
