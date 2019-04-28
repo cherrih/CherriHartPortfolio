@@ -12,7 +12,7 @@ const Modal = (props) => {
               <p>
                 Use your arrow keys to navigate Pac. 
                 Power up with "<span className="modal-cherri">Cherri</span>" to defeat the code bugs.
-                Earn 1000 points and score yourself beer on me! Otherwise click through and see my projects.
+                Earn 1500 points and score a beer with me! Otherwise click through and see my projects.
               </p>
             </div>
           </div>

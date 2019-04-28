@@ -162,7 +162,6 @@ class Projects extends React.Component {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
     }
-    console.log(currentView)
     return (
       <div>
         {currentView === 'projectsHome' && 

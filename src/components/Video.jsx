@@ -11,9 +11,9 @@ const Video = ({ project, hideProject }) => {
         <h1>{project.title}</h1>
         <h3>{project.date}</h3>
         <p>{project.fullDescription}</p>
-        <div>{project.photoText.map(text => <p>{text}</p>)}</div>
+        <div>{project.photoText.map(text => <p key="text">{text}</p>)}</div>
         <p>Full tech-stack: {project.techStack}</p>
-        <p>Team: {project.team.map(member => <ul>{member}</ul>)}</p>
+        <p>Team: {project.team.map(member => <ul key="member">{member}</ul>)}</p>
         <p><u><a href={project.link.link} target="_blank">Link to project {project.link.location}</a></u></p>
       </div>
       <div className="lightbox-footer" onClick={hideProject}>Back</div>
