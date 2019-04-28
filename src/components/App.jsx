@@ -8,7 +8,8 @@ class App extends React.Component {
     this.state = {
       isHome: true,
       isProjects: false,
-      isAbout: false
+      isAbout: false,
+      isModal: false
     };
     this.toggleProjects = this.toggleProjects.bind(this);
     this.goHome = this.goHome.bind(this);
@@ -26,7 +27,15 @@ class App extends React.Component {
       isHome: true
     })
   }
-
+  toggleModal() {
+    console.log('modal')
+    this.setState({
+      isModal: !this.state.isModal
+    })
+  }
+  componentDidMount() {
+    setTimeout(this.toggleModal.bind(this), 3000)
+  }
   render() {
     return (
       <>
