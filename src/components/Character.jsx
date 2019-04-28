@@ -1,23 +1,34 @@
 import React from 'react';
 
-const Character = (props) => {
+const Character = ({ char, left }) => {
   let charHTML;
-  if (props.char === '1') {
-    charHTML = <><div className="cherry"><img src="images/cherry.png"/></div><div className="space"></div></>
-  } else if (props.char === '2') {
-    charHTML = <><div className="space"></div><div id="pac"><img src={this.props.left ? "images/pac-left.png" :"images/pac.png"}/></div><div className="space"></div></>
-  } else if (props.char === ' ') {
-    charHTML = <div className="space"></div>
-  } else if (props.char === '3') {
-    charHTML = <div className="eaten"></div>
+  if (char === '1') {
+    charHTML = (
+      <>
+        <div className="cherry"><img src="images/cherry.png" /></div>
+        <div className="space" />
+      </>
+    );
+  } else if (char === '2') {
+    charHTML = (
+      <>
+        <div className="space" />
+        <div id="pac"><img src={left ? 'images/pac-left.png' : 'images/pac.png'} /></div>
+        <div className="space" />
+      </>
+    );
+  } else if (char === ' ') {
+    charHTML = <div className="space" />;
+  } else if (char === '3') {
+    charHTML = <div className="eaten" />;
   } else {
-    charHTML = <div className="world-char">{props.char}</div>
-  }        
+    charHTML = <div className="world-char">{char}</div>;
+  }
   return (
     <>
-    {charHTML}
+      {charHTML}
     </>
-  )
-}
+  );
+};
 
 export default Character;

@@ -9,53 +9,58 @@ class App extends React.Component {
     this.state = {
       isHome: true,
       isProjects: false,
-      isAbout: false,
-      isModal: false
+      isModal: false,
     };
     this.toggleProjects = this.toggleProjects.bind(this);
     this.goHome = this.goHome.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
   }
-  
-  toggleProjects() {
-    this.setState({
-      isProjects: !this.state.isProjects,
-      isHome: !this.state.isHome
-    });
-  }
-  goHome() {
-    this.setState({
-      isProjects: false,
-      isHome: true
-    });
-  }
-  toggleModal() {
-    this.setState({
-      isModal: !this.state.isModal
-    });
-  }
+
   componentDidMount() {
     setTimeout(this.toggleModal.bind(this), 3000);
   }
+
+  toggleProjects() {
+    this.setState(state => ({
+      isProjects: !state.isProjects,
+      isHome: !state.isHome,
+    }));
+  }
+
+  goHome() {
+    this.setState({
+      isProjects: false,
+      isHome: true,
+    });
+  }
+
+  toggleModal() {
+    this.setState(state => ({
+      isModal: !state.isModal,
+    }));
+  }
+
   render() {
+    const { toggleProjects, toggleModal, goHome } = this;
+    const { isHome, isModal } = this.state;
     return (
       <>
         <nav className="home-nav">
-          <div className="cherri" onClick={this.goHome}>Cherri Hartigan</div>
+          <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
           <div className="about">
-            <div><a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank">Resume</a></div>
+            <div><a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank" rel="noopener noreferrer">Resume</a></div>
             <div><a href="mailto:cherri.hartigan@gmail.com">Contact </a></div>
           </div>
         </nav>
-        <div>{
-          this.state.isHome ? <Home toggleProjects={this.toggleProjects}/>
-          :
-          <Projects />
+        <div>
+          {
+          isHome ? <Home toggleProjects={toggleProjects} />
+            : <Projects />
         }
         </div>
-        {this.state.isModal && <Modal close={this.toggleModal}/>}
+        {isModal && <Modal close={toggleModal} />}
       </>
-    )
+    );
   }
 }
 

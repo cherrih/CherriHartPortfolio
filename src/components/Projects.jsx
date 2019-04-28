@@ -14,15 +14,15 @@ class Projects extends React.Component {
           date: 'Feb 2018 - launching May 2019',
           fullDescription: 'Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.',
           photoText: [
-            'This video shows the landing page with interactive menu items. Built in React, with physics provided by Matter.js'
+            'This video shows the landing page with interactive menu items. Built in React, with physics provided by Matter.js',
           ],
-          team: ['Belen Tenorio (design / concept)','Cherri Hartigan (development / concept)', 'Eli VanAlsburg (model)','Isioma Iyamah (model)'],
+          team: ['Belen Tenorio (design / concept)', 'Cherri Hartigan (development / concept)', 'Eli VanAlsburg (model)', 'Isioma Iyamah (model)'],
           link: {
             link: 'https://github.com/cherrih/rogue',
-            location: 'on GitHub'
+            location: 'on GitHub',
           },
           video: 'RogueHome',
-          img: '../../public/images/Rogue.png'
+          img: '../../public/images/Rogue.png',
         },
         {
           title: 'Queertrip',
@@ -31,12 +31,12 @@ class Projects extends React.Component {
           date: 'Jan 2019 - Feb 2019',
           fullDescription: 'Traveling internationally while queer can sometimes be a scary experience. With Queertrips you can find experiences and people across the globe who will accept you for who you are. Browse through safe spots around the world and share your own tips!',
           photoText: [
-            'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance'
+            'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance',
           ],
-          team: ['Belen Tenorio (design/concept)','Cherri Hartigan (concept/full-stack engineer)'],
+          team: ['Belen Tenorio (design/concept)', 'Cherri Hartigan (concept/full-stack engineer)'],
           link: {
             link: 'https://github.com/cherrih/hrsf107-mvp',
-            location: 'on GitHub'
+            location: 'on GitHub',
           },
           video: 'Queertrip',
           img: '../../../../public/images/QueerTrip1.png',
@@ -47,11 +47,11 @@ class Projects extends React.Component {
           techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
           date: 'Dec 2018 - Jan 2019',
           fullDescription: '',
-          photoText: ['Developed an interactive front-end microservice using JavaScript and React to dynamically render details and specifications for 100 watches.', 'Seeded MySQL database with 1000 unique rows of watch product information to enforce a single source of truth and avoid data duplication.', 'Utilized service-oriented architecture by integrating microservices through an Express proxy server to improve team development efficiency.','Improved page load speeds by 53% by minifying webpack bundles and implementing Express compression middleware'],
-          team: ['Aaron Deane (full-stack engineer, photo component)', 'Cherri Hartigan (full-stack engineer, summary/cart component)','George Qian (full-stack engineer, details component)','Linden Chiu (full-stack engineer, reviews component)'],
+          photoText: ['Developed an interactive front-end microservice using JavaScript and React to dynamically render details and specifications for 100 watches.', 'Seeded MySQL database with 1000 unique rows of watch product information to enforce a single source of truth and avoid data duplication.', 'Utilized service-oriented architecture by integrating microservices through an Express proxy server to improve team development efficiency.', 'Improved page load speeds by 53% by minifying webpack bundles and implementing Express compression middleware'],
+          team: ['Aaron Deane (full-stack engineer, photo component)', 'Cherri Hartigan (full-stack engineer, summary/cart component)', 'George Qian (full-stack engineer, details component)', 'Linden Chiu (full-stack engineer, reviews component)'],
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
-            location: 'on GitHub'
+            location: 'on GitHub',
           },
           video: 'Watch',
           img: '../../../../public/images/Watch.io1.png',
@@ -69,7 +69,7 @@ class Projects extends React.Component {
           team: [''],
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
-            location: 'on GitHub'
+            location: 'on GitHub',
           },
           video: '',
           img: '../../../../public/images/FindTables.png',
@@ -84,7 +84,7 @@ class Projects extends React.Component {
           team: ['Belen Tenorio (design / development)', 'Cherri Hartigan (front end engineer)'],
           link: {
             link: 'http://belentenorio.com',
-            location: ''
+            location: '',
           },
           video: 'belentenorio',
           img: '',
@@ -99,87 +99,93 @@ class Projects extends React.Component {
           team: ['Cherri Hartigan (design / front end engineer)'],
           link: {
             link: 'http://www.annadegenaar.com',
-            location: ''
+            location: '',
           },
           video: 'annadegenaar',
           img: '',
-        }
+        },
       ],
       background: 'none',
-      currentView: 'projectsHome'
-    }
+      currentView: 'projectsHome',
+    };
     this.mouseEnterProject = this.mouseEnterProject.bind(this);
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
     this.showProject = this.showProject.bind(this);
     this.hideProject = this.hideProject.bind(this);
   }
+
   mouseEnterProject(e) {
     let background = 'none';
     if (e.target.className === 'Belen Tenorio Portfolio' || e.target.className === 'Belen Tenorio Portfolio grid-element') {
       background = 'url(../../../../public/images/BelenTenorioPortfolio.png)';
     }
     if (e.target.className === 'Anna Degenaar Portfolio' || e.target.className === 'Anna Degenaar Portfolio grid-element') {
-      background = 'url(../../../../public/images/AnnaDegenaarPortfolio.png)';      
+      background = 'url(../../../../public/images/AnnaDegenaarPortfolio.png)';
     }
     if (e.target.className === 'FindTables' || e.target.className === 'FindTables grid-element') {
-      background = 'url(../../../../public/images/FindTables.png)';      
+      background = 'url(../../../../public/images/FindTables.png)';
     }
     if (e.target.className === 'Rogue' || e.target.className === 'Rogue grid-element') {
-      background = 'url(../../../../public/images/Rogue.png)';      
+      background = 'url(../../../../public/images/Rogue.png)';
     }
     if (e.target.className === 'Queertrip' || e.target.className === 'Queertrip grid-element') {
-      background = 'url(../../../../public/images/QueerTrip1.png)';      
+      background = 'url(../../../../public/images/QueerTrip1.png)';
     }
     if (e.target.className === 'Watch.io' || e.target.className === 'Watch.io grid-element') {
-      background = 'url(../../../../public/images/Watch.io1.png)';      
+      background = 'url(../../../../public/images/Watch.io1.png)';
     }
     this.setState({
-      background: background
-    })
+      background,
+    });
   }
+
   mouseLeaveProject() {
     this.setState({
-      background: 'none'
-    })
+      background: 'none',
+    });
   }
+
   showProject(e) {
     const currentView = e.target.className.split(' ')[0];
     this.setState({
-      currentView: currentView
-    })
-  }
-  hideProject() {
-    this.setState({
-      currentView: 'projectsHome'
-    })
+      currentView,
+    });
   }
 
-  render () {
+  hideProject() {
+    this.setState({
+      currentView: 'projectsHome',
+    });
+  }
+
+  render() {
     const { projects, background, currentView } = this.state;
     const projectsStyle = {
       backgroundImage: background,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-    }
+    };
     return (
       <div>
-        {currentView === 'projectsHome' && 
-          <ProjectsHome 
-            projects={projects} 
-            mouseEnterProject={this.mouseEnterProject} 
+        {currentView === 'projectsHome'
+          && (
+          <ProjectsHome
+            projects={projects}
+            mouseEnterProject={this.mouseEnterProject}
             mouseLeaveProject={this.mouseLeaveProject}
             projectsStyle={projectsStyle}
             showProject={this.showProject}
-          />}
-        {currentView === "Rogue" && <Video hideProject={this.hideProject} project={projects[0]}/>}
-        {currentView === "Queertrip" && <Video hideProject={this.hideProject} project={projects[1]}/>}
-        {currentView === "Watch.io" && <Video hideProject={this.hideProject} project={projects[2]}/>}
-        {currentView === "FindTables" && <Video hideProject={this.hideProject} project={projects[3]}/>}        
-        {currentView === "Belen" && <Video hideProject={this.hideProject} project={projects[4]}/>}
-        {currentView === "Anna" && <Video hideProject={this.hideProject} project={projects[5]}/>}
+          />
+          )}
+        {currentView === 'Rogue' && <Video hideProject={this.hideProject} project={projects[0]} />}
+        {currentView === 'Queertrip' && <Video hideProject={this.hideProject} project={projects[1]} />}
+        {currentView === 'Watch.io' && <Video hideProject={this.hideProject} project={projects[2]} />}
+        {currentView === 'FindTables' && <Video hideProject={this.hideProject} project={projects[3]} />}
+        {currentView === 'Belen' && <Video hideProject={this.hideProject} project={projects[4]} />}
+        {currentView === 'Anna' && <Video hideProject={this.hideProject} project={projects[5]} />}
       </div>
-    )
+    );
   }
 }
 

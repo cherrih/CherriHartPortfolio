@@ -1,12 +1,11 @@
 import React from 'react';
-import Row from './Row.jsx'
+import Row from './Row.jsx';
 
-const World = (props) => {
-  return (
-    <div id="world" >
-    {props.matrix.map((row, i) => <Row row={row} key={`row${i}`} rowIndex={i} left={props.left}/>)}
-    </div>
-  )
-}
+const World = ({ matrix, left }) => (
+  <div id="world">
+    {matrix.map((row, i) => <Row row={row} key={`row${i}`} rowIndex={i} left={left} />)}
+  </div>
+);
+
 
 export default World;
