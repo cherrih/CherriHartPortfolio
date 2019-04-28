@@ -18,7 +18,7 @@ class Home extends React.Component {
         x: 42,
         y: 7,
         n: '7',
-        dir: 'Up',
+        dir: 'Left',
         alive: true
       },
       g8: {
@@ -34,7 +34,10 @@ class Home extends React.Component {
         n: '9',
         dir: 'Left',
         alive: true
-      }
+      },
+      g7Lives: true,
+      g8Lives: true,
+      g9Lives: true,
     }
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
@@ -44,22 +47,14 @@ class Home extends React.Component {
     return dir[i];
   }
   moveRight(g) {
-    let matrix = [...this.state.matrix];
-    let ghost = {...g};
-    const name = `g${ghost.n}`;
+    let { matrix } = this.state;
     if (g.x < matrix[g.y].length - 1 && matrix[g.y][g.x + 1] === '3') {
       matrix[g.y][g.x] = '3';
-      ghost.x += 1;
+      g.x += 1;
       matrix[g.y][g.x] = g.n;
-      this.setState ({
-        matrix: matrix,
-        [name]: ghost
-      });
     } else {
-      ghost.dir = this.getRandomDirection();
-      this.setState({
-        [name]: ghost
-      }, this.moveGhost(g));
+      g.dir = this.getRandomDirection();
+      this.moveGhost(g);
     }
   }
   moveLeft(g) {
@@ -97,15 +92,16 @@ class Home extends React.Component {
   }
   moveGhost(g) {
     const dir = `move${g.dir}`;
-    if (g.alive) {
+    const isAlive = `g${g.n}Lives`;
+    if (this.state[isAlive]) {
       this[dir](g);
+      this.forceUpdate();
     };
-    this.forceUpdate();
   }
   toggleCherriMode() {
-    this.setState( state => ({
+    this.setState(state => ({
       cherriMode: !state.cherriMode
-    }))
+    }));
   }
   activateCherriMode() {
     this.toggleCherriMode();
@@ -148,21 +144,21 @@ class Home extends React.Component {
     clearInterval(this.interval2);
     clearInterval(this.interval3);
   }
-  killGhost(ghost) {
+  killGhost(g) {
     console.log('killing')
-    const name = `g${ghost.n}`
-    // const g = {...ghost};
-    // g.alive = false;
-    // this.setState({
-    //   [name]: g
-    // })
-    this.setState(prevState => ({
-      [name]: {
-          ...prevState[name],
-          alive: false
-      }
-    }))
-    console.log(ghost)
+    let { matrix } = this.state;
+    const name = `g${g.n}Lives`;
+    matrix[g.y][g.x] = '3';
+    this.setState({
+      [name]: false
+    });
+    // this.setState(prevState => ({
+    //   [name]: {
+    //     ...prevState[name],
+    //     alive: false
+    //   }
+    // }))
+    // console.log(ghost)
   }
   handleKeyDown(e) {
     e.preventDefault();
