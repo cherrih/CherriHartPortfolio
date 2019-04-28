@@ -15,17 +15,20 @@ class Home extends React.Component {
       g7: {
         x: 42,
         y: 7,
-        n: '7'
+        n: '7',
+        dir: 'Up'
       },
       g8: {
         x: 31,
         y: 10,
-        n: '8'
+        n: '8',
+        dir: 'Left'
       },
       g9: {
         x: 43,
         y: 1,
-        n: '9'
+        n: '9',
+        dir: 'Left'
       }
     }
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -41,6 +44,9 @@ class Home extends React.Component {
       matrix[g.y][g.x] = '3';
       g.x += 1;
       matrix[g.y][g.x] = g.n;
+    } else {
+      g.dir = this.getRandomDirection();
+      this.moveGhost(g);
     }
   }
   moveLeft(g) {
@@ -49,6 +55,9 @@ class Home extends React.Component {
       matrix[g.y][g.x] = '3';
       g.x -= 1;
       matrix[g.y][g.x] = g.n;
+    } else {
+      g.dir = this.getRandomDirection();
+      this.moveGhost(g);
     }
   }
   moveUp(g) {
@@ -57,6 +66,9 @@ class Home extends React.Component {
       matrix[g.y][g.x] = '3';
       g.y -= 1;
       matrix[g.y][g.x] = g.n;
+    } else {
+      g.dir = this.getRandomDirection();
+      this.moveGhost(g);
     }
   }
   moveDown(g) {
@@ -65,13 +77,15 @@ class Home extends React.Component {
       matrix[g.y][g.x] = '3';
       g.y += 1;
       matrix[g.y][g.x] = g.n;
+    } else {
+      g.dir = this.getRandomDirection();
+      this.moveGhost(g);
     }
   }
   moveGhost(g) {
-    const dir = `move${this.getRandomDirection()}`;
-    this.moveDown(g);
-    // this[dir](g);
-    // console.log(this.getRandomDirection());
+    const dir = `move${g.dir}`;
+    // console.log(g.dir)
+    this[dir](g);
     this.forceUpdate();
   }
   componentDidMount() {
@@ -96,9 +110,9 @@ class Home extends React.Component {
       matrix: matrix
     })
     let { g7, g8, g9 } = this.state;
-    this.interval = setInterval(() => this.moveGhost(g7), 1000);
-    this.interval = setInterval(() => this.moveGhost(g8), 1000);
-    this.interval = setInterval(() => this.moveGhost(g9), 1000);
+    this.interval1 = setInterval(() => this.moveGhost(g7), 500);
+    this.interval2 = setInterval(() => this.moveGhost(g8), 500);
+    this.interval3 = setInterval(() => this.moveGhost(g9), 500);
   }
   componentWillMount() {
     window.addEventListener('keydown', this.handleKeyDown);
@@ -106,7 +120,9 @@ class Home extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyDown);
-    clearInterval(this.interval);
+    clearInterval(this.interval1);
+    clearInterval(this.interval2);
+    clearInterval(this.interval3);
   }
 
   handleKeyDown(e) {
