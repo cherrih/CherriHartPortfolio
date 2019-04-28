@@ -21,22 +21,21 @@ class App extends React.Component {
     this.setState({
       isProjects: !this.state.isProjects,
       isHome: !this.state.isHome
-    })
+    });
   }
   goHome() {
     this.setState({
       isProjects: false,
       isHome: true
-    })
+    });
   }
   toggleModal() {
-    console.log('modal')
     this.setState({
       isModal: !this.state.isModal
-    })
+    });
   }
   componentDidMount() {
-    setTimeout(this.toggleModal.bind(this), 3000)
+    setTimeout(this.toggleModal.bind(this), 3000);
   }
   render() {
     return (

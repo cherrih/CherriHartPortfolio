@@ -44,14 +44,22 @@ class Home extends React.Component {
     return dir[i];
   }
   moveRight(g) {
-    let { matrix } = this.state;
+    let matrix = [...this.state.matrix];
+    let ghost = {...g};
+    const name = `g${ghost.n}`;
     if (g.x < matrix[g.y].length - 1 && matrix[g.y][g.x + 1] === '3') {
       matrix[g.y][g.x] = '3';
-      g.x += 1;
+      ghost.x += 1;
       matrix[g.y][g.x] = g.n;
+      this.setState ({
+        matrix: matrix,
+        [name]: ghost
+      });
     } else {
-      g.dir = this.getRandomDirection();
-      this.moveGhost(g);
+      ghost.dir = this.getRandomDirection();
+      this.setState({
+        [name]: ghost
+      }, this.moveGhost(g));
     }
   }
   moveLeft(g) {
@@ -89,7 +97,9 @@ class Home extends React.Component {
   }
   moveGhost(g) {
     const dir = `move${g.dir}`;
-    if (g.alive) this[dir](g);
+    if (g.alive) {
+      this[dir](g);
+    };
     this.forceUpdate();
   }
   toggleCherriMode() {
@@ -138,12 +148,27 @@ class Home extends React.Component {
     clearInterval(this.interval2);
     clearInterval(this.interval3);
   }
-
+  killGhost(ghost) {
+    console.log('killing')
+    const name = `g${ghost.n}`
+    // const g = {...ghost};
+    // g.alive = false;
+    // this.setState({
+    //   [name]: g
+    // })
+    this.setState(prevState => ({
+      [name]: {
+          ...prevState[name],
+          alive: false
+      }
+    }))
+    console.log(ghost)
+  }
   handleKeyDown(e) {
     e.preventDefault();
     let pieceToEat;
     let score = 0;
-    let { cherriMode, matrix, pac } = this.state;
+    let { cherriMode, matrix, pac, g7, g8, g9 } = this.state;
     if (pac.alive) {
       if (e.keyCode === 37 && pac.x > 0) {
         // move pac left
@@ -183,10 +208,13 @@ class Home extends React.Component {
       } else if (cherriMode) {
         if (pieceToEat === '7') {
           score += 50;
+          this.killGhost(g7);
         } else if (pieceToEat === '8') {
-          score += 50;          
+          score += 50;    
+          this.killGhost(g8);
         } else if (pieceToEat === '9') {
           score += 50;
+          this.killGhost(g9);
         }
       } else if (pieceToEat && pieceToEat !== '3') {
         score += 2;
