@@ -130,13 +130,12 @@ nav {
 .close-modal-btn {
   cursor: pointer;
   font-size: 40px;
-  color: var(--main-green);
 }
 .close-modal-btn:hover, .modal-btn-play:hover {
   cursor: pointer;
 }
 .close-modal-btn:hover {
-  color: #fff;
+  color: var(--main-green);
 }
 .modal-btn-play:hover {
   color: #000;
