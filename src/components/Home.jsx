@@ -73,6 +73,8 @@ class Home extends React.Component {
       } else if (matrix[g.y][g.x + 1] === '2') {
         this.killPac();
         this.getNewDirection(g);
+      } else {
+        this.getNewDirection(g);
       }
     } else {
       this.getNewDirection(g);
