@@ -47,7 +47,8 @@ class Home extends React.Component {
     let { matrix, pac } = this.state;
     matrix[pac.y][pac.x] = '3';
     this.setState({
-      pacLives: false
+      pacLives: false,
+      score: 0
     });
   }
   killGhost(g) {
