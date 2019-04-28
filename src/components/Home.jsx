@@ -43,15 +43,38 @@ class Home extends React.Component {
     const i = Math.floor(Math.random() * (3 + 1));
     return dir[i];
   }
+  killPac() {
+    let { matrix, pac } = this.state;
+    matrix[pac.y][pac.x] = '3';
+    this.setState({
+      pacLives: false
+    });
+  }
+  killGhost(g) {
+    let { matrix } = this.state;
+    const name = `g${g.n}Lives`;
+    matrix[g.y][g.x] = '3';
+    this.setState({
+      [name]: false
+    });
+  }
+  getNewDirection(g) {
+    g.dir = this.getRandomDirection();
+    this.moveGhost(g);
+  }
   moveRight(g) {
     let { matrix } = this.state;
-    if (g.x < matrix[g.y].length - 1 && matrix[g.y][g.x + 1] === '3') {
-      matrix[g.y][g.x] = '3';
-      g.x += 1;
-      matrix[g.y][g.x] = g.n;
+    if (g.x < matrix[g.y].length - 1) {
+      if (matrix[g.y][g.x + 1] === '3') {
+        matrix[g.y][g.x] = '3';
+        g.x += 1;
+        matrix[g.y][g.x] = g.n;
+      } else if (matrix[g.y][g.x + 1] === '2') {
+        this.killPac();
+        this.getNewDirection(g);
+      }
     } else {
-      g.dir = this.getRandomDirection();
-      this.moveGhost(g);
+      this.getNewDirection(g);
     }
   }
   moveLeft(g) {
@@ -61,8 +84,7 @@ class Home extends React.Component {
       g.x -= 1;
       matrix[g.y][g.x] = g.n;
     } else {
-      g.dir = this.getRandomDirection();
-      this.moveGhost(g);
+      this.getNewDirection(g);      
     }
   }
   moveUp(g) {
@@ -72,8 +94,7 @@ class Home extends React.Component {
       g.y -= 1;
       matrix[g.y][g.x] = g.n;
     } else {
-      g.dir = this.getRandomDirection();
-      this.moveGhost(g);
+      this.getNewDirection(g);
     }
   }
   moveDown(g) {
@@ -83,8 +104,7 @@ class Home extends React.Component {
       g.y += 1;
       matrix[g.y][g.x] = g.n;
     } else {
-      g.dir = this.getRandomDirection();
-      this.moveGhost(g);
+      this.getNewDirection(g);
     }
   }
   moveGhost(g) {
@@ -134,20 +154,11 @@ class Home extends React.Component {
   componentWillMount() {
     window.addEventListener('keydown', this.handleKeyDown);
   }
-
   componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyDown);
     clearInterval(this.interval1);
     clearInterval(this.interval2);
     clearInterval(this.interval3);
-  }
-  killGhost(g) {
-    let { matrix } = this.state;
-    const name = `g${g.n}Lives`;
-    matrix[g.y][g.x] = '3';
-    this.setState({
-      [name]: false
-    });
   }
   handleKeyDown(e) {
     e.preventDefault();
