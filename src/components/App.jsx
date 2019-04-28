@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home.jsx';
-import Projects from './Projects.jsx'
+import Projects from './Projects.jsx';
+import Modal from './Modal.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
     };
     this.toggleProjects = this.toggleProjects.bind(this);
     this.goHome = this.goHome.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
   
   toggleProjects() {
@@ -52,6 +54,7 @@ class App extends React.Component {
           <Projects />
         }
         </div>
+        {this.state.isModal && <Modal close={this.toggleModal}/>}
       </>
     )
   }
