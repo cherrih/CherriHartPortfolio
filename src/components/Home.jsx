@@ -6,6 +6,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       matrix: [],
+      cherriMode: false,
       pac: {
         x: 6,
         y: 1,
@@ -91,6 +92,16 @@ class Home extends React.Component {
     if (g.alive) this[dir](g);
     this.forceUpdate();
   }
+  toggleCherriMode() {
+    this.setState( state => ({
+      cherriMode: !state.cherriMode
+    }))
+  }
+  activateCherriMode() {
+    this.toggleCherriMode();
+    setTimeout(this.toggleCherriMode.bind(this), 5000);
+    // new images for ghosts
+  }
   componentDidMount() {
     const text = 
       ["33333333333333333333333333333333333333333333",
@@ -132,60 +143,58 @@ class Home extends React.Component {
     e.preventDefault();
     let pieceToEat;
     let score = 0;
-    let { matrix, pac } = this.state;
+    let { cherriMode, matrix, pac } = this.state;
     if (pac.alive) {
-      if (e.keyCode === 37) {
+      if (e.keyCode === 37 && pac.x > 0) {
         // move pac left
-        if (pac.x > 0) {
-          pac.left = true;
-          matrix[pac.y][pac.x] = '3';
-          pac.x -= 1;
-          pieceToEat = matrix[pac.y][pac.x];
-          matrix[pac.y][pac.x] = '2';
-        }
+        pac.left = true;
+        matrix[pac.y][pac.x] = '3';
+        pac.x -= 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
       }
       // move pac right
-      if (e.keyCode === 39) {
-        if (pac.x < matrix[pac.y].length - 1){
-          pac.left = false;
-          matrix[pac.y][pac.x] = '3';
-          pac.x += 1;
-          pieceToEat = matrix[pac.y][pac.x];
-          matrix[pac.y][pac.x] = '2';
-        }
+      if (e.keyCode === 39 && pac.x < matrix[pac.y].length - 1){
+        pac.left = false;
+        matrix[pac.y][pac.x] = '3';
+        pac.x += 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
       }
-      if (e.keyCode === 38) {
+      if (e.keyCode === 38 && pac.y > 0) {
         // move pac up 
-        if (pac.y > 0) {
-          pac.left = false;
-          matrix[pac.y][pac.x] = '3';
-          pac.y -= 1;
-          pieceToEat = matrix[pac.y][pac.x];
-          matrix[pac.y][pac.x] = '2';
-        }
+        pac.left = false;
+        matrix[pac.y][pac.x] = '3';
+        pac.y -= 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
       }
-      if (e.keyCode === 40 ) {
+      if (e.keyCode === 40 && pac.y < matrix.length - 1) {
         // move pac down
-        if (pac.y < matrix.length - 1) {
-          pac.left = false;
-          matrix[pac.y][pac.x] = '3';
-          pac.y += 1;
-          pieceToEat = matrix[pac.y][pac.x];
-          matrix[pac.y][pac.x] = '2';
-        }
+        pac.left = false;
+        matrix[pac.y][pac.x] = '3';
+        pac.y += 1;
+        pieceToEat = matrix[pac.y][pac.x];
+        matrix[pac.y][pac.x] = '2';
       }
       if (pieceToEat === '1') {
         score += 10;
-      } else if (pieceToEat === '7' || pieceToEat === '8' || pieceToEat === '9'){
-        score += 20;
+        this.activateCherriMode();
+      } else if (cherriMode) {
+        if (pieceToEat === '7') {
+          score += 50;
+        } else if (pieceToEat === '8') {
+          score += 50;          
+        } else if (pieceToEat === '9') {
+          score += 50;
+        }
       } else if (pieceToEat && pieceToEat !== '3') {
         score += 2;
       } 
-      
-      this.setState({
-        score: this.state.score += score,
+      this.setState(state => ({
+        score: state.score + score,
         matrix: matrix
-      })
+      }));
     }
   }
   render() {
