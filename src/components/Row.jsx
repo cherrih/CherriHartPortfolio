@@ -1,9 +1,10 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable class-methods-use-this */
 import React from 'react';
 
 class Row extends React.Component {
-  renderRow() {
+  renderRow(row, rowIndex, left) {
     const innerHTML = [];
-    const { row, rowIndex, left } = this.props;
     row.forEach((char, i) => {
       if (char === '1') {
         innerHTML.push(
@@ -62,7 +63,8 @@ class Row extends React.Component {
 
   render() {
     const { renderRow } = this;
-    return <>{renderRow()}</>;
+    const { row, rowIndex, left } = this.props;
+    return <>{renderRow(row, rowIndex, left)}</>;
   }
 }
 

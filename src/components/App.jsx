@@ -35,9 +35,9 @@ class App extends React.Component {
   }
 
   toggleModal() {
-    this.setState(state => ({
-      isModal: !state.isModal,
-    }));
+    this.setState({
+      isModal: !this.state.isModal,
+    });
   }
 
   render() {
