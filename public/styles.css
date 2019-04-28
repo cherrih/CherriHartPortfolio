@@ -210,25 +210,28 @@ h1 {
 }
 .lightbox-hero {
   margin: 10vh 2vw;
-  max-width: 70vw;
+  max-width: 65vw;
 }
 .lightbox-text {
   color: #fff;
-  padding: 4vh 4vw 0 2vw;
+  padding: 4vh 4vw 4vh 2vw;
   width: 25vw;
+  overflow: scroll;
 }
 .lightbox-text h1 {
-  padding-top: 2vh;
+  padding-top: 5vh;
   font-size: 3em;
   font-weight: 400;
   line-height: 1;
 }
-.light-box-exit {
-  text-align: right;
+.lightbox-exit {
+  position: fixed;
+  right: 3vw;
+  top: 2vh;
   font-size: 40px;
   padding-right: 10px;
 }
-.light-box-exit:hover {
+.lightbox-exit:hover {
   color: var(--main-green);
   cursor: pointer;
 }

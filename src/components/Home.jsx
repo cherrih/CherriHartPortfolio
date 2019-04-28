@@ -84,7 +84,6 @@ class Home extends React.Component {
   }
   moveGhost(g) {
     const dir = `move${g.dir}`;
-    // console.log(g.dir)
     this[dir](g);
     this.forceUpdate();
   }

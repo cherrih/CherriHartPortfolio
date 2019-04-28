@@ -16,7 +16,7 @@ class Projects extends React.Component {
           photoText: [
             'This video shows the landing page with interactive menu items. Built in React, with physics provided by Matter.js'
           ],
-          team: 'Belen Tenorio (design/concept), Cherri Hartigan (development/concept), Eli Voca (model), Isioma (model)',
+          team: ['Belen Tenorio (design / concept)','Cherri Hartigan (development / concept)', 'Eli VanAlsburg (model)','Isioma Iyamah (model)'],
           link: {
             link: 'https://github.com/cherrih/rogue',
             location: 'on GitHub'
@@ -33,7 +33,7 @@ class Projects extends React.Component {
           photoText: [
             'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance'
           ],
-          team: 'Belen Tenorio (design/concept), Cherri Hartigan (concept/full-stack engineer)',
+          team: ['Belen Tenorio (design/concept)','Cherri Hartigan (concept/full-stack engineer)'],
           link: {
             link: 'https://github.com/cherrih/hrsf107-mvp',
             location: 'on GitHub'
@@ -47,14 +47,14 @@ class Projects extends React.Component {
           techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
           date: 'Dec 2018 - Jan 2019',
           fullDescription: '',
-          photoText: [''],
-          team: 'Aaron Deane (full-stack engineer, photo component), Cherri Hartigan (full-stack engineer, summary/cart component), George Qian (full-stack engineer, details component), Linden Chiu (full-stack engineer, reviews component)',
+          photoText: ['Developed an interactive front-end microservice using JavaScript and React to dynamically render details and specifications for 100 watches.', 'Seeded MySQL database with 1000 unique rows of watch product information to enforce a single source of truth and avoid data duplication.', 'Utilized service-oriented architecture by integrating microservices through an Express proxy server to improve team development efficiency.','Improved page load speeds by 53% by minifying webpack bundles and implementing Express compression middleware'],
+          team: ['Aaron Deane (full-stack engineer, photo component)', 'Cherri Hartigan (full-stack engineer, summary/cart component)','George Qian (full-stack engineer, details component)','Linden Chiu (full-stack engineer, reviews component)'],
           link: {
-            link: '',
+            link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: 'on GitHub'
           },
-          video: '',
-          img: '',
+          video: 'Watch',
+          img: '../../../../public/images/Watch.io1.png',
         },
         {
           title: 'FindTables',
@@ -62,23 +62,26 @@ class Projects extends React.Component {
           techStack: 'Javascript, MongoDB, Mongoose.js, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io, Git',
           date: 'Jan 2019 - Feb 2019',
           fullDescription: '',
-          photoText: [''],
-          team: '',
+          photoText: ['Horizontally scaled microservice using an NGINX load balancer across 3 servers to handle a 12000 RPS throughput at 34 ms latency and 0% errors',
+            'Benchmarked Postgres and MongoDB performance on a production-level dataset (10M records) to explore tradeoffs in SQL and noSQL databases',
+            'Reduced Postgres query times from 40 seconds to 3.5 ms on a table of 150M records by creating relevant btree indexes',
+            'Performed stress tests using K6 and loader.io to simulate sustained web-scale traffic and identified performance bottlenecks on New Relic'],
+          team: [''],
           link: {
-            link: '',
+            link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: 'on GitHub'
           },
           video: '',
-          img: '',
+          img: '../../../../public/images/FindTables.png',
         },
         {
           title: 'Belen Tenorio Portfolio',
           description: 'Portfolio development for product/brand designer',
           techStack: 'Vanilla Javascript, HTML, CSS, Sketch',
-          date: '',
+          date: 'Apr 2018 - May 2018',
           fullDescription: '',
-          photoText: ['We architected responsive design to ensure user-friendly interaction across multiple devices. Created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'],
-          team: 'Belen Tenorio (concept/design/development), Cherri Hartigan (front end engineer)',
+          photoText: ['We architected responsive design to ensure user-friendly interaction across multiple devices.', 'We created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'],
+          team: ['Belen Tenorio (design / development)', 'Cherri Hartigan (front end engineer)'],
           link: {
             link: 'http://belentenorio.com',
             location: ''
@@ -90,10 +93,10 @@ class Projects extends React.Component {
           title: 'Anna Degenaar Portfolio',
           description: 'Portfolio design and development for photographer/writer',
           techStack: 'Javascript, jQuery, HTML, CSS, Sketch',
-          date: '',
+          date: 'Feb 2018 - Mar 2018',
           fullDescription: '',
           photoText: [''],
-          team: '',
+          team: ['Cherri Hartigan (design / front end engineer)'],
           link: {
             link: 'http://www.annadegenaar.com',
             location: ''

@@ -7,13 +7,13 @@ const Video = ({ project, hideProject }) => {
       <img className="lightbox-hero" src={project.img}/>
       </video>
       <div className="lightbox-text">
-        <div className="light-box-exit" onClick={hideProject}>x</div>
+        <div className="lightbox-exit" onClick={hideProject}>x</div>
         <h1>{project.title}</h1>
         <h3>{project.date}</h3>
         <p>{project.fullDescription}</p>
-        <p>{project.photoText[0]}</p>
+        <div>{project.photoText.map(text => <p>{text}</p>)}</div>
         <p>Full tech-stack: {project.techStack}</p>
-        <p>Team: {project.team}</p>
+        <p>Team: {project.team.map(member => <ul>{member}</ul>)}</p>
         <p><u><a href={project.link.link} target="_blank">Link to project {project.link.location}</a></u></p>
       </div>
       <div className="lightbox-footer" onClick={hideProject}>Back</div>
