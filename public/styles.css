@@ -8,7 +8,7 @@
 }
 :root {
   --main-background: rgb(248, 245, 243);
-  --main-green: rgb(39, 211, 0);
+  --main-green: rgb(36, 248, 242);
 }
 body {
   font-family: "Moderat Regular";
@@ -172,9 +172,9 @@ h1 {
 }
 .grid-element:hover {
   border-radius: 100%;
-  background-color: var(--main-background);
+  background-color: var(--main-green);
   cursor: pointer;
-  color: var(--main-green);
+  /* color: var(--main-green); */
   text-align: center;
   font-size: 14px;
 }
