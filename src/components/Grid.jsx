@@ -1,7 +1,10 @@
 import React from 'react';
 
 const Grid = ({
-  projects, mouseEnterProject, mouseLeaveProject, showProject,
+  projects,
+  mouseEnterProject,
+  mouseLeaveProject,
+  showProject,
 }) => (
   <div className="grid-container">
     {

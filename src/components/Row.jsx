@@ -23,9 +23,7 @@ class Row extends React.Component {
       } else if (char === '2') {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
-            <div className="space" />
             <div id="pac"><img src={left ? `${url}pac-left.png` : `${url}pac.png`} /></div>
-            <div className="space" />
           </div>,
         );
       } else if (char === ' ') {
@@ -40,31 +38,25 @@ class Row extends React.Component {
       } else if (char === '7') {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
-            <div className="space" />
             <div className="ghost" id="badlogic">
               <img src={`${url}badlogic_${cherriMode ? 'deadmode' : 'normal'}.png`} />
             </div>
-            <div className="space" />
           </div>,
         );
       } else if (char === '8') {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
-            <div className="space" />
             <div className="ghost" id="syntactic">
               <img src={`${url}syntacticerror_${cherriMode ? 'deadmode' : 'normal'}.png`} />
             </div>
-            <div className="space" />
           </div>,
         );
       } else if (char === '9') {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
-            <div className="space" />
             <div className="ghost" id="codebug">
               <img src={`${url}codebug_${cherriMode ? 'deadmode' : 'normal'}.png`} />
             </div>
-            <div className="space" />
           </div>,
         );
       } else {
