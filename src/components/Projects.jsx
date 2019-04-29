@@ -10,7 +10,7 @@ class Projects extends React.Component {
         {
           title: 'Rogue',
           description: 'Digital experiential "low fashion" magazine',
-          techStack: 'Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL',
+          techStack: ' Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL',
           date: 'Feb 2018 - launching May 2019',
           fullDescription: 'Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.',
           photoText: [
@@ -19,15 +19,15 @@ class Projects extends React.Component {
           team: ['Belen Tenorio (design / concept)', 'Cherri Hartigan (development / concept)', 'Eli VanAlsburg (model)', 'Isioma Iyamah (model)'],
           link: {
             link: 'https://github.com/cherrih/rogue',
-            location: 'on GitHub',
+            location: ' on GitHub',
           },
           video: 'RogueHome',
-          img: '../../public/images/Rogue.png',
+          img: 'Rogue',
         },
         {
           title: 'Queertrip',
           description: 'Full-stack travel app for the LGBTQIA+ community',
-          techStack: 'Javascript, React, HTML, CSS, MongoDB, Mongoose.js, Express, Node.js, Webpack, Google Maps API',
+          techStack: ' Javascript, React, HTML, CSS, MongoDB, Mongoose.js, Express, Node.js, Webpack, Google Maps API',
           date: 'Jan 2019 - Feb 2019',
           fullDescription: 'Traveling internationally while queer can sometimes be a scary experience. With Queertrips you can find experiences and people across the globe who will accept you for who you are. Browse through safe spots around the world and share your own tips!',
           photoText: [
@@ -36,30 +36,30 @@ class Projects extends React.Component {
           team: ['Belen Tenorio (design/concept)', 'Cherri Hartigan (concept/full-stack engineer)'],
           link: {
             link: 'https://github.com/cherrih/hrsf107-mvp',
-            location: 'on GitHub',
+            location: ' on GitHub',
           },
           video: 'Queertrip',
-          img: '../../../../public/images/QueerTrip1.png',
+          img: 'QueerTrip',
         },
         {
           title: 'Watch.io',
           description: 'Full-stack retail product app for watch company',
-          techStack: 'Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
+          techStack: ' Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
           date: 'Dec 2018 - Jan 2019',
           fullDescription: '',
           photoText: ['Developed an interactive front-end microservice using JavaScript and React to dynamically render details and specifications for 100 watches.', 'Seeded MySQL database with 1000 unique rows of watch product information to enforce a single source of truth and avoid data duplication.', 'Utilized service-oriented architecture by integrating microservices through an Express proxy server to improve team development efficiency.', 'Improved page load speeds by 53% by minifying webpack bundles and implementing Express compression middleware'],
           team: ['Aaron Deane (full-stack engineer, photo component)', 'Cherri Hartigan (full-stack engineer, summary/cart component)', 'George Qian (full-stack engineer, details component)', 'Linden Chiu (full-stack engineer, reviews component)'],
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
-            location: 'on GitHub',
+            location: ' on GitHub',
           },
           video: 'Watch',
-          img: '../../../../public/images/Watch.io1.png',
+          img: 'Watch.io',
         },
         {
           title: 'FindTables',
           description: 'System design of an online restaurant reservation service',
-          techStack: 'Javascript, MongoDB, Mongoose.js, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io, Git',
+          techStack: ' Javascript, MongoDB, Mongoose.js, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io, Git',
           date: 'Jan 2019 - Feb 2019',
           fullDescription: '',
           photoText: ['Horizontally scaled microservice using an NGINX load balancer across 3 servers to handle a 12000 RPS throughput at 34 ms latency and 0% errors',
@@ -69,15 +69,15 @@ class Projects extends React.Component {
           team: [''],
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
-            location: 'on GitHub',
+            location: ' on GitHub',
           },
           video: '',
-          img: '../../../../public/images/FindTables.png',
+          img: 'findtables',
         },
         {
           title: 'Belen Tenorio Portfolio',
           description: 'Portfolio development for product/brand designer',
-          techStack: 'Vanilla Javascript, HTML, CSS, Sketch',
+          techStack: ' Javascript, HTML, CSS, Sketch',
           date: 'Apr 2018 - May 2018',
           fullDescription: '',
           photoText: ['We architected responsive design to ensure user-friendly interaction across multiple devices.', 'We created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'],
@@ -87,12 +87,12 @@ class Projects extends React.Component {
             location: '',
           },
           video: 'belentenorio',
-          img: '',
+          img: 'BelenTenorioPortfolio',
         },
         {
           title: 'Anna Degenaar Portfolio',
           description: 'Portfolio design and development for photographer/writer',
-          techStack: 'Javascript, jQuery, HTML, CSS, Sketch',
+          techStack: ' Javascript, jQuery, HTML, CSS, Sketch',
           date: 'Feb 2018 - Mar 2018',
           fullDescription: '',
           photoText: [''],
@@ -102,7 +102,7 @@ class Projects extends React.Component {
             location: '',
           },
           video: 'annadegenaar',
-          img: '',
+          img: 'AnnaDegenaarPortfolio',
         },
       ],
       background: 'none',
@@ -116,23 +116,24 @@ class Projects extends React.Component {
 
   mouseEnterProject(e) {
     let background = 'none';
+    const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
     if (e.target.className === 'Belen Tenorio Portfolio' || e.target.className === 'Belen Tenorio Portfolio grid-element') {
-      background = 'url(../../../../public/images/BelenTenorioPortfolio.png)';
+      background = `url(${url}BelenTenorioPortfolio.png)`;
     }
     if (e.target.className === 'Anna Degenaar Portfolio' || e.target.className === 'Anna Degenaar Portfolio grid-element') {
-      background = 'url(../../../../public/images/AnnaDegenaarPortfolio.png)';
+      background = `url(${url}AnnaDegenaarPortfolio.png)`;
     }
     if (e.target.className === 'FindTables' || e.target.className === 'FindTables grid-element') {
-      background = 'url(../../../../public/images/FindTables.png)';
+      background = `url(${url}findtables.png)`;
     }
     if (e.target.className === 'Rogue' || e.target.className === 'Rogue grid-element') {
-      background = 'url(../../../../public/images/Rogue.png)';
+      background = `url(${url}Rogue.png)`;
     }
     if (e.target.className === 'Queertrip' || e.target.className === 'Queertrip grid-element') {
-      background = 'url(../../../../public/images/QueerTrip.png)';
+      background = `url(${url}QueerTrip.png)`;
     }
     if (e.target.className === 'Watch.io' || e.target.className === 'Watch.io grid-element') {
-      background = 'url(../../../../public/images/Watch.io.png)';
+      background = `url(${url}Watch.io.png)`;
     }
     this.setState({
       background,

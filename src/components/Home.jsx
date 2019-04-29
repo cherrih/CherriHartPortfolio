@@ -307,7 +307,7 @@ class Home extends React.Component {
           </div>
           <div className="projects" onClick={toggleProjects}>
             Projects
-            <img src="images/arrow.png" />
+            <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png" />
           </div>
         </div>
       </div>

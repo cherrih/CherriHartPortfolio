@@ -12,18 +12,18 @@ const Video = ({ project, hideProject }) => (
       <p>{project.fullDescription}</p>
       <div>{project.photoText.map(text => <p key="text">{text}</p>)}</div>
       <p>
-Full tech-stack:
-        {project.techStack}
+        Full tech-stack: 
+        { project.techStack }
       </p>
       <p>
-Team:
+        Team:
         {project.team.map(member => <ul key="member">{member}</ul>)}
       </p>
       <p>
         <u>
           <a href={project.link.link} target="_blank" rel="noopener noreferrer">
-Link to project
-            {project.link.location}
+          Link to project 
+            { project.link.location }
           </a>
         </u>
       </p>
