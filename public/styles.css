@@ -8,7 +8,9 @@
 }
 :root {
   --main-background: rgb(248, 245, 243);
-  --main-green: rgb(36, 248, 242);
+  --main-green: #4FDCD2;
+  --main-red: rgb(255, 51, 53);
+  --main-brown: rgb(222, 210, 192);
 }
 body {
   font-family: "Moderat Regular";
@@ -67,7 +69,7 @@ nav {
   padding: 0 6vw 5vh 5vw;
 }
 .score {
-  color: rgb(222, 210, 192);
+  color: var(--main-brown);
   text-align: center;
 }
 #points {
@@ -85,11 +87,11 @@ nav {
   padding-left: 8px;
 }
 .designed {
-  color: rgb(222, 210, 192);
+  color: var(--main-brown);
   text-align: center;
 }
 .designed a {
-  color: rgb(222, 210, 192);  
+  color: inherit;  
 }
 .designed a:hover {
   color: var(--main-green);
@@ -126,7 +128,7 @@ nav {
   width: 34vw;
 }
 .modal-cherri {
-  color: rgb(255, 0, 0);
+  color: var(--main-red);
 }
 .close-modal-btn {
   float: right;
@@ -153,7 +155,8 @@ nav {
 }
 #world {
   font-size: 48px;
-  margin-top: 1vh;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 #pac {
   display: inline-block;
