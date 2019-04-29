@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Moderat Black';
-  src: url('fonts/Moderat-Black.woff');
+  font-family: 'Apercu Regular';
+  src: url('fonts/Apercu-Regular.otf');
 }
 @font-face {
   font-family: 'Moderat Regular';
@@ -13,7 +13,7 @@
   --main-brown: rgb(222, 210, 192);
 }
 body {
-  font-family: "Moderat Regular";
+  font-family: 'Apercu Regular';
   letter-spacing: 0.5px;
   background-color: var(--main-background);
   margin: 0;
@@ -120,6 +120,7 @@ nav {
   text-align: center;
   padding: 20px 40px 0;
   font-size: 55px;
+  font-family: 'Moderat Regular';
 }
 .modal-body {
   padding: 0 40px 30px;
@@ -152,6 +153,7 @@ nav {
 .world-container {
   display: flex;
   justify-content: center;
+  font-family: 'Moderat Regular';
 }
 #world {
   font-size: 48px;
@@ -202,6 +204,7 @@ nav {
 }
 h1 {
   margin: 10px 0;
+  font-family: 'Moderat Regular';
 }
 .grid-container {
   padding-top: 10vh;
