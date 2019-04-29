@@ -19,18 +19,21 @@ class Home extends React.Component {
         y: 7,
         n: '7',
         dir: 'Left',
+        img: 'badlogic',
       },
       g8: {
         x: 31,
         y: 10,
         n: '8',
         dir: 'Left',
+        img: 'syntacticerror',
       },
       g9: {
         x: 43,
         y: 1,
         n: '9',
         dir: 'Left',
+        img: 'codebug',
       },
       pacLives: true,
       g7Lives: true,
@@ -268,7 +271,13 @@ class Home extends React.Component {
   }
 
   render() {
-    const { matrix, pac, score } = this.state;
+    const {
+      matrix,
+      pac,
+      score,
+      pacLives,
+      cherriMode,
+    } = this.state;
     const { toggleProjects } = this.props;
     return (
       <div>
@@ -277,7 +286,12 @@ class Home extends React.Component {
           <div id="points-text">points</div>
         </div>
         <div className="world-container">
-          <World matrix={matrix} left={pac.left} />
+          <World
+            matrix={matrix}
+            left={pac.left}
+            pacLives={pacLives}
+            cherriMode={cherriMode}
+          />
         </div>
         <div className="home-footer">
           <div className="social">

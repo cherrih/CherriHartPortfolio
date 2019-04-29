@@ -129,10 +129,10 @@ class Projects extends React.Component {
       background = 'url(../../../../public/images/Rogue.png)';
     }
     if (e.target.className === 'Queertrip' || e.target.className === 'Queertrip grid-element') {
-      background = 'url(../../../../public/images/QueerTrip1.png)';
+      background = 'url(../../../../public/images/QueerTrip.png)';
     }
     if (e.target.className === 'Watch.io' || e.target.className === 'Watch.io grid-element') {
-      background = 'url(../../../../public/images/Watch.io1.png)';
+      background = 'url(../../../../public/images/Watch.io.png)';
     }
     this.setState({
       background,

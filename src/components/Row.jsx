@@ -3,7 +3,13 @@
 import React from 'react';
 
 class Row extends React.Component {
-  renderRow(row, rowIndex, left) {
+  renderRow(
+    row,
+    rowIndex,
+    left,
+    pacLives,
+    cherriMode,
+  ) {
     const innerHTML = [];
     row.forEach((char, i) => {
       if (char === '1') {
@@ -34,7 +40,9 @@ class Row extends React.Component {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
             <div className="space" />
-            <div className="ghost" id="badlogic"><img src="images/badlogic.png" /></div>
+            <div className="ghost" id="badlogic">
+              <img src={`https://s3-us-west-1.amazonaws.com/cherri-portfolio/badlogic_${cherriMode ? 'deadmode' : 'normal'}.png`} />
+            </div>
             <div className="space" />
           </div>,
         );
@@ -42,7 +50,9 @@ class Row extends React.Component {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
             <div className="space" />
-            <div className="ghost" id="syntactic"><img src="images/syntactic.png" /></div>
+            <div className="ghost" id="syntactic">
+              <img src={`https://s3-us-west-1.amazonaws.com/cherri-portfolio/syntacticerror_${cherriMode ? 'deadmode' : 'normal'}.png`} />
+            </div>
             <div className="space" />
           </div>,
         );
@@ -50,7 +60,9 @@ class Row extends React.Component {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
             <div className="space" />
-            <div className="ghost" id="codebug"><img src="images/codebug.png" /></div>
+            <div className="ghost" id="codebug">
+              <img src={`https://s3-us-west-1.amazonaws.com/cherri-portfolio/codebug_${cherriMode ? 'deadmode' : 'normal'}.png`} />
+            </div>
             <div className="space" />
           </div>,
         );
@@ -63,8 +75,24 @@ class Row extends React.Component {
 
   render() {
     const { renderRow } = this;
-    const { row, rowIndex, left } = this.props;
-    return <>{renderRow(row, rowIndex, left)}</>;
+    const {
+      row,
+      rowIndex,
+      left,
+      pacLives,
+      cherriMode,
+    } = this.props;
+    return (
+      <>
+        {renderRow(
+          row,
+          rowIndex,
+          left,
+          pacLives,
+          cherriMode,
+        )}
+      </>
+);
   }
 }
 
