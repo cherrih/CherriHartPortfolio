@@ -286,13 +286,13 @@ class Home extends React.Component {
           </div>
           <div className="designed">
             <div>
-design and concept by
-              <a href="http://belentenorio.com" target="_blank" rel="noopener noreferrer">Belen Tenorio</a>
+              design and concept by
+              <a href="http://belentenorio.com" target="_blank" rel="noopener noreferrer"> Belen Tenorio</a>
             </div>
             <div>code by Cherri Hartigan</div>
           </div>
           <div className="projects" onClick={toggleProjects}>
-Projects
+            Projects
             <img src="images/arrow.png" />
           </div>
         </div>

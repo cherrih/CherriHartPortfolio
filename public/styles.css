@@ -82,6 +82,7 @@ nav {
 }
 .projects img {
   max-width: 18px;
+  padding-left: 8px;
 }
 .designed {
   color: rgb(222, 210, 192);
