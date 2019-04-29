@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectsHome from './ProjectsHome.jsx';
-import Video from './Video.jsx';
+import Lightbox from './Lightbox.jsx/index.js.js';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -179,12 +179,12 @@ class Projects extends React.Component {
             showProject={this.showProject}
           />
           )}
-        {currentView === 'Rogue' && <Video hideProject={this.hideProject} project={projects[0]} />}
-        {currentView === 'Queertrip' && <Video hideProject={this.hideProject} project={projects[1]} />}
-        {currentView === 'Watch.io' && <Video hideProject={this.hideProject} project={projects[2]} />}
-        {currentView === 'FindTables' && <Video hideProject={this.hideProject} project={projects[3]} />}
-        {currentView === 'Belen' && <Video hideProject={this.hideProject} project={projects[4]} />}
-        {currentView === 'Anna' && <Video hideProject={this.hideProject} project={projects[5]} />}
+        {currentView === 'Rogue' && <Lightbox hideProject={this.hideProject} project={projects[0]} />}
+        {currentView === 'Queertrip' && <Lightbox hideProject={this.hideProject} project={projects[1]} />}
+        {currentView === 'Watch.io' && <Lightbox hideProject={this.hideProject} project={projects[2]} />}
+        {currentView === 'FindTables' && <Lightbox hideProject={this.hideProject} project={projects[3]} />}
+        {currentView === 'Belen' && <Lightbox hideProject={this.hideProject} project={projects[4]} />}
+        {currentView === 'Anna' && <Lightbox hideProject={this.hideProject} project={projects[5]} />}
       </div>
     );
   }
