@@ -17,7 +17,6 @@ class Row extends React.Component {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
             <div className="cherry"><img src={`${url}cherris.png`} /></div>
-            <div className="space" />
           </div>,
         );
       } else if (char === '2') {
