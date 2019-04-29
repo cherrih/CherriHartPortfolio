@@ -18,8 +18,7 @@ const World = ({
         pacLives={pacLives}
         cherriMode={cherriMode}
       />
-))
-    }
+    ))}
   </div>
 );
 

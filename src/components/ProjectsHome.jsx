@@ -5,6 +5,7 @@ const ProjectsHome = ({
   projects, mouseEnterProject, mouseLeaveProject, showProject, projectsStyle,
 }) => (
   <div className="projects-container" style={projectsStyle}>
+    <div></div>
     <Grid
       projects={projects}
       mouseEnterProject={mouseEnterProject}
