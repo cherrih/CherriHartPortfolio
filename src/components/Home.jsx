@@ -198,7 +198,8 @@ class Home extends React.Component {
 
   killPac() {
     const { matrix, pac } = this.state;
-    matrix[pac.y][pac.x] = '3';
+    matrix[pac.y][pac.x] = '4';
+    // setTimeout(() => { matrix[pac.y][pac.x] = '3' }, 600);
     this.setState({
       pacLives: false,
       score: 0,
@@ -246,17 +247,17 @@ class Home extends React.Component {
         matrix[pac.y][pac.x] = '2';
       }
       if (pieceToEat === '1') {
-        score += 50;
+        score += 100;
         this.activateCherriMode();
       } else if (cherriMode) {
         if (pieceToEat === '7') {
-          score += 100;
+          score += 250;
           this.killGhost(g7);
         } else if (pieceToEat === '8') {
-          score += 100;
+          score += 250;
           this.killGhost(g8);
         } else if (pieceToEat === '9') {
-          score += 100;
+          score += 250;
           this.killGhost(g9);
         }
       } else if (pieceToEat && pieceToEat !== '3') {

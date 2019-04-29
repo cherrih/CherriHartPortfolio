@@ -34,6 +34,12 @@ class Row extends React.Component {
         );
       } else if (char === '3') {
         innerHTML.push(<div key={rowIndex + i} className="world-char"><div className="eaten" /></div>);
+      } else if (char === '4') {
+        innerHTML.push(
+          <div key={rowIndex + i} className="world-char">
+            <div id="pacdies"><img src={`${url}pacmandies.gif`} /></div>
+          </div>,
+        );
       } else if (char === '7') {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">

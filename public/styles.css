@@ -158,11 +158,14 @@ nav {
   margin-top: auto;
   margin-bottom: auto;
 }
-#pac {
+#pac, #pacdies {
   display: inline-block;
 }
 #pac img {
   height: 50px;
+}
+#pacdies img {
+  width: 100px;
 }
 .ghost {
   display: inline-block;
