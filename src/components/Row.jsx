@@ -10,12 +10,13 @@ class Row extends React.Component {
     pacLives,
     cherriMode,
   ) {
+    const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
     const innerHTML = [];
     row.forEach((char, i) => {
       if (char === '1') {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
-            <div className="cherry"><img src="images/cherry.png" /></div>
+            <div className="cherry"><img src={`${url}cherris.png`} /></div>
             <div className="space" />
           </div>,
         );
@@ -23,7 +24,7 @@ class Row extends React.Component {
         innerHTML.push(
           <div key={rowIndex + i} className="world-char">
             <div className="space" />
-            <div id="pac"><img src={left ? 'images/pac-left.png' : 'images/pac.png'} /></div>
+            <div id="pac"><img src={left ? `${url}pac-left.png` : `${url}pac.png`} /></div>
             <div className="space" />
           </div>,
         );
@@ -41,7 +42,7 @@ class Row extends React.Component {
           <div key={rowIndex + i} className="world-char">
             <div className="space" />
             <div className="ghost" id="badlogic">
-              <img src={`https://s3-us-west-1.amazonaws.com/cherri-portfolio/badlogic_${cherriMode ? 'deadmode' : 'normal'}.png`} />
+              <img src={`${url}badlogic_${cherriMode ? 'deadmode' : 'normal'}.png`} />
             </div>
             <div className="space" />
           </div>,
@@ -51,7 +52,7 @@ class Row extends React.Component {
           <div key={rowIndex + i} className="world-char">
             <div className="space" />
             <div className="ghost" id="syntactic">
-              <img src={`https://s3-us-west-1.amazonaws.com/cherri-portfolio/syntacticerror_${cherriMode ? 'deadmode' : 'normal'}.png`} />
+              <img src={`${url}syntacticerror_${cherriMode ? 'deadmode' : 'normal'}.png`} />
             </div>
             <div className="space" />
           </div>,
@@ -61,7 +62,7 @@ class Row extends React.Component {
           <div key={rowIndex + i} className="world-char">
             <div className="space" />
             <div className="ghost" id="codebug">
-              <img src={`https://s3-us-west-1.amazonaws.com/cherri-portfolio/codebug_${cherriMode ? 'deadmode' : 'normal'}.png`} />
+              <img src={`${url}codebug_${cherriMode ? 'deadmode' : 'normal'}.png`} />
             </div>
             <div className="space" />
           </div>,
