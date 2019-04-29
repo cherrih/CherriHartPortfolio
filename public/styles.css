@@ -6,10 +6,6 @@
   font-family: 'Moderat Regular';
   src: url('fonts/Moderat-Regular.woff');
 }
-@font-face {
-  font-family: 'Moderat Black';
-  src: url('fonts/Moderat-Black.woff');
-}
 :root {
   --main-background: rgb(248, 245, 243);
   --main-green: #4FDCD2;
@@ -157,7 +153,7 @@ nav {
 .world-container {
   display: flex;
   justify-content: center;
-  font-family: 'Moderat Black';
+  font-family: 'Moderat Regular';
 }
 #world {
   font-size: 48px;
