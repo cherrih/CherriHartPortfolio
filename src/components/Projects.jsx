@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectsHome from './ProjectsHome.jsx';
-import Lightbox from './Lightbox.jsx/index.js.js';
+import Lightbox from './Lightbox.jsx';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -71,7 +71,7 @@ class Projects extends React.Component {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: ' on GitHub',
           },
-          video: '',
+          // video: '',
           img: 'findtables',
         },
         {
