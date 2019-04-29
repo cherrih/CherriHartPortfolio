@@ -94,21 +94,20 @@ class Home extends React.Component {
   killGhost(g) {
     const { matrix } = this.state;
     const name = `g${g.n}Lives`;
-    matrix[g.y][g.x] = '3';
     this.setState({
       [name]: false,
     });
   }
 
   moveRight(g) {
-    const { matrix } = this.state;
+    const { matrix, cherriMode } = this.state;
     if (g.x < matrix[g.y].length - 1) {
       const nextPiece = matrix[g.y][g.x + 1];
       if (nextPiece === '3') {
         matrix[g.y][g.x] = '3';
         g.x += 1;
         matrix[g.y][g.x] = g.n;
-      } else if (nextPiece === '2') {
+      } else if (nextPiece === '2' && !cherriMode) {
         this.killPac();
         this.getNewDirection(g);
       } else {
@@ -120,14 +119,14 @@ class Home extends React.Component {
   }
 
   moveLeft(g) {
-    const { matrix } = this.state;
+    const { matrix, cherriMode } = this.state;
     if (g.x > 0) {
       const nextPiece = matrix[g.y][g.x - 1];
       if (nextPiece === '3') {
         matrix[g.y][g.x] = '3';
         g.x -= 1;
         matrix[g.y][g.x] = g.n;
-      } else if (nextPiece === '2') {
+      } else if (nextPiece === '2' && !cherriMode) {
         this.killPac();
         this.getNewDirection(g);
       } else {
@@ -139,14 +138,14 @@ class Home extends React.Component {
   }
 
   moveUp(g) {
-    const { matrix } = this.state;
+    const { matrix, cherriMode } = this.state;
     if (g.y > 0) {
       const nextPiece = matrix[g.y - 1][g.x];
       if (nextPiece === '3') {
         matrix[g.y][g.x] = '3';
         g.y -= 1;
         matrix[g.y][g.x] = g.n;
-      } else if (nextPiece === '2') {
+      } else if (nextPiece === '2' && !cherriMode) {
         this.killPac();
         this.getNewDirection(g);
       } else {
@@ -158,14 +157,14 @@ class Home extends React.Component {
   }
 
   moveDown(g) {
-    const { matrix } = this.state;
+    const { matrix, cherriMode } = this.state;
     if (g.y < matrix.length - 1) {
       const nextPiece = matrix[g.y + 1][g.x];
       if (nextPiece === '3') {
         matrix[g.y][g.x] = '3';
         g.y += 1;
         matrix[g.y][g.x] = g.n;
-      } else if (nextPiece === '2') {
+      } else if (nextPiece === '2' && !cherriMode) {
         this.killPac();
         this.getNewDirection(g);
       } else {
