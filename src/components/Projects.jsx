@@ -11,7 +11,7 @@ class Projects extends React.Component {
           title: 'Rogue',
           description: 'Digital experiential "low fashion" magazine',
           techStack: ' Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL',
-          date: 'Feb 2018 - launching May 2019',
+          date: 'Feb 2018 - launching Summer 2019',
           fullDescription: 'Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.',
           photoText: [
             'This video shows the landing page with interactive menu items. Built in React, with physics provided by Matter.js',
@@ -75,7 +75,6 @@ class Projects extends React.Component {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: ' on GitHub',
           },
-          // video: '',
           img: 'findtables',
         },
         {
