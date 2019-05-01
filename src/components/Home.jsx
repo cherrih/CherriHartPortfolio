@@ -92,7 +92,6 @@ class Home extends React.Component {
   }
 
   killGhost(g) {
-    const { matrix } = this.state;
     const name = `g${g.n}Lives`;
     this.setState({
       [name]: false,
@@ -193,7 +192,6 @@ class Home extends React.Component {
   activateCherriMode() {
     this.toggleCherriMode();
     setTimeout(this.toggleCherriMode.bind(this), 5000);
-    // new images for ghosts
   }
 
   killPac() {
