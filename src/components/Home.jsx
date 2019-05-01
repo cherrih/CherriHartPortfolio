@@ -202,6 +202,7 @@ class Home extends React.Component {
       score: 0,
       matrix,
     });
+    setTimeout(this.props.toggleDeadMessage.bind(this), 1000);
   }
   checkForGhost(y, x) {
     const { matrix } = this.state;
