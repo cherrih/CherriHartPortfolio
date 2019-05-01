@@ -48,6 +48,21 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
+    this.buildMatrix();
+    const { g7, g8, g9 } = this.state;
+    this.interval1 = setInterval(() => this.moveGhost(g7), 500);
+    this.interval2 = setInterval(() => this.moveGhost(g8), 500);
+    this.interval3 = setInterval(() => this.moveGhost(g9), 500);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKeyDown);
+    clearInterval(this.interval1);
+    clearInterval(this.interval2);
+    clearInterval(this.interval3);
+  }
+
+  buildMatrix() {
     const text = ['33333333333333333333333333333333333333333333',
       '3333332 Hailing from 1 the land of3333333339',
       '333333sheep and kiwis (New Zealand),33333333',
@@ -67,17 +82,6 @@ class Home extends React.Component {
     this.setState({
       matrix,
     });
-    const { g7, g8, g9 } = this.state;
-    this.interval1 = setInterval(() => this.moveGhost(g7), 500);
-    this.interval2 = setInterval(() => this.moveGhost(g8), 500);
-    this.interval3 = setInterval(() => this.moveGhost(g9), 500);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeyDown);
-    clearInterval(this.interval1);
-    clearInterval(this.interval2);
-    clearInterval(this.interval3);
   }
 
   getRandomDirection() {
