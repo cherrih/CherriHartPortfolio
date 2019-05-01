@@ -18,7 +18,7 @@ class Home extends React.Component {
         x: 42,
         y: 7,
         n: '7',
-        dir: 'Left',
+        dir: 'Up',
         img: 'badlogic',
       },
       g8: {
@@ -32,7 +32,7 @@ class Home extends React.Component {
         x: 43,
         y: 1,
         n: '9',
-        dir: 'Left',
+        dir: 'Right',
         img: 'codebug',
       },
       pacLives: true,
@@ -68,9 +68,9 @@ class Home extends React.Component {
       matrix,
     });
     const { g7, g8, g9 } = this.state;
-    // this.interval1 = setInterval(() => this.moveGhost(g7), 500);
-    // this.interval2 = setInterval(() => this.moveGhost(g8), 500);
-    // this.interval3 = setInterval(() => this.moveGhost(g9), 500);
+    this.interval1 = setInterval(() => this.moveGhost(g7), 500);
+    this.interval2 = setInterval(() => this.moveGhost(g8), 500);
+    this.interval3 = setInterval(() => this.moveGhost(g9), 500);
   }
 
   componentWillUnmount() {
