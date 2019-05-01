@@ -154,11 +154,13 @@ nav {
   display: flex;
   justify-content: center;
   font-family: 'Moderat Regular';
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
 }
 #world {
   font-size: 48px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 12vh;
 }
 #pac, #pacdies {
   display: inline-block;
