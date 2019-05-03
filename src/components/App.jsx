@@ -3,6 +3,7 @@ import Home from './Home.jsx';
 import Projects from './Projects.jsx';
 import Modal from './Modal.jsx';
 import DeadMessage from './DeadMessage.jsx';
+import WinMessage from './WinMessage.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,11 +13,13 @@ class App extends React.Component {
       isProjects: false,
       isModal: false,
       isDead: false,
+      isChampion: false,
     };
     this.toggleProjects = this.toggleProjects.bind(this);
     this.goHome = this.goHome.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.toggleDeadMessage = this.toggleDeadMessage.bind(this);
+    this.toggleWinMessage = this.toggleWinMessage.bind(this);
   }
 
   componentDidMount() {
@@ -49,9 +52,19 @@ class App extends React.Component {
     });
   }
 
+  toggleWinMessage() {
+    this.setState({
+      isChampion: !this.state.isChampion,
+    });
+  }
+
   render() {
-    const { toggleProjects, toggleModal, goHome, toggleDeadMessage } = this;
-    const { isHome, isModal, isDead } = this.state;
+    const {
+      toggleProjects, toggleModal, goHome, toggleDeadMessage, toggleWinMessage,
+    } = this;
+    const {
+      isHome, isModal, isDead, isChampion,
+    } = this.state;
     return (
       <>
         <nav className="home-nav">
@@ -63,12 +76,13 @@ class App extends React.Component {
         </nav>
         <div>
           {
-          isHome ? <Home toggleProjects={toggleProjects} toggleDeadMessage={toggleDeadMessage}/>
+          isHome ? <Home toggleProjects={toggleProjects} toggleDeadMessage={toggleDeadMessage} toggleWinMessage={toggleWinMessage} />
             : <Projects />
         }
         </div>
         {isModal && <Modal close={toggleModal} />}
         {isDead && <DeadMessage close={toggleDeadMessage} />}
+        {isChampion && <WinMessage close={toggleWinMessage} />}
       </>
     );
   }

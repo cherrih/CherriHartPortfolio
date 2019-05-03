@@ -56,6 +56,11 @@ nav {
   cursor: pointer;
   color: var(--main-green);
 }
+.projects-photo-preview {
+  width: 100vw;
+  height: 100vh;
+  z-index: 998
+}
 
 /* ---------FOOTER----------- */
 .home-footer {
@@ -236,6 +241,7 @@ h1 {
   /* color: var(--main-green); */
   text-align: center;
   font-size: 14px;
+  z-index: 999;
 }
 .projects-footer {
   padding: 2vh 6vw 0 5vw;

@@ -4,8 +4,8 @@ import Grid from './Grid.jsx';
 const ProjectsHome = ({
   projects, mouseEnterProject, mouseLeaveProject, showProject, projectsStyle,
 }) => (
-  <div className="projects-container" style={projectsStyle}>
-    <div className="projects-photo-preview"></div>
+  <div className="projects-container" >
+    <div className="projects-photo-preview" style={projectsStyle}></div>
     <Grid
         projects={projects}
         mouseEnterProject={mouseEnterProject}

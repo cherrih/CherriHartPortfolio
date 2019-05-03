@@ -110,6 +110,7 @@ class Projects extends React.Component {
       ],
       background: 'none',
       currentView: 'projectsHome',
+      display: 'none',
     };
     this.mouseEnterProject = this.mouseEnterProject.bind(this);
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
@@ -140,12 +141,14 @@ class Projects extends React.Component {
     }
     this.setState({
       background,
+      display: 'block',
     });
   }
 
   mouseLeaveProject() {
     this.setState({
       background: 'none',
+      display: 'none',
     });
   }
 
@@ -163,12 +166,13 @@ class Projects extends React.Component {
   }
 
   render() {
-    const { projects, background, currentView } = this.state;
+    const { projects, background, currentView, display } = this.state;
     const projectsStyle = {
       backgroundImage: background,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
+      display: display,
     };
     return (
       <div>
