@@ -62,6 +62,17 @@ class Home extends React.Component {
     clearInterval(this.interval3);
   }
 
+  getRandomDirection() {
+    const dir = ['Left', 'Right', 'Up', 'Down'];
+    const i = Math.floor(Math.random() * (3 + 1));
+    return dir[i];
+  }
+
+  getNewDirection(g) {
+    g.dir = this.getRandomDirection();
+    this.moveGhost(g);
+  }
+
   buildMatrix() {
     const text = ['33333333333333333333333333333333333333333333',
       '3333332 Hailing from 1 the land of3333333339',
@@ -82,17 +93,6 @@ class Home extends React.Component {
     this.setState({
       matrix,
     });
-  }
-
-  getRandomDirection() {
-    const dir = ['Left', 'Right', 'Up', 'Down'];
-    const i = Math.floor(Math.random() * (3 + 1));
-    return dir[i];
-  }
-
-  getNewDirection(g) {
-    g.dir = this.getRandomDirection();
-    this.moveGhost(g);
   }
 
   killGhost(g) {
@@ -199,6 +199,7 @@ class Home extends React.Component {
   }
 
   killPac() {
+    const { toggleDeadMessage } = this.props;
     const { matrix, pac } = this.state;
     matrix[pac.y][pac.x] = '4';
     this.setState({
@@ -206,31 +207,33 @@ class Home extends React.Component {
       score: 0,
       matrix,
     });
-    setTimeout(this.props.toggleDeadMessage.bind(this), 1000);
+    setTimeout(toggleDeadMessage.bind(this), 1000);
   }
+
   checkForGhost(y, x) {
     const { matrix } = this.state;
     const piece = matrix[y][x];
     if (piece === '7' || piece === '8' || piece === '9') {
       this.killPac();
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
+
   handleKeyDown(e) {
     e.preventDefault();
     let pieceToEat;
     let score = 0;
+    const { showWinMessage } = this.props;
     const {
       cherriMode, matrix, pac, g7, g8, g9, pacLives,
     } = this.state;
-    
+
     if (pacLives) {
       // move pac left
       if (e.keyCode === 37 && pac.x > 0) {
         pac.left = true;
-        if (this.checkForGhost(pac.y, pac.x - 1)) return;
+        if (!cherriMode && this.checkForGhost(pac.y, pac.x - 1)) return;
         matrix[pac.y][pac.x] = '3';
         pac.x -= 1;
         pieceToEat = matrix[pac.y][pac.x];
@@ -239,7 +242,7 @@ class Home extends React.Component {
       // move pac right
       if (e.keyCode === 39 && pac.x < matrix[pac.y].length - 1) {
         pac.left = false;
-        if (this.checkForGhost(pac.y, pac.x + 1)) return;
+        if (!cherriMode && this.checkForGhost(pac.y, pac.x + 1)) return;
         matrix[pac.y][pac.x] = '3';
         pac.x += 1;
         pieceToEat = matrix[pac.y][pac.x];
@@ -248,7 +251,7 @@ class Home extends React.Component {
       if (e.keyCode === 38 && pac.y > 0) {
         // move pac up
         pac.left = false;
-        if (this.checkForGhost(pac.y - 1, pac.x)) return;
+        if (!cherriMode && this.checkForGhost(pac.y - 1, pac.x)) return;
         matrix[pac.y][pac.x] = '3';
         pac.y -= 1;
         pieceToEat = matrix[pac.y][pac.x];
@@ -257,7 +260,7 @@ class Home extends React.Component {
       if (e.keyCode === 40 && pac.y < matrix.length - 1) {
         // move pac down
         pac.left = false;
-        if (this.checkForGhost(pac.y + 1, pac.x)) return;
+        if (!cherriMode && this.checkForGhost(pac.y + 1, pac.x)) return;
         matrix[pac.y][pac.x] = '3';
         pac.y += 1;
         pieceToEat = matrix[pac.y][pac.x];
@@ -284,6 +287,9 @@ class Home extends React.Component {
         score: state.score + score,
         matrix,
       }));
+      if (this.state.score >= 1000) {
+        showWinMessage();
+      }
     }
   }
 

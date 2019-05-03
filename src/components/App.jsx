@@ -19,7 +19,8 @@ class App extends React.Component {
     this.goHome = this.goHome.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.toggleDeadMessage = this.toggleDeadMessage.bind(this);
-    this.toggleWinMessage = this.toggleWinMessage.bind(this);
+    this.showWinMessage = this.showWinMessage.bind(this);
+    this.hideWinMessage = this.hideWinMessage.bind(this);
   }
 
   componentDidMount() {
@@ -52,15 +53,21 @@ class App extends React.Component {
     });
   }
 
-  toggleWinMessage() {
+  hideWinMessage() {
     this.setState({
-      isChampion: !this.state.isChampion,
+      isChampion: false,
+    });
+  }
+
+  showWinMessage() {
+    this.setState({
+      isChampion: true,
     });
   }
 
   render() {
     const {
-      toggleProjects, toggleModal, goHome, toggleDeadMessage, toggleWinMessage,
+      toggleProjects, toggleModal, goHome, toggleDeadMessage, hideWinMessage, showWinMessage,
     } = this;
     const {
       isHome, isModal, isDead, isChampion,
@@ -76,13 +83,13 @@ class App extends React.Component {
         </nav>
         <div>
           {
-          isHome ? <Home toggleProjects={toggleProjects} toggleDeadMessage={toggleDeadMessage} toggleWinMessage={toggleWinMessage} />
+          isHome ? <Home toggleProjects={toggleProjects} toggleDeadMessage={toggleDeadMessage} showWinMessage={showWinMessage} />
             : <Projects />
         }
         </div>
         {isModal && <Modal close={toggleModal} />}
         {isDead && <DeadMessage close={toggleDeadMessage} />}
-        {isChampion && <WinMessage close={toggleWinMessage} />}
+        {isChampion && <WinMessage close={hideWinMessage} />}
       </>
     );
   }

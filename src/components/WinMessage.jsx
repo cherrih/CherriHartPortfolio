@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WinMessage = ({ close }) => (
-  <div className="modal-wrapper" onClick={close}>
+  <div className="modal-wrapper">
     <div className="modal">
       <div className="close-modal-btn" onClick={close}>×</div>
       <div className="modal-title">
@@ -9,8 +9,8 @@ const WinMessage = ({ close }) => (
       </div>
       <div className="modal-body">
         <p>
-          You won! 
-          <a href="mailto:cherri.hartigan@gmail.com">Email me</a>
+          You won a beer with me! 
+          <a href="mailto:cherri.hartigan@gmail.com"> Email me </a>
            to set up a time to imbibe.
         </p>
       </div>
