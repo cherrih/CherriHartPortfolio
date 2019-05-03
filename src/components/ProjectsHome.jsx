@@ -4,7 +4,7 @@ import Grid from './Grid.jsx';
 const ProjectsHome = ({
   projects, mouseEnterProject, mouseLeaveProject, showProject, projectsStyle,
 }) => (
-  <div className="projects-container" >
+  <div className="projects-container">
     <Grid
         projects={projects}
         mouseEnterProject={mouseEnterProject}

@@ -121,7 +121,6 @@ class Projects extends React.Component {
 
   mouseEnterProject(e) {
     let background = 'none';
-    console.log(e.target.className)
     const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
     if (e.target.className === 'Belen Tenorio Portfolio' || e.target.className === 'Belen Tenorio Portfolio grid-element') {
       background = `url(${url}BelenTenorioPortfolio.png)`;
@@ -148,7 +147,6 @@ class Projects extends React.Component {
   }
 
   mouseLeaveProject() {
-    console.log('leaving')
     this.setState({
       background: 'none',
       display: 'none',
