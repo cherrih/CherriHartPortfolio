@@ -229,22 +229,22 @@ h1 {
   margin: 5px 0;
 }
 .grid-element:hover {
-  border-radius: 100%;
-  background-color: var(--main-green);
+  background-image: url(https://s3-us-west-1.amazonaws.com/cherri-portfolio/big_cherri.png);
+  background-repeat: no-repeat;
+  background-size: contain;
   cursor: pointer;
   text-align: center;
   font-size: 14px;
   z-index: 999;
+  height: 500px;
+  margin-top: -260px;
+  padding-top: 80px;
+  padding-left: 45px;
 }
 .projects-footer {
   padding: 2vh 6vw 0 5vw;
   position: fixed;
   bottom: 5vh;
-}
-.projects-footer:hover {
-  font-weight: 800;
-  cursor: pointer;
-  color: var(--main-green);
 }
 .projects-photo-preview {
   position: absolute;

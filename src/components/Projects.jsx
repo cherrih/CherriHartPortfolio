@@ -159,12 +159,16 @@ class Projects extends React.Component {
     const currentView = e.target.className.split(' ')[0];
     this.setState({
       currentView,
+      background: 'none',
+      display: 'none',
     });
   }
 
   hideProject() {
     this.setState({
       currentView: 'projectsHome',
+      background: 'none',
+      display: 'none',
     });
   }
 
