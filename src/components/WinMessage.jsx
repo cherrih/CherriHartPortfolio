@@ -11,7 +11,7 @@ const WinMessage = ({ close }) => (
         <p>
           You won a beer with me! 
           <a href="mailto:cherri.hartigan@gmail.com"> Email me </a>
-           to set up a time to imbibe.
+           to set up a time to imbibe or go browse my other projects.
         </p>
       </div>
     </div>

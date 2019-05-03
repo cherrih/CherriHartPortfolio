@@ -66,11 +66,12 @@ class Projects extends React.Component {
             'Benchmarked Postgres and MongoDB performance on a production-level dataset (10M records) to explore tradeoffs in SQL and noSQL databases',
             'Reduced Postgres query times from 40 seconds to 3.5 ms on a table of 150M records by creating relevant btree indexes',
             'Performed stress tests using K6 and loader.io to simulate sustained web-scale traffic and identified performance bottlenecks on New Relic'],
-          team: ['Cherri Hartigan (back end engineer, photos service)',
-                  'Ed Wu (back end engineer, menu cards service)',
-                  'Johnson Kwok (back end engineer, reviews service)',
-                  'Mike Lau (back end engineer, reservations service)',
-                ],
+          team: [
+            'Cherri Hartigan (back end engineer, photos service)',
+            'Ed Wu (back end engineer, menu cards service)',
+            'Johnson Kwok (back end engineer, reviews service)',
+            'Mike Lau (back end engineer, reservations service)',
+          ],
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: ' on GitHub',
@@ -120,6 +121,7 @@ class Projects extends React.Component {
 
   mouseEnterProject(e) {
     let background = 'none';
+    console.log(e.target.className)
     const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
     if (e.target.className === 'Belen Tenorio Portfolio' || e.target.className === 'Belen Tenorio Portfolio grid-element') {
       background = `url(${url}BelenTenorioPortfolio.png)`;
@@ -146,6 +148,7 @@ class Projects extends React.Component {
   }
 
   mouseLeaveProject() {
+    console.log('leaving')
     this.setState({
       background: 'none',
       display: 'none',
@@ -166,7 +169,9 @@ class Projects extends React.Component {
   }
 
   render() {
-    const { projects, background, currentView, display } = this.state;
+    const {
+      projects, background, currentView, display,
+    } = this.state;
     const projectsStyle = {
       backgroundImage: background,
       backgroundSize: 'cover',
