@@ -56,12 +56,6 @@ nav {
   cursor: pointer;
   color: var(--main-green);
 }
-.projects-photo-preview {
-  width: 100vw;
-  height: 100vh;
-  z-index: 998
-}
-
 /* ---------FOOTER----------- */
 .home-footer {
   position: fixed;
@@ -238,7 +232,6 @@ h1 {
   border-radius: 100%;
   background-color: var(--main-green);
   cursor: pointer;
-  /* color: var(--main-green); */
   text-align: center;
   font-size: 14px;
   z-index: 999;
@@ -253,6 +246,15 @@ h1 {
   cursor: pointer;
   color: var(--main-green);
 }
+.projects-photo-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998
+}
+
 
 /* ---------- PROJECT LIGHTBOX ------- */
 

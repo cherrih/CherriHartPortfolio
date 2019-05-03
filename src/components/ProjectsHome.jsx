@@ -5,12 +5,12 @@ const ProjectsHome = ({
   projects, mouseEnterProject, mouseLeaveProject, showProject, projectsStyle,
 }) => (
   <div className="projects-container" >
-    <div className="projects-photo-preview" style={projectsStyle}></div>
     <Grid
         projects={projects}
         mouseEnterProject={mouseEnterProject}
         mouseLeaveProject={mouseLeaveProject}
         showProject={showProject}
+        projectsStyle={projectsStyle}
     />
     <div className="projects-footer">
       <div><a href="https://linkedin.com/in/cherri-hartigan" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
