@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DeadMessage = ({ close }) => (
+const DeadMessage = ({ close, toggleProjects }) => (
   <div className="modal-wrapper" onClick={close}>
     <div className="modal">
       <div className="close-modal-btn" onClick={close}>×</div>
@@ -9,7 +9,9 @@ const DeadMessage = ({ close }) => (
       </div>
       <div className="modal-body">
         <p>
-          You killed Pac! <a>Play again</a> or go browse my other projects.
+          You killed Pac! <span className="modal-link">Play again </span>
+          or go
+          <span onClick={toggleProjects} className="modal-link"> browse my other projects.</span>
         </p>
       </div>
     </div>

@@ -31,6 +31,9 @@ class App extends React.Component {
     this.setState(state => ({
       isProjects: !state.isProjects,
       isHome: !state.isHome,
+      isDead: false,
+      isModal: false,
+      isChampion: false,
     }));
   }
 
@@ -87,9 +90,9 @@ class App extends React.Component {
             : <Projects />
         }
         </div>
-        {isModal && <Modal close={toggleModal} />}
-        {isDead && <DeadMessage close={toggleDeadMessage} />}
-        {isChampion && <WinMessage close={hideWinMessage} />}
+        {isModal && <Modal close={toggleModal} toggleProjects={toggleProjects} />}
+        {isDead && <DeadMessage close={toggleDeadMessage} toggleProjects={toggleProjects} />}
+        {isChampion && <WinMessage close={hideWinMessage} toggleProjects={toggleProjects} />}
       </>
     );
   }

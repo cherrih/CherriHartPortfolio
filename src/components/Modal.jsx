@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Modal = ({ close }) => (
+const Modal = ({ close, toggleProjects }) => (
   <div className="modal-wrapper" onClick={close}>
     <div className="modal">
       <div className="close-modal-btn" onClick={close}>×</div>
@@ -14,7 +14,8 @@ const Modal = ({ close }) => (
           <span className="modal-cherri">Cherri</span>
           " to defeat the code bugs.
           Earn 1000 points and score a beer with me!
-          Otherwise click through and see my projects.
+          Otherwise
+          <span onClick={toggleProjects} className="modal-link"> click through and see my projects.</span>
         </p>
       </div>
     </div>
