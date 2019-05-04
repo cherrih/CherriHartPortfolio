@@ -31,7 +31,7 @@ class Projects extends React.Component {
           date: 'Jan 2019 - Feb 2019',
           fullDescription: 'Traveling internationally while queer can sometimes be a scary experience. With Queertrips you can find experiences and people across the globe who will accept you for who you are. Browse through safe spots around the world and share your own tips!',
           photoText: [
-            'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance',
+            'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance.',
           ],
           team: ['Belen Tenorio (design/concept)', 'Cherri Hartigan (concept/full-stack engineer)'],
           link: {
@@ -47,7 +47,12 @@ class Projects extends React.Component {
           techStack: ' Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
           date: 'Dec 2018 - Jan 2019',
           fullDescription: '',
-          photoText: ['Developed an interactive front-end microservice using JavaScript and React to dynamically render details and specifications for 100 watches.', 'Seeded MySQL database with 1000 unique rows of watch product information to enforce a single source of truth and avoid data duplication.', 'Utilized service-oriented architecture by integrating microservices through an Express proxy server to improve team development efficiency.', 'Improved page load speeds by 53% by minifying webpack bundles and implementing Express compression middleware'],
+          photoText: [
+            'Developed an interactive front-end microservice using JavaScript and React to dynamically render details and specifications for 100 watches.',
+            'Seeded MySQL database with 1000 unique rows of watch product information to enforce a single source of truth and avoid data duplication.',
+            'Utilized service-oriented architecture by integrating microservices through an Express proxy server to improve team development efficiency.',
+            'Improved page load speeds by 53% by minifying webpack bundles and implementing Express compression middleware.',
+          ],
           team: ['Aaron Deane (full-stack engineer, photo component)', 'Cherri Hartigan (full-stack engineer, summary/cart component)', 'George Qian (full-stack engineer, details component)', 'Linden Chiu (full-stack engineer, reviews component)'],
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
@@ -61,11 +66,10 @@ class Projects extends React.Component {
           description: 'System design of an online restaurant reservation service',
           techStack: ' Javascript, MongoDB, Mongoose.js, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io, Git',
           date: 'Jan 2019 - Feb 2019',
-          fullDescription: 'I built out and optimized the backend for a photos component of a restaurant reservation application. The goal was to extend the capabilities of the database and server layer to support production-level traffic. I defined success as achieving 1000 RPS with an error rate of less than 1% and latency of less than 200ms.',
+          fullDescription: 'I built out and optimized the backend of a photos component of a restaurant reservation application. The goal was to extend the capabilities of the database and server layer to support production-level traffic. I defined success as achieving 1000 RPS with an error rate of less than 1% and latency of less than 200ms.',
           photoText: [
             'In order to choose the optimal database for the component, I benchmarked the performance of Postgres and MongoDB on a production-level dataset (10M records) to explore tradeoffs in SQL and noSQL databases.',
-            'MongoDB initially outperformed Postgres, with query speeds between 0-1ms compared to 40 seconds.',
-            'Wanting to give Postgres a fair chance, I optimized by creating relevant btree indexes, reducing query times from 40 seconds to 3.5 ms.',
+            'MongoDB initially outperformed Postgres, with query speeds between 0-1ms compared to 40 seconds. I reduced Postgre query times from 40 seconds to 3.5 ms by creating relevant btree indexes.',
             'While MongoDB still outperformed Postgres, I considered other tradeoffs in coming to my final decision including write speeds (MongoDB again outperformed Postgres), ACID compliance (a feature of both databases), and SQL vs NoSQL features.',
             'The next challenge was to benchmark the MongoDB database under production-level traffic. I performed stresstests using K6 and loader.io to simulate sustained web-scale traffic. I identified a bottleneck via New Relic with multiple queries trying to access the database. In order to combat this, I implemented Redis as a data structure store to create a cache for some of the data.',
             'I also changed my stress-test to favour requests to 20% of the database as this would be a more realistic simulation of production. This reduced response times at 1000 rps to 4ms (well below my goal of 200 ms). Error rate remained at 0%.',
@@ -89,8 +93,11 @@ class Projects extends React.Component {
           techStack: ' Javascript, HTML, CSS, Sketch',
           date: 'Apr 2018 - May 2018',
           fullDescription: '',
-          photoText: ['We architected responsive design to ensure user-friendly interaction across multiple devices.', 'We created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'],
-          team: ['Belen Tenorio (design / development)', 'Cherri Hartigan (front end engineer)'],
+          photoText: [
+            'We architected responsive design to ensure user-friendly interaction across multiple devices.',
+            'We created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'
+          ],
+          team: ['Belen Tenorio (design)', 'Cherri Hartigan (front end engineer)'],
           link: {
             link: 'http://belentenorio.com',
             location: '',
@@ -104,7 +111,7 @@ class Projects extends React.Component {
           techStack: ' Javascript, jQuery, HTML, CSS, Sketch',
           date: 'Feb 2018 - Mar 2018',
           fullDescription: '',
-          photoText: [''],
+          photoText: ['Portfolio design and development for photographer/writer, Anna Degenaar including click and place photo elements and a photo slideshow.'],
           team: ['Cherri Hartigan (design / front end engineer)'],
           link: {
             link: 'http://www.annadegenaar.com',
