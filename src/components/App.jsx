@@ -45,9 +45,11 @@ class App extends React.Component {
   }
 
   toggleModal() {
-    this.setState({
-      isModal: !this.state.isModal,
-    });
+    if (this.state.isHome) {
+      this.setState({
+        isModal: !this.state.isModal,
+      });
+    }
   }
 
   toggleDeadMessage() {
