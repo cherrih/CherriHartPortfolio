@@ -16,7 +16,7 @@ class Projects extends React.Component {
           photoText: [
             'This video shows the landing page with interactive menu items. Built in React, with physics provided by Matter.js',
           ],
-          team: ['Belen Tenorio (design / concept)', 'Cherri Hartigan (development / concept)', 'Eli VanAlsburg (model)', 'Isioma Iyamah (model)'],
+          team: ['Belen Tenorio (concept / design)', 'Cherri Hartigan (concept / development)', 'Eli VanAlsburg (model)', 'Isioma Iyamah (model)'],
           link: {
             link: 'https://github.com/cherrih/rogue',
             location: ' on GitHub',
@@ -33,7 +33,7 @@ class Projects extends React.Component {
           photoText: [
             'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance.',
           ],
-          team: ['Belen Tenorio (design/concept)', 'Cherri Hartigan (concept/full-stack engineer)'],
+          team: ['Belen Tenorio (concept / design)', 'Cherri Hartigan (concept / full-stack engineer)'],
           link: {
             link: 'https://github.com/cherrih/hrsf107-mvp',
             location: ' on GitHub',

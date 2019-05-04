@@ -17,6 +17,7 @@ body {
   letter-spacing: 0.5px;
   background-color: var(--main-background);
   margin: 0;
+  font-size: 16px;
 }
 a {
   text-decoration: none;
@@ -158,7 +159,7 @@ nav {
   align-items: center;
 }
 #world {
-  font-size: 48px;
+  font-size: 3em;
   margin-bottom: 12vh;
 }
 #pac, #pacdies {
