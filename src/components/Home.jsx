@@ -280,7 +280,8 @@ class Home extends React.Component {
           score += 250;
           this.killGhost(g9);
         }
-      } else if (pieceToEat && pieceToEat !== '3') {
+      }
+      if (pieceToEat && pieceToEat !== '3') {
         score += 5;
       }
       this.setState(state => ({
@@ -330,7 +331,7 @@ class Home extends React.Component {
           </div>
           <div className="projects" onClick={toggleProjects}>
             Projects
-            <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png" />
+            <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png"/>
           </div>
         </div>
       </div>
