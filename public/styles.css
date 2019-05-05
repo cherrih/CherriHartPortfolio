@@ -300,6 +300,13 @@ h1 {
   padding: 2vh 6vw;
   width: 88vw;
 }
+.small-home-body {
+  padding: 8vh 6vw;
+  font-size: 24px;
+}
+.small-home-body div {
+  padding-bottom: 2vh;
+}
 /* ------ MEDIA QUERIES ------ */
 
 /* ---- MOBILE ---- */

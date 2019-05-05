@@ -4,6 +4,7 @@ import Projects from './Projects/Projects.jsx';
 import Modal from './Modal.jsx';
 import DeadMessage from './DeadMessage.jsx';
 import WinMessage from './WinMessage.jsx';
+import MobileHome from './Mobile/MobileHome.jsx';
 import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from 'react-socks';
 
 class App extends React.Component {
@@ -105,6 +106,7 @@ class App extends React.Component {
             <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
             <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
           </nav>
+          {isHome && <MobileHome />}
         </Breakpoint>
       </BreakpointProvider>
     );
