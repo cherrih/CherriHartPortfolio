@@ -309,6 +309,7 @@ h1 {
 }
 .small-home-body div {
   padding-bottom: 2vh;
+  line-height: 1.1;
 }
 /* ---- MOBILE PROJECTS ---- */
 .small-projects-body {
