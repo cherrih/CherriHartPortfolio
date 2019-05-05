@@ -9,8 +9,8 @@ const Menu = ({ toggleMenu }) => {
       <div>
         <a href="mailto:cherri.hartigan@gmail.com"><h2>Contact</h2></a>
         <a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank" rel="noopener noreferrer"><h2>Resume</h2></a>
-        <a href="" target="_blank" rel="noopener noreferrer"><h2>GitHub</h2></a>
-        <a href="" target="_blank" rel="noopener noreferrer"><h2>LinkedIn</h2></a>
+        <a href="https://github.com/cherrih" target="_blank" rel="noopener noreferrer"><h2>GitHub</h2></a>
+        <a href="https://linkedin.com/in/cherri-hartigan" target="_blank" rel="noopener noreferrer"><h2>LinkedIn</h2></a>
       </div>
     </div>
   )
