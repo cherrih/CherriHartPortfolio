@@ -379,6 +379,7 @@ h1 {
 .project-hero {
   width: 100vw;
   margin-top: 8.5vh;
+  background-color: var(--main-background);
 }
 .small-project-container p {
   margin: 0;

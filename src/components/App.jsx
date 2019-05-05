@@ -142,6 +142,7 @@ class App extends React.Component {
     };
     this.toggleProjects = this.toggleProjects.bind(this);
     this.goHome = this.goHome.bind(this);
+    this.goHomeMobile = this.goHomeMobile.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.toggleDeadMessage = this.toggleDeadMessage.bind(this);
     this.showWinMessage = this.showWinMessage.bind(this);
@@ -190,15 +191,21 @@ class App extends React.Component {
     });
   }
 
+  showWinMessage() {
+    this.setState({
+      isChampion: true,
+    });
+  }
+
   toggleMobileProjects(e) {
     this.setState({
       currentView: e.target.className,
     });
   }
 
-  showWinMessage() {
+  goHomeMobile() {
     this.setState({
-      isChampion: true,
+      currentView: 'home',
     });
   }
 
@@ -207,6 +214,7 @@ class App extends React.Component {
       toggleProjects,
       toggleModal,
       goHome,
+      goHomeMobile,
       toggleDeadMessage,
       hideWinMessage,
       showWinMessage,
@@ -237,7 +245,7 @@ class App extends React.Component {
         <Breakpoint medium down>
           <div>
             <nav className="small-home-nav">
-              <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
+              <div className="cherri" onClick={goHomeMobile}>Cherri Hartigan</div>
               <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
             </nav>
             {currentView === 'home' && <MobileHome />}
