@@ -54,6 +54,7 @@ class App extends React.Component {
         },
         {
           title: 'Watch.io',
+          id: 'Watch',
           description: 'Full-stack retail product app for watch company',
           techStack: ' Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
           date: 'Dec 2018 - Jan 2019',
@@ -100,6 +101,8 @@ class App extends React.Component {
         },
         {
           title: 'Belen Tenorio Portfolio',
+          id: 'Belen',
+          shortTitle: 'Belen T Portfolio',
           description: 'Portfolio development for product/brand designer',
           techStack: ' Javascript, HTML, CSS, Sketch',
           date: 'Apr 2018 - May 2018',
@@ -118,6 +121,8 @@ class App extends React.Component {
         },
         {
           title: 'Anna Degenaar Portfolio',
+          id: 'Anna',
+          shortTitle: 'Anna D Portfolio',
           description: 'Portfolio design and development for photographer/writer',
           techStack: ' Javascript, jQuery, HTML, CSS, Sketch',
           date: 'Feb 2018 - Mar 2018',

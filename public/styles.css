@@ -335,9 +335,25 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-#Rogue {
-  
+#smallRogue {
+  background-color: var(--main-red);
 }
+#smallQueertrip {
+  background-color: rgb(242, 106, 106);
+}
+#smallWatch {
+  background-color: rgb(140, 215, 146);
+}
+#smallFindTables {
+  background-color: rgb(252, 164, 61);
+}
+#smallBelen {
+  background-color: var(--main-green);
+}
+#smallAnna {
+  background-color: rgb(153, 167, 255);
+}
+
 
 /* ------ MEDIA QUERIES ------ */
 

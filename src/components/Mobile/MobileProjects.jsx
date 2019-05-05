@@ -7,8 +7,8 @@ const MobileProjects = ({ projects }) => {
       <div className="small-projects-container">
         {
           projects.map(project => (
-            <div key={project.title} id={project.title}>
-              <h4 className={project.title}>{project.title}</h4>
+            <div key={project.title} id={`small${project.id || project.title}`}>
+              <h4>{project.shortTitle || project.title}</h4>
             </div>
           ))
         }
