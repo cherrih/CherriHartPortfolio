@@ -162,42 +162,23 @@ nav {
   font-size: 3em;
   margin-bottom: 12vh;
 }
-#pac, #pacdies {
+#pac, #pacdies, .ghost, .world-char, .world-letter, .space, .cherry, .eaten {
   display: inline-block;
 }
-#pac img {
+#pac img, .ghost img {
   height: 50px;
 }
 #pacdies img {
   height: 56px;
 }
-.ghost {
-  display: inline-block;
-}
-.ghost img {
-  height: 50px;
-}
-.cherry {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-}
 .cherry img {
-  max-width: 40px;
+  width: 40px;
 }
 .space {
   width: 10px;
-  display: inline-block;
-}
-.world-letter {
-  display: inline-block;
 }
 .eaten {
   width: 25px;
-  display: inline-block;
-}
-.world-char {
-  display: inline-block;
 }
 
 /* ---------- PROJECTS ---------- */
@@ -217,6 +198,7 @@ h1 {
   height: 90vh;
 }
 .grid-element {
+  font-size: 16px;
   height: 310px;
   width: 270px;
   display: flex;
@@ -277,7 +259,7 @@ h1 {
   cursor: pointer;
 }
 .lightbox-hero {
-  margin: 10vh 2vw;
+  padding: 12vh 2vw;
   max-width: 65vw;
 }
 .lightbox-text {
@@ -302,4 +284,91 @@ h1 {
 .lightbox-exit:hover {
   color: var(--main-green);
   cursor: pointer;
+}
+
+/* ------ MEDIA QUERIES ------ */
+
+/* ---- MOBILE ---- */
+@media screen and (max-width: 600px) {
+  /* hide world */
+
+  /* project layout */
+}
+@media screen and (max-width: 1100px) {
+  body {
+    font-size: 12px;
+  }
+  #pac img, .ghost img {
+    height: 35px;
+  }
+  #pacdies img {
+    height: 40px;
+  }
+  .cherry img {
+    width: 15px;
+  }
+  #world {
+    font-size: 30px;
+  }
+  .space {
+    width: 15px;
+  }
+  .eaten {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  body {
+    font-size: 14px;
+  }
+  #pac img, .ghost img {
+    height: 40px;
+  }
+  #pacdies img {
+    height: 46px;
+  }
+  .cherry img {
+    width: 35px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body {
+    font-size: 20px;
+  }
+  #pac img, .ghost img {
+    height: 60px;
+  }
+  #pacdies img {
+    height: 68px;
+  }
+  .cherry img {
+    width: 43px;
+  }
+  .space {
+    width: 8px;
+  }
+  .eaten {
+    width: 20px;
+  }
+}
+@media screen and (min-width: 1700px) {
+  body {
+    font-size: 21px;
+  }
+  #pac img, .ghost img {
+    height: 65px;
+  }
+  #pacdies img {
+    height: 75px;
+  }
+  .cherry img {
+    width: 53px;
+  }
+  .space {
+    width: 20px;
+  }
+  .eaten {
+    width: 30px;
+  }
 }
