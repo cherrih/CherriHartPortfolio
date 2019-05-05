@@ -315,7 +315,23 @@ h1 {
   font-family: 'Apercu Regular';
   text-align: center;
 }
-
+.small-projects-body h3 {
+  padding: 2vh 0;
+}
+.small-projects-container {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;
+}
+.small-projects-container div {
+  border-radius: 100%;
+  padding: 15px;
+  height: 30%;
+  padding-bottom: 30%;
+}
+#Rogue {
+  
+}
 
 /* ------ MEDIA QUERIES ------ */
 

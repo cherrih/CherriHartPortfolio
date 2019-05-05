@@ -6,7 +6,7 @@ import DeadMessage from './DeadMessage.jsx';
 import WinMessage from './WinMessage.jsx';
 import MobileHome from './Mobile/MobileHome.jsx';
 import MobileProjects from './Mobile/MobileProjects.jsx';
-import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from 'react-socks';
+import Breakpoint, { BreakpointProvider } from 'react-socks';
 
 class App extends React.Component {
   constructor(props) {
@@ -189,9 +189,6 @@ class App extends React.Component {
   }
 
   render() {
-    setDefaultBreakpoints([
-      { small: 768 },
-    ]);
     const {
       toggleProjects, toggleModal, goHome, toggleDeadMessage, hideWinMessage, showWinMessage,
     } = this;
@@ -200,7 +197,7 @@ class App extends React.Component {
     } = this.state;
     return (
       <BreakpointProvider>
-        <Breakpoint small up>
+        <Breakpoint medium up>
           <nav className="home-nav">
             <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
             <div className="about">
@@ -217,13 +214,15 @@ class App extends React.Component {
           {isDead && <DeadMessage close={toggleDeadMessage} toggleProjects={toggleProjects} />}
           {isChampion && <WinMessage close={hideWinMessage} toggleProjects={toggleProjects} />}
         </Breakpoint>
-        <Breakpoint small down>
-          <nav className="small-home-nav">
-            <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
-            <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
-          </nav>
-          {isHome && <MobileHome />}
-          <MobileProjects />
+        <Breakpoint medium down>
+          <div>
+            <nav className="small-home-nav">
+              <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
+              <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
+            </nav>
+            {isHome && <MobileHome />}
+            <MobileProjects projects={projects} />
+          </div>
         </Breakpoint>
       </BreakpointProvider>
     );
