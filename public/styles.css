@@ -297,13 +297,13 @@ h1 {
   cursor: pointer;
 }
 .small-home-nav {
-  padding: 2vh 6vw;
-  width: 88vw;
+  padding: 5vh 10vw 2vh;
+  width: 80vw;
   position: static;
 }
 .small-home-body {
-  padding: 3vh 6vw;
-  font-size: 24px;
+  padding: 3vh 10vw;
+  font-size: 22px;
 }
 .small-home-body div {
   padding-bottom: 2vh;
@@ -316,17 +316,18 @@ h1 {
   text-align: center;
 }
 .small-projects-body h3 {
-  padding: 2vh 0;
+  padding: 4vh 0;
+  font-size: 24px;
 }
 .small-projects-container {
   display: grid;
-  grid-template-columns: 25% 25%;
+  grid-template-columns: 40% 40%;
   justify-content: center;
-  grid-gap: 0 5vw;
+  grid-gap: 1vh 2vw;
   color: #000;
+  padding-bottom: 5vh;
 }
 .small-projects-container div {
-  padding: 5px;
   height: 130px;
   width: 130px;
   border-radius: 100%;
@@ -334,6 +335,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#smallRogue:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
 }
 #smallRogue {
   background-color: var(--main-red);
@@ -353,7 +359,9 @@ h1 {
 #smallAnna {
   background-color: rgb(153, 167, 255);
 }
-
+.small-projects-container div h4 {
+  width: 100px;
+}
 
 /* ------ MEDIA QUERIES ------ */
 
