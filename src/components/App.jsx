@@ -86,11 +86,15 @@ class App extends React.Component {
             <div><a href="mailto:cherri.hartigan@gmail.com">Contact </a></div>
           </div>
         </nav>
-        <div>
+        <div className="home-main">
           {
-          isHome ? <Home toggleProjects={toggleProjects} toggleDeadMessage={toggleDeadMessage} showWinMessage={showWinMessage} />
+          isHome
+            ? <Home toggleProjects={toggleProjects} toggleDeadMessage={toggleDeadMessage} showWinMessage={showWinMessage} />
             : <Projects />
-        }
+          }
+        </div>
+        <div className="home-small">
+
         </div>
         {isModal && <Modal close={toggleModal} toggleProjects={toggleProjects} />}
         {isDead && <DeadMessage close={toggleDeadMessage} toggleProjects={toggleProjects} />}

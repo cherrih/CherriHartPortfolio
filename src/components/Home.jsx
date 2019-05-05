@@ -74,7 +74,8 @@ class Home extends React.Component {
   }
 
   buildMatrix() {
-    const text = ['33333333333333333333333333333333333333333333',
+    const text = [
+      '33333333333333333333333333333333333333333333',
       '3333332 Hailing from 1 the land of3333333339',
       '333333sheep and kiwis (New Zealand),33333333',
       '333333I am a San Francisco-based 13333333333',
@@ -84,7 +85,8 @@ class Home extends React.Component {
       '333333Front-End Developer role.3133333333373',
       '333333Fancy a collaboration or interested333',
       "333333in chatting? Let's talk!33333333333333",
-      '33333333333333333333333333333338333333333333'];
+      '33333333333333333333333333333338333333333333',
+    ];
 
     const matrix = [];
     text.forEach((line) => {
