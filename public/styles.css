@@ -299,14 +299,24 @@ h1 {
 .small-home-nav {
   padding: 2vh 6vw;
   width: 88vw;
+  position: static;
 }
 .small-home-body {
-  padding: 8vh 6vw;
+  padding: 3vh 6vw;
   font-size: 24px;
 }
 .small-home-body div {
   padding-bottom: 2vh;
 }
+/* ---- MOBILE PROJECTS ---- */
+.small-projects-body {
+  background: black;
+  color: #fff;
+  font-family: 'Apercu Regular';
+  text-align: center;
+}
+
+
 /* ------ MEDIA QUERIES ------ */
 
 /* ---- MOBILE ---- */
