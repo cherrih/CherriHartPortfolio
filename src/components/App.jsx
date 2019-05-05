@@ -13,6 +13,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       isHome: true,
+      currentView: 'home',
       isProjects: false,
       isModal: false,
       isDead: false,
@@ -187,6 +188,10 @@ class App extends React.Component {
     });
   }
 
+  toggleMobileProjects(e) {
+    console.log(e.target.id);
+  }
+
   showWinMessage() {
     this.setState({
       isChampion: true,
@@ -195,10 +200,16 @@ class App extends React.Component {
 
   render() {
     const {
-      toggleProjects, toggleModal, goHome, toggleDeadMessage, hideWinMessage, showWinMessage,
+      toggleProjects,
+      toggleModal,
+      goHome,
+      toggleDeadMessage,
+      hideWinMessage,
+      showWinMessage,
+      toggleMobileProjects,
     } = this;
     const {
-      isHome, isModal, isDead, isChampion, projects,
+      isHome, isModal, isDead, isChampion, projects, currentView,
     } = this.state;
     return (
       <BreakpointProvider>
@@ -225,8 +236,8 @@ class App extends React.Component {
               <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
               <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
             </nav>
-            {isHome && <MobileHome />}
-            <MobileProjects projects={projects} />
+            {currentView === 'home' && <MobileHome />}
+            <MobileProjects projects={projects} toggleMobileProjects={toggleMobileProjects} />
           </div>
         </Breakpoint>
       </BreakpointProvider>

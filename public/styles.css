@@ -336,7 +336,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-#smallRogue:hover {
+#smallRogue:hover, #smallFindTables:hover, #smallQueertrip:hover, #smallWatch:hover, #smallBelen:hover, #smallAnna:hover {
   color: #fff;
   background-color: #000;
   border: 1px solid #fff;
