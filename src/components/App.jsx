@@ -6,6 +6,7 @@ import DeadMessage from './DeadMessage.jsx';
 import WinMessage from './WinMessage.jsx';
 import MobileHome from './Mobile/MobileHome.jsx';
 import MobileProjects from './Mobile/MobileProjects.jsx';
+import MobileProject from './Mobile/MobileProject.jsx';
 import Breakpoint, { BreakpointProvider } from 'react-socks';
 
 class App extends React.Component {
@@ -145,6 +146,7 @@ class App extends React.Component {
     this.toggleDeadMessage = this.toggleDeadMessage.bind(this);
     this.showWinMessage = this.showWinMessage.bind(this);
     this.hideWinMessage = this.hideWinMessage.bind(this);
+    this.toggleMobileProjects = this.toggleMobileProjects.bind(this);
   }
 
   componentDidMount() {
@@ -189,7 +191,9 @@ class App extends React.Component {
   }
 
   toggleMobileProjects(e) {
-    console.log(e.target.id);
+    this.setState({
+      currentView: e.target.className,
+    });
   }
 
   showWinMessage() {
@@ -237,6 +241,12 @@ class App extends React.Component {
               <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
             </nav>
             {currentView === 'home' && <MobileHome />}
+            {currentView === 'smallRogue' && <MobileProject project={projects[0]} />}
+            {currentView === 'smallQueertrip' && <MobileProject project={projects[1]} />}
+            {currentView === 'smallWatch' && <MobileProject project={projects[2]} />}
+            {currentView === 'smallFindTables' && <MobileProject project={projects[3]} />}
+            {currentView === 'smallBelen' && <MobileProject project={projects[4]} />}
+            {currentView === 'smallAnna' && <MobileProject project={projects[5]} />}
             <MobileProjects projects={projects} toggleMobileProjects={toggleMobileProjects} />
           </div>
         </Breakpoint>

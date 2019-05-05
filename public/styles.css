@@ -336,31 +336,36 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-#smallRogue:hover, #smallFindTables:hover, #smallQueertrip:hover, #smallWatch:hover, #smallBelen:hover, #smallAnna:hover {
+.smallRogue:hover, .smallFindTables:hover, .smallQueertrip:hover, .smallWatch:hover, .smallBelen:hover, .smallAnna:hover {
   color: #fff;
   background-color: #000;
   border: 1px solid #fff;
+  cursor: pointer;
 }
-#smallRogue {
+.smallRogue {
   background-color: var(--main-red);
 }
-#smallQueertrip {
+.smallQueertrip {
   background-color: rgb(242, 106, 106);
 }
-#smallWatch {
+.smallWatch {
   background-color: rgb(140, 215, 146);
 }
-#smallFindTables {
+.smallFindTables {
   background-color: rgb(252, 164, 61);
 }
-#smallBelen {
+.smallBelen {
   background-color: var(--main-green);
 }
-#smallAnna {
+.smallAnna {
   background-color: rgb(153, 167, 255);
+}
+.smallRogue h4:hover, .smallFindTables h4:hover, .smallQueertrip h4:hover, .smallWatch h4:hover, .smallBelen h4:hover, .smallAnna h4:hover {
+  border: none;
 }
 .small-projects-container div h4 {
   width: 100px;
+  background-color: inherit;
 }
 
 /* ------ MEDIA QUERIES ------ */
