@@ -320,14 +320,20 @@ h1 {
 }
 .small-projects-container {
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 25% 25%;
   justify-content: center;
+  grid-gap: 0 5vw;
+  color: #000;
 }
 .small-projects-container div {
+  padding: 5px;
+  height: 130px;
+  width: 130px;
   border-radius: 100%;
-  padding: 15px;
-  height: 30%;
-  padding-bottom: 30%;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #Rogue {
   
