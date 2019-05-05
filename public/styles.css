@@ -316,10 +316,11 @@ h1 {
   font-family: 'Apercu Regular';
   text-align: center;
 }
-.small-projects-body h3 {
+.small-projects-body h3, .small-project-container h3 {
   padding: 4vh 0;
   font-size: 24px;
   margin: 0;
+  text-align: center;
 }
 .small-projects-container {
   display: grid;
@@ -378,6 +379,13 @@ h1 {
 .project-hero {
   width: 100vw;
   margin-top: 8.5vh;
+}
+.small-project-container p {
+  margin: 0;
+  padding-bottom: 2vh;
+}
+.small-project-text {
+  padding: 0 10vw;
 }
 
 /* ------ MEDIA QUERIES ------ */

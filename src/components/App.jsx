@@ -42,7 +42,7 @@ class App extends React.Component {
           description: 'Full-stack travel app for the LGBTQIA+ community',
           techStack: ' Javascript, React, HTML, CSS, MongoDB, Mongoose.js, Express, Node.js, Webpack, Google Maps API',
           date: 'Jan 2019 - Feb 2019',
-          fullDescription: 'Traveling internationally while queer can sometimes be a scary experience. With Queertrips you can find experiences and people across the globe who will accept you for who you are. Browse through safe spots around the world and share your own tips!',
+          fullDescription: 'Traveling internationally while queer can sometimes be a scary experience. With Queertrip you can find experiences and people across the globe who will accept you for who you are. Browse through safe spots around the world and share your own tips!',
           photoText: [
             'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance.',
           ],
