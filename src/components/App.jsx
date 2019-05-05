@@ -7,6 +7,7 @@ import WinMessage from './WinMessage.jsx';
 import MobileHome from './Mobile/MobileHome.jsx';
 import MobileProjects from './Mobile/MobileProjects.jsx';
 import MobileProject from './Mobile/MobileProject.jsx';
+import Menu from './Mobile/Menu.jsx';
 import Breakpoint, { BreakpointProvider } from 'react-socks';
 
 class App extends React.Component {
@@ -15,6 +16,7 @@ class App extends React.Component {
     this.state = {
       isHome: true,
       currentView: 'home',
+      isMenu: false,
       isProjects: false,
       isModal: false,
       isDead: false,
@@ -144,6 +146,7 @@ class App extends React.Component {
     this.goHome = this.goHome.bind(this);
     this.goHomeMobile = this.goHomeMobile.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
     this.toggleDeadMessage = this.toggleDeadMessage.bind(this);
     this.showWinMessage = this.showWinMessage.bind(this);
     this.hideWinMessage = this.hideWinMessage.bind(this);
@@ -209,6 +212,12 @@ class App extends React.Component {
     });
   }
 
+  toggleMenu() {
+    this.setState({
+      isMenu: !this.state.isMenu,
+    });
+  }
+
   render() {
     const {
       toggleProjects,
@@ -219,9 +228,10 @@ class App extends React.Component {
       hideWinMessage,
       showWinMessage,
       toggleMobileProjects,
+      toggleMenu,
     } = this;
     const {
-      isHome, isModal, isDead, isChampion, projects, currentView,
+      isHome, isModal, isDead, isChampion, projects, currentView, isMenu,
     } = this.state;
     return (
       <BreakpointProvider>
@@ -246,15 +256,18 @@ class App extends React.Component {
           <div>
             <nav className="small-home-nav">
               <div className="cherri" onClick={goHomeMobile}>Cherri Hartigan</div>
-              <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
+              <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png" onClick={toggleMenu}/>
             </nav>
-            {currentView === 'home' && <MobileHome />}
-            {currentView === 'smallRogue' && <MobileProject project={projects[0]} />}
-            {currentView === 'smallQueertrip' && <MobileProject project={projects[1]} />}
-            {currentView === 'smallWatch' && <MobileProject project={projects[2]} />}
-            {currentView === 'smallFindTables' && <MobileProject project={projects[3]} />}
-            {currentView === 'smallBelen' && <MobileProject project={projects[4]} />}
-            {currentView === 'smallAnna' && <MobileProject project={projects[5]} />}
+            <div className="small-home-container">
+              {isMenu && <Menu toggleMenu={toggleMenu} />}
+              {currentView === 'home' && <MobileHome />}
+              {currentView === 'smallRogue' && <MobileProject project={projects[0]} />}
+              {currentView === 'smallQueertrip' && <MobileProject project={projects[1]} />}
+              {currentView === 'smallWatch' && <MobileProject project={projects[2]} />}
+              {currentView === 'smallFindTables' && <MobileProject project={projects[3]} />}
+              {currentView === 'smallBelen' && <MobileProject project={projects[4]} />}
+              {currentView === 'smallAnna' && <MobileProject project={projects[5]} />}
+            </div>
             <MobileProjects projects={projects} toggleMobileProjects={toggleMobileProjects} />
           </div>
         </Breakpoint>

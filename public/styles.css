@@ -301,9 +301,10 @@ h1 {
   width: 80vw;
   background-color: var(--main-background);
   opacity: 0.95;
+  z-index: 9998;
 }
 .small-home-body {
-  padding: 11.5vh 10vw 3vh;
+  padding: 11.5vh 10vw;
   font-size: 22px;
 }
 .small-home-body div {
@@ -378,7 +379,7 @@ h1 {
 }
 .project-hero {
   width: 100vw;
-  margin-top: 8.5vh;
+  padding-top: 8.5vh;
   background-color: var(--main-background);
 }
 .small-project-container p {
@@ -387,6 +388,30 @@ h1 {
 }
 .small-project-text {
   padding: 0 10vw;
+}
+
+/* ----- MENU ----- */
+.small-home-container {
+  position: relative;
+}
+.mobile-menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff;
+  opacity: 0.95;
+  text-align: center;
+  font-size: 24px;
+}
+.mobile-menu img {
+  width: 20px;
+}
+.mobile-menu-exit {
+  padding: 4vh 10vw;
+  text-align: right;
 }
 
 /* ------ MEDIA QUERIES ------ */
