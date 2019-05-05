@@ -3,7 +3,6 @@ import React from 'react';
 const Lightbox = ({ project, hideProject }) => {
   const isVideo = project.video ? true : false;
   const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
-  console.log(isVideo)
   return (
     <div className="lightbox-container">
       <div>

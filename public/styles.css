@@ -297,12 +297,13 @@ h1 {
   cursor: pointer;
 }
 .small-home-nav {
-  padding: 5vh 10vw 2vh;
+  padding: 4vh 10vw 2vh;
   width: 80vw;
-  position: static;
+  background-color: var(--main-background);
+  opacity: 0.95;
 }
 .small-home-body {
-  padding: 3vh 10vw;
+  padding: 11.5vh 10vw 3vh;
   font-size: 22px;
 }
 .small-home-body div {
@@ -318,6 +319,7 @@ h1 {
 .small-projects-body h3 {
   padding: 4vh 0;
   font-size: 24px;
+  margin: 0;
 }
 .small-projects-container {
   display: grid;
@@ -366,6 +368,16 @@ h1 {
 .small-projects-container div h4 {
   width: 100px;
   background-color: inherit;
+}
+
+/* ----- PROJECT PAGE ----- */
+.small-project-container {
+  background-color: #000;
+  color: #fff;
+}
+.project-hero {
+  width: 100vw;
+  margin-top: 8.5vh;
 }
 
 /* ------ MEDIA QUERIES ------ */
