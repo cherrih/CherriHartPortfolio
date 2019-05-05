@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectsHome from './ProjectsHome.jsx';
-import Lightbox from './Lightbox.jsx';
+import Lightbox from '../Lightbox.jsx';
 
 class Projects extends React.Component {
   constructor(props) {

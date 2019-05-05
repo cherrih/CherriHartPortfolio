@@ -288,7 +288,18 @@ h1 {
   color: var(--main-green);
   cursor: pointer;
 }
-
+/* ----- MOBILE HOME ----- */
+.small-home-nav img {
+  width: 20px;
+  height: 20px;
+}
+.small-home-nav img:hover {
+  cursor: pointer;
+}
+.small-home-nav {
+  padding: 2vh 6vw;
+  width: 88vw;
+}
 /* ------ MEDIA QUERIES ------ */
 
 /* ---- MOBILE ---- */

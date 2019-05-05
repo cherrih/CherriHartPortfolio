@@ -1,9 +1,10 @@
 import React from 'react';
-import Home from './Home.jsx';
-import Projects from './Projects.jsx';
+import Home from './World/Home.jsx';
+import Projects from './Projects/Projects.jsx';
 import Modal from './Modal.jsx';
 import DeadMessage from './DeadMessage.jsx';
 import WinMessage from './WinMessage.jsx';
+import Breakpoint, { BreakpointProvider, setDefaultBreakpoints } from 'react-socks';
 
 class App extends React.Component {
   constructor(props) {
@@ -71,6 +72,9 @@ class App extends React.Component {
   }
 
   render() {
+    setDefaultBreakpoints([
+      { small: 768 },
+    ]);
     const {
       toggleProjects, toggleModal, goHome, toggleDeadMessage, hideWinMessage, showWinMessage,
     } = this;
@@ -78,28 +82,31 @@ class App extends React.Component {
       isHome, isModal, isDead, isChampion,
     } = this.state;
     return (
-      <>
-        <nav className="home-nav">
-          <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
-          <div className="about">
-            <div><a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank" rel="noopener noreferrer">Resume</a></div>
-            <div><a href="mailto:cherri.hartigan@gmail.com">Contact </a></div>
-          </div>
-        </nav>
-        <div className="home-main">
+      <BreakpointProvider>
+        <Breakpoint small up>
+          <nav className="home-nav">
+            <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
+            <div className="about">
+              <div><a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank" rel="noopener noreferrer">Resume</a></div>
+              <div><a href="mailto:cherri.hartigan@gmail.com">Contact </a></div>
+            </div>
+          </nav>
           {
           isHome
             ? <Home toggleProjects={toggleProjects} toggleDeadMessage={toggleDeadMessage} showWinMessage={showWinMessage} />
             : <Projects />
           }
-        </div>
-        <div className="home-small">
-
-        </div>
-        {isModal && <Modal close={toggleModal} toggleProjects={toggleProjects} />}
-        {isDead && <DeadMessage close={toggleDeadMessage} toggleProjects={toggleProjects} />}
-        {isChampion && <WinMessage close={hideWinMessage} toggleProjects={toggleProjects} />}
-      </>
+          {isModal && <Modal close={toggleModal} toggleProjects={toggleProjects} />}
+          {isDead && <DeadMessage close={toggleDeadMessage} toggleProjects={toggleProjects} />}
+          {isChampion && <WinMessage close={hideWinMessage} toggleProjects={toggleProjects} />}
+        </Breakpoint>
+        <Breakpoint small down>
+          <nav className="small-home-nav">
+            <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
+            <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"/>
+          </nav>
+        </Breakpoint>
+      </BreakpointProvider>
     );
   }
 }
