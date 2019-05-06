@@ -204,6 +204,7 @@ class App extends React.Component {
     this.setState({
       currentView: e.target.className,
     });
+    window.scrollTo(0, 0);
   }
 
   goHomeMobile() {
