@@ -9,8 +9,7 @@ const DeadMessage = ({ close, toggleProjects }) => (
       </div>
       <div className="modal-body">
         <p>
-          You killed Pac! <span className="modal-link">Play again </span>
-          or go
+          You killed Pac! Play again or go
           <span onClick={toggleProjects} className="modal-link"> browse my other projects.</span>
         </p>
       </div>

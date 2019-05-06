@@ -268,13 +268,17 @@ class Home extends React.Component {
       pacLives: false,
       score: 0,
       matrix,
-      buttonStyle: {
-        color: '#fff',
-        backgroundColor: 'var(--main-red)',
-        border: '1px solid var(--main-red)',
-      },
     });
     setTimeout(toggleDeadMessage.bind(this), 1000);
+    setTimeout(()=> {
+      this.setState({
+        buttonStyle: {
+          color: '#fff',
+          backgroundColor: 'var(--main-red)',
+          border: '1px solid var(--main-red)',
+        },
+      });
+    }, 1000);
   }
 
   checkForGhost(y, x) {
