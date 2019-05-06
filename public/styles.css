@@ -371,6 +371,7 @@ h1 {
 .small-projects-container div h4 {
   width: 100px;
   background-color: inherit;
+  transform: rotate(-40deg);
 }
 
 /* ----- PROJECT PAGE ----- */
