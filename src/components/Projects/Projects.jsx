@@ -21,22 +21,22 @@ class Projects extends React.Component {
   mouseEnterProject(e) {
     let background = 'none';
     const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
-    if (e.target.className === 'Belen Tenorio Portfolio' || e.target.className === 'Belen Tenorio Portfolio grid-element') {
+    if (e.target.className === 'Belen Tenorio Portfolio 4' || e.target.className === 'Belen Tenorio Portfolio grid-element 4') {
       background = `url(${url}BelenTenorioPortfolio.png)`;
     }
-    if (e.target.className === 'Anna Degenaar Portfolio' || e.target.className === 'Anna Degenaar Portfolio grid-element') {
+    if (e.target.className === 'Anna Degenaar Portfolio 5' || e.target.className === 'Anna Degenaar Portfolio grid-element 5') {
       background = `url(${url}AnnaDegenaarPortfolio.png)`;
     }
-    if (e.target.className === 'FindTables' || e.target.className === 'FindTables grid-element') {
+    if (e.target.className === 'FindTables 3' || e.target.className === 'FindTables grid-element 3') {
       background = `url(${url}findtables.png)`;
     }
-    if (e.target.className === 'Rogue' || e.target.className === 'Rogue grid-element') {
+    if (e.target.className === 'Rogue 0' || e.target.className === 'Rogue grid-element 0') {
       background = `url(${url}Rogue.png)`;
     }
-    if (e.target.className === 'Queertrip' || e.target.className === 'Queertrip grid-element') {
+    if (e.target.className === 'Queertrip 1' || e.target.className === 'Queertrip grid-element 1') {
       background = `url(${url}QueerTrip.png)`;
     }
-    if (e.target.className === 'Watch.io' || e.target.className === 'Watch.io grid-element') {
+    if (e.target.className === 'Watch.io 2' || e.target.className === 'Watch.io grid-element 2') {
       background = `url(${url}Watch.io.png)`;
     }
     this.setState({
