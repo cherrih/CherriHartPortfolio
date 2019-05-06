@@ -301,7 +301,7 @@ h1 {
   width: 80vw;
   background-color: var(--main-background);
   opacity: 0.95;
-  z-index: 9998;
+  z-index: 9996;
 }
 .small-home-body {
   padding: 11.5vh 10vw;
@@ -402,7 +402,7 @@ h1 {
   left: 0px;
   width: 100%;
   height: 100%;
-  z-index: 9999;
+  z-index: 9997;
   background: #fff;
   opacity: 0.95;
   text-align: center;
@@ -414,6 +414,48 @@ h1 {
 .mobile-menu-exit {
   padding: 4vh 10vw;
   text-align: right;
+}
+/* ------ MOBILE MODAL ------ */
+.mobile-modal-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  background-color: rgb(209, 199, 188);
+  opacity: 0.95;
+}
+.mobile-modal {
+  position: absolute;
+  top: 2vh;
+  left: 4vw;
+  width: 92%;
+  height: 94%;
+  z-index: 9999;
+  background: var(--main-background);
+  border-radius: 20px;
+  opacity: 0.95;
+}
+.mobile-modal p {
+  padding: 1vh 9vw;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+.mobile-modal-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 75%;
+  width: 100%;
+}
+.mobile-modal-title {
+  text-align: center;
+  padding: 20px 40px 0;
+  font-size: 45px;
+  font-family: 'Moderat Regular';
 }
 
 /* ------ MEDIA QUERIES ------ */

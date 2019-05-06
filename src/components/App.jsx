@@ -1,4 +1,5 @@
 import React from 'react';
+import Breakpoint, { BreakpointProvider } from 'react-socks';
 import Home from './World/Home.jsx';
 import Projects from './Projects/Projects.jsx';
 import Modal from './Modal.jsx';
@@ -7,8 +8,8 @@ import WinMessage from './WinMessage.jsx';
 import MobileHome from './Mobile/MobileHome.jsx';
 import MobileProjects from './Mobile/MobileProjects.jsx';
 import MobileProject from './Mobile/MobileProject.jsx';
+import MobileModal from './Mobile/MobileModal.jsx';
 import Menu from './Mobile/Menu.jsx';
-import Breakpoint, { BreakpointProvider } from 'react-socks';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends React.Component {
       currentView: 'home',
       isMenu: false,
       isProjects: false,
+      isMobileModal: false,
       isModal: false,
       isDead: false,
       isChampion: false,
@@ -151,10 +153,12 @@ class App extends React.Component {
     this.showWinMessage = this.showWinMessage.bind(this);
     this.hideWinMessage = this.hideWinMessage.bind(this);
     this.toggleMobileProjects = this.toggleMobileProjects.bind(this);
+    this.toggleModalMobile = this.toggleModalMobile.bind(this);
   }
 
   componentDidMount() {
-    setTimeout(this.toggleModal.bind(this), 2000);
+    setTimeout(this.toggleModal, 2000);
+    setTimeout(this.toggleModalMobile, 2000);
   }
 
   toggleProjects() {
@@ -207,6 +211,12 @@ class App extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  toggleModalMobile() {
+    this.setState({
+      isMobileModal: !this.state.isMobileModal,
+    });
+  }
+
   goHomeMobile() {
     this.setState({
       currentView: 'home',
@@ -230,9 +240,10 @@ class App extends React.Component {
       showWinMessage,
       toggleMobileProjects,
       toggleMenu,
+      toggleModalMobile,
     } = this;
     const {
-      isHome, isModal, isDead, isChampion, projects, currentView, isMenu,
+      isHome, isModal, isDead, isChampion, projects, currentView, isMenu, isMobileModal,
     } = this.state;
     return (
       <BreakpointProvider>
@@ -260,6 +271,7 @@ class App extends React.Component {
               <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png" onClick={toggleMenu}/>
             </nav>
             <div className="small-home-container">
+              {isMobileModal && <MobileModal close={toggleModalMobile} />}
               {isMenu && <Menu toggleMenu={toggleMenu} />}
               {currentView === 'home' && <MobileHome />}
               {currentView === 'smallRogue' && <MobileProject project={projects[0]} />}
