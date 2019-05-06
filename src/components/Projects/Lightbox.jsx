@@ -21,20 +21,18 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
         <p>{project.fullDescription}</p>
         <div>{project.photoText.map(text => <p key={text}>{text}</p>)}</div>
         <p>
-          Full tech-stack: 
+          Full tech-stack:
           { project.techStack }
         </p>
         <div>
-          Team: 
+          Team:
           { project.team }
         </div>
         <p>
-          <u>
-            <a href={project.link.link} target="_blank" rel="noopener noreferrer">
-            Link to project 
-              { project.link.location }
-            </a>
-          </u>
+          <a href={project.link.link} target="_blank" rel="noopener noreferrer">
+          Link to project
+            { project.link.location }
+          </a>
         </p>
       </div>
       <div className="lightbox-footer">

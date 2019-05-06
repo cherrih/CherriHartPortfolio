@@ -283,6 +283,11 @@ h1 {
   width: 25vw;
   overflow: scroll;
   height: 80vh;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+.lightbox-text::-webkit-scrollbar { 
+  width: 0 !important 
 }
 .lightbox-text h1 {
   padding-top: 5vh;

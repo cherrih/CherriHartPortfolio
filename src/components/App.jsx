@@ -33,7 +33,7 @@ class App extends React.Component {
           photoText: [
             'The landing page with interactive menu items is built in React, with physics provided by Matter.js',
           ],
-          team: ['Belen Tenorio (concept / design)', 'Cherri Hartigan (concept / development)', 'Eli VanAlsburg (model)', 'Isioma Iyamah (model)'],
+          team: ' Belen Tenorio (concept / design), Cherri Hartigan (concept / development), Eli VanAlsburg (model), Isioma Iyamah (model)',
           link: {
             link: 'https://github.com/cherrih/rogue',
             location: ' on GitHub',
