@@ -9,6 +9,7 @@ class Projects extends React.Component {
       background: 'none',
       currentView: 'projectsHome',
       display: 'none',
+      index: 0,
     };
     this.mouseEnterProject = this.mouseEnterProject.bind(this);
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
@@ -51,11 +52,14 @@ class Projects extends React.Component {
   }
 
   showProject(e) {
-    const currentView = e.target.className.split(' ')[0];
+    const split = e.target.className.split(' ');
+    const currentView = split[0];
+    const index = split[split.length - 1];
     this.setState({
       currentView,
       background: 'none',
       display: 'none',
+      index,
     });
   }
 
@@ -69,14 +73,14 @@ class Projects extends React.Component {
 
   render() {
     const {
-      background, currentView, display,
+      background, currentView, display, index,
     } = this.state;
     const projectsStyle = {
       backgroundImage: background,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      display: display,
+      display,
     };
     const {
       projects,
@@ -93,12 +97,7 @@ class Projects extends React.Component {
             showProject={this.showProject}
           />
           )}
-        {currentView === 'Rogue' && <Lightbox hideProject={this.hideProject} project={projects[0]} />}
-        {currentView === 'Queertrip' && <Lightbox hideProject={this.hideProject} project={projects[1]} />}
-        {currentView === 'Watch.io' && <Lightbox hideProject={this.hideProject} project={projects[2]} />}
-        {currentView === 'FindTables' && <Lightbox hideProject={this.hideProject} project={projects[3]} />}
-        {currentView === 'Belen' && <Lightbox hideProject={this.hideProject} project={projects[4]} />}
-        {currentView === 'Anna' && <Lightbox hideProject={this.hideProject} project={projects[5]} />}
+        {currentView !== 'projectsHome' && <Lightbox hideProject={this.hideProject} project={projects[index]} />}
       </div>
     );
   }
