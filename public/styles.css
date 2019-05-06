@@ -507,7 +507,7 @@ h1 {
     width: 20px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1366px) {
   #world {
     font-size: 40px;
   }
