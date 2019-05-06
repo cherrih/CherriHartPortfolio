@@ -39,8 +39,10 @@ class Home extends React.Component {
       g7Lives: true,
       g8Lives: true,
       g9Lives: true,
+      color: 'var(--main-brown)',
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.deactivateCherriMode = this.deactivateCherriMode.bind(this);
   }
 
   componentWillMount() {
@@ -189,15 +191,19 @@ class Home extends React.Component {
     }
   }
 
-  toggleCherriMode() {
-    this.setState(state => ({
-      cherriMode: !state.cherriMode,
-    }));
+  deactivateCherriMode() {
+    this.setState({
+      cherriMode: false,
+      color: 'var(--main-brown)',
+    });
   }
 
   activateCherriMode() {
-    this.toggleCherriMode();
-    setTimeout(this.toggleCherriMode.bind(this), 5000);
+    this.setState({
+      cherriMode: true,
+      color: 'var(--main-red)',
+    });
+    setTimeout(this.deactivateCherriMode, 5000);
   }
 
   killPac() {
@@ -303,11 +309,15 @@ class Home extends React.Component {
       score,
       pacLives,
       cherriMode,
+      color,
     } = this.state;
     const { toggleProjects } = this.props;
+    const style = {
+      color: color,
+    };
     return (
       <div>
-        <div className="score">
+        <div className="score" style={style}>
           <div id="points">{score}</div>
           <div id="points-text">points</div>
         </div>

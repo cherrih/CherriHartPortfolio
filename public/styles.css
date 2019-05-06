@@ -69,7 +69,6 @@ nav {
   padding: 0 6vw 5vh 5vw;
 }
 .score {
-  color: var(--main-brown);
   text-align: center;
 }
 #points {
