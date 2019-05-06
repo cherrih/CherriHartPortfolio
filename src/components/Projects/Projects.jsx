@@ -73,7 +73,7 @@ class Projects extends React.Component {
   }
 
   nextProject() {
-    let { index } = this.state;
+    const { index } = this.state;
     let newIndex = JSON.parse(index);
     newIndex = newIndex === 5 ? 0 : newIndex + 1;
     this.setState({
@@ -92,10 +92,8 @@ class Projects extends React.Component {
       backgroundPosition: 'center',
       display,
     };
-    const { hideProject, nextProject, } = this;
-    const {
-      projects,
-    } = this.props;
+    const { hideProject, nextProject } = this;
+    const { projects } = this.props;
     return (
       <div>
         {currentView === 'projectsHome'
