@@ -260,12 +260,15 @@ h1 {
   display: flex;
 }
 .lightbox-footer {
-  padding: 2vh 6vw 0 2vw;
+  padding: 2vh 6vw;
   position: fixed;
   bottom: 6vh;
   color: #ffffff;
+  display: flex;
+  width: 89vw;
+  justify-content: space-between;
 }
-.lightbox-footer:hover {
+.lightbox-footer div:hover {
   color: var(--main-red);
   font-weight: 800;
   cursor: pointer;
@@ -279,6 +282,7 @@ h1 {
   padding: 4vh 4vw 4vh 2vw;
   width: 25vw;
   overflow: scroll;
+  height: 80vh;
 }
 .lightbox-text h1 {
   padding-top: 5vh;
@@ -297,6 +301,10 @@ h1 {
 }
 .lightbox-exit:hover {
   cursor: pointer;
+}
+.next-arrow {
+  width: 20px;
+  padding-left: 5px;
 }
 /* ----- MOBILE HOME ----- */
 .small-home-nav img {

@@ -15,6 +15,7 @@ class Projects extends React.Component {
     this.mouseLeaveProject = this.mouseLeaveProject.bind(this);
     this.showProject = this.showProject.bind(this);
     this.hideProject = this.hideProject.bind(this);
+    this.nextProject = this.nextProject.bind(this);
   }
 
   mouseEnterProject(e) {
@@ -71,6 +72,15 @@ class Projects extends React.Component {
     });
   }
 
+  nextProject() {
+    let { index } = this.state;
+    let newIndex = JSON.parse(index);
+    newIndex = newIndex === 5 ? 0 : newIndex + 1;
+    this.setState({
+      index: newIndex,
+    });
+  }
+
   render() {
     const {
       background, currentView, display, index,
@@ -82,6 +92,7 @@ class Projects extends React.Component {
       backgroundPosition: 'center',
       display,
     };
+    const { hideProject, nextProject, } = this;
     const {
       projects,
     } = this.props;
@@ -97,7 +108,7 @@ class Projects extends React.Component {
             showProject={this.showProject}
           />
           )}
-        {currentView !== 'projectsHome' && <Lightbox hideProject={this.hideProject} project={projects[index]} />}
+        {currentView !== 'projectsHome' && <Lightbox hideProject={hideProject} project={projects[index]} nextProject={nextProject} />}
       </div>
     );
   }

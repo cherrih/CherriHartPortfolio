@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Lightbox = ({ project, hideProject }) => {
+const Lightbox = ({ project, hideProject, nextProject }) => {
   const isVideo = project.video ? true : false;
   const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
   return (
@@ -37,7 +37,14 @@ const Lightbox = ({ project, hideProject }) => {
           </u>
         </p>
       </div>
-      <div className="lightbox-footer" onClick={hideProject}>Back</div>
+      <div className="lightbox-footer">
+        <div onClick={hideProject}>
+          Back
+        </div>
+        <div onClick={nextProject}>
+          Next Project <img src={`${url}arrow_white.png`} className="next-arrow"/>
+        </div>
+      </div>
     </div>
   )
 };
