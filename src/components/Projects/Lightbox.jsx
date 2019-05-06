@@ -15,7 +15,7 @@ const Lightbox = ({ project, hideProject }) => {
         }
       </div>
       <div className="lightbox-text">
-        <div className="lightbox-exit" onClick={hideProject}>x</div>
+        <div className="lightbox-exit" onClick={hideProject}><img src={`${url}xWhite.png`}/></div>
         <h1>{project.title}</h1>
         <h3>{project.date}</h3>
         <p>{project.fullDescription}</p>

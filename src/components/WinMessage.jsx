@@ -3,7 +3,7 @@ import React from 'react';
 const WinMessage = ({ close, toggleProjects }) => (
   <div className="modal-wrapper">
     <div className="modal">
-      <div className="close-modal-btn" onClick={close}>×</div>
+      <div className="close-modal-btn" onClick={close}><img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/xBlack.png"/></div>
       <div className="modal-title">
         Congrats!
       </div>

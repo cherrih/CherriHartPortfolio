@@ -4,7 +4,7 @@ const MobileModal = ({ close, isModal }) => {
   return (
     <div className="mobile-modal-wrapper" onClick={close}>
       <div className="mobile-modal">
-        <div className="close-modal-btn" onClick={close}>×</div>
+        <div className="close-modal-btn" onClick={close}><img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/xBlack.png"/></div>
         <div className="mobile-modal-text">
           <div className="mobile-modal-title">
             Welcome!

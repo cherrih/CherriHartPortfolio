@@ -133,8 +133,10 @@ nav {
 .close-modal-btn {
   float: right;
   cursor: pointer;
-  font-size: 40px;
-  padding-right: 20px;
+  padding: 25px 30px;
+}
+.close-modal-btn img {
+  width: 25px;
 }
 .close-modal-btn:hover {
   cursor: pointer;
@@ -288,11 +290,12 @@ h1 {
   position: fixed;
   right: 3vw;
   top: 2vh;
-  font-size: 40px;
   padding-right: 10px;
 }
+.lightbox-exit img {
+  width: 40px;
+}
 .lightbox-exit:hover {
-  color: var(--main-red);
   cursor: pointer;
 }
 /* ----- MOBILE HOME ----- */
