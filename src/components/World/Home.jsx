@@ -328,6 +328,7 @@ class Home extends React.Component {
             pacLives={pacLives}
             cherriMode={cherriMode}
           />
+        <div>Play Again</div>
         </div>
         <div className="home-footer">
           <div className="social">

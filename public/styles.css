@@ -151,6 +151,7 @@ nav {
 
 .world-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   font-family: 'Moderat Regular';
   height: 100vh;
@@ -159,7 +160,6 @@ nav {
 }
 #world {
   font-size: 3em;
-  margin-bottom: 12vh;
 }
 #pac, #pacdies, .ghost, .world-char, .world-letter, .space, .cherry, .eaten {
   display: inline-block;
@@ -406,6 +406,7 @@ h1 {
   opacity: 0.95;
   text-align: center;
   font-size: 24px;
+  line-height: 1;
 }
 .mobile-menu img {
   width: 20px;
@@ -461,6 +462,26 @@ h1 {
 
 /* ---- MOBILE ---- */
 
+@media screen and (min-width: 1500px) {
+  body {
+    font-size: 20px;
+  }
+  #pac img, .ghost img {
+    height: 60px;
+  }
+  #pacdies img {
+    height: 68px;
+  }
+  .cherry img {
+    width: 43px;
+  }
+  .space {
+    width: 15px;
+  }
+  .eaten {
+    width: 30px;
+  }
+}
 @media screen and (min-width: 1700px) {
   body {
     font-size: 21px;
@@ -477,31 +498,7 @@ h1 {
   .space {
     width: 20px;
   }
-  .eaten {
-    width: 30px;
-  }
 }
-@media screen and (min-width: 1500px) {
-  body {
-    font-size: 20px;
-  }
-  #pac img, .ghost img {
-    height: 60px;
-  }
-  #pacdies img {
-    height: 68px;
-  }
-  .cherry img {
-    width: 43px;
-  }
-  .space {
-    width: 8px;
-  }
-  .eaten {
-    width: 20px;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   #world {
     font-size: 40px;
@@ -516,7 +513,7 @@ h1 {
     width: 35px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   #pac img, .ghost img {
     height: 28px;
   }
