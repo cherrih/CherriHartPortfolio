@@ -47,6 +47,8 @@ class Home extends React.Component {
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.deactivateCherriMode = this.deactivateCherriMode.bind(this);
+    this.buildMatrix = this.buildMatrix.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   componentWillMount() {
@@ -104,6 +106,9 @@ class Home extends React.Component {
   }
 
   handleReset() {
+    clearInterval(this.interval1);
+    clearInterval(this.interval2);
+    clearInterval(this.interval3);
     this.buildMatrix();
     this.setState({
       pacLives: true,
@@ -114,8 +119,38 @@ class Home extends React.Component {
         color: 'var(--main-brown)',
         border: '1px solid var(--main-brown)',
       },
+      pac: {
+        x: 6,
+        y: 1,
+        left: false,
+      },
       score: 0,
+      g7: {
+        x: 42,
+        y: 7,
+        n: '7',
+        dir: 'Up',
+        img: 'badlogic',
+      },
+      g8: {
+        x: 31,
+        y: 10,
+        n: '8',
+        dir: 'Left',
+        img: 'syntacticerror',
+      },
+      g9: {
+        x: 43,
+        y: 1,
+        n: '9',
+        dir: 'Right',
+        img: 'codebug',
+      },
     });
+    const { g7, g8, g9 } = this.state;
+    this.interval1 = setInterval(() => this.moveGhost(g7), 500);
+    this.interval2 = setInterval(() => this.moveGhost(g8), 500);
+    this.interval3 = setInterval(() => this.moveGhost(g9), 500);
   }
 
   killGhost(g) {
@@ -343,6 +378,7 @@ class Home extends React.Component {
       scoreColor,
       buttonStyle,
     } = this.state;
+    const { handleReset } = this;
     const { toggleProjects } = this.props;
     const style = { color: scoreColor };
     return (
@@ -358,7 +394,7 @@ class Home extends React.Component {
             pacLives={pacLives}
             cherriMode={cherriMode}
           />
-        <div className="reset-button" style={buttonStyle}>Play Again</div>
+        <div className="reset-button" style={buttonStyle} onClick={handleReset}>Play Again</div>
         </div>
         <div className="home-footer">
           <div className="social">
