@@ -13,17 +13,15 @@ const Project = ({ project }) => {
           Full tech-stack: 
           { project.techStack }
         </p>
-        <div>
-          Team:
-          {project.team.map(member => <ul key={member}>{member}</ul>)}
-        </div>
         <p>
-          <u>
-            <a href={project.link.link} target="_blank" rel="noopener noreferrer">
-            Link to project 
-              { project.link.location }
-            </a>
-          </u>
+          Team:
+          { project.team }
+        </p>
+        <p>
+          <a href={project.link.link} target="_blank" rel="noopener noreferrer">
+          Link to project 
+            { project.link.location }
+          </a>
         </p>
       </div>
     </div>

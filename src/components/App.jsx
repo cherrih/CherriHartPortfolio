@@ -50,7 +50,7 @@ class App extends React.Component {
           photoText: [
             'This project utilized the Google Maps API with custom markers to dynamically display city data persisted in a MongoDB instance.',
           ],
-          team: ['Belen Tenorio (concept / design)', 'Cherri Hartigan (concept / full-stack engineer)'],
+          team: ' Belen Tenorio (concept / design), Cherri Hartigan (concept / full-stack engineer)',
           link: {
             link: 'https://github.com/cherrih/hrsf107-mvp',
             location: ' on GitHub',
@@ -71,7 +71,7 @@ class App extends React.Component {
             'Utilized service-oriented architecture by integrating microservices through an Express proxy server to improve team development efficiency.',
             'Improved page load speeds by 53% by minifying webpack bundles and implementing Express compression middleware.',
           ],
-          team: ['Aaron Deane (full-stack engineer, photo component)', 'Cherri Hartigan (full-stack engineer, summary/cart component)', 'George Qian (full-stack engineer, details component)', 'Linden Chiu (full-stack engineer, reviews component)'],
+          team: ' Aaron Deane (full-stack engineer, photo component), Cherri Hartigan (full-stack engineer, summary/cart component), George Qian (full-stack engineer, details component), Linden Chiu (full-stack engineer, reviews component)',
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: ' on GitHub',
@@ -93,12 +93,7 @@ class App extends React.Component {
             'I also changed my stress-test to favour requests to 20% of the database as this would be a more realistic simulation of production. This reduced response times at 1000 rps to 4ms (well below my goal of 200 ms). Error rate remained at 0%.',
             'As a final optimization, I horizontally scaled the microservice using an NGINX load balancer across 3 servers enabling the microservice to handle a 12000 RPS throughput at 34 ms latency and 0% errors.',
           ],
-          team: [
-            'Cherri Hartigan (back end engineer, photos service)',
-            'Ed Wu (back end engineer, menu cards service)',
-            'Johnson Kwok (back end engineer, reviews service)',
-            'Mike Lau (back end engineer, reservations service)',
-          ],
+          team: ' Cherri Hartigan (back end engineer, photos service), Ed Wu (back end engineer, menu cards service), Johnson Kwok (back end engineer, reviews service), Mike Lau (back end engineer, reservations service)',
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: ' on GitHub',
@@ -117,7 +112,7 @@ class App extends React.Component {
             'We architected responsive design to ensure user-friendly interaction across multiple devices.',
             'We created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'
           ],
-          team: ['Belen Tenorio (design)', 'Cherri Hartigan (front end engineer)'],
+          team: ' Belen Tenorio (design), Cherri Hartigan (front end engineer)',
           link: {
             link: 'http://belentenorio.com',
             location: '',
@@ -134,7 +129,7 @@ class App extends React.Component {
           date: 'Feb 2018 - Mar 2018',
           fullDescription: '',
           photoText: ['Portfolio design and development for photographer/writer, Anna Degenaar including click and place photo elements and a photo slideshow.'],
-          team: ['Cherri Hartigan (design / front end engineer)'],
+          team: ' Cherri Hartigan (design / front end engineer)',
           link: {
             link: 'http://www.annadegenaar.com',
             location: '',

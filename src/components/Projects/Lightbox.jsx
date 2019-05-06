@@ -25,8 +25,8 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
           { project.techStack }
         </p>
         <div>
-          Team:
-          {project.team.map(member => <ul key={member}>{member}</ul>)}
+          Team: 
+          { project.team }
         </div>
         <p>
           <u>
