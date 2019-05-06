@@ -39,7 +39,11 @@ class Home extends React.Component {
       g7Lives: true,
       g8Lives: true,
       g9Lives: true,
-      color: 'var(--main-brown)',
+      scoreColor: 'var(--main-brown)',
+      buttonStyle: {
+        color: 'var(--main-brown)',
+        border: '1px solid var(--main-brown)',
+      },
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.deactivateCherriMode = this.deactivateCherriMode.bind(this);
@@ -96,6 +100,21 @@ class Home extends React.Component {
     });
     this.setState({
       matrix,
+    });
+  }
+
+  handleReset() {
+    this.buildMatrix();
+    this.setState({
+      pacLives: true,
+      g7Lives: true,
+      g8Lives: true,
+      g9Lives: true,
+      buttonStyle: {
+        color: 'var(--main-brown)',
+        border: '1px solid var(--main-brown)',
+      },
+      score: 0,
     });
   }
 
@@ -194,14 +213,14 @@ class Home extends React.Component {
   deactivateCherriMode() {
     this.setState({
       cherriMode: false,
-      color: 'var(--main-brown)',
+      scoreColor: 'var(--main-brown)',
     });
   }
 
   activateCherriMode() {
     this.setState({
       cherriMode: true,
-      color: 'var(--main-red)',
+      scoreColor: 'var(--main-red)',
     });
     setTimeout(this.deactivateCherriMode, 5000);
   }
@@ -214,6 +233,11 @@ class Home extends React.Component {
       pacLives: false,
       score: 0,
       matrix,
+      buttonStyle: {
+        color: '#fff',
+        backgroundColor: 'var(--main-red)',
+        border: '1px solid var(--main-red)',
+      },
     });
     setTimeout(toggleDeadMessage.bind(this), 1000);
   }
@@ -297,6 +321,13 @@ class Home extends React.Component {
         matrix,
       }));
       if (this.state.score >= 1000) {
+        this.setState({
+          buttonStyle: {
+            color: '#fff',
+            backgroundColor: 'var(--main-red)',
+            border: '1px solid var(--main-red)',
+          },
+        });
         showWinMessage();
       }
     }
@@ -309,12 +340,11 @@ class Home extends React.Component {
       score,
       pacLives,
       cherriMode,
-      color,
+      scoreColor,
+      buttonStyle,
     } = this.state;
     const { toggleProjects } = this.props;
-    const style = {
-      color: color,
-    };
+    const style = { color: scoreColor };
     return (
       <div>
         <div className="score" style={style}>
@@ -328,7 +358,7 @@ class Home extends React.Component {
             pacLives={pacLives}
             cherriMode={cherriMode}
           />
-        <div>Play Again</div>
+        <div className="reset-button" style={buttonStyle}>Play Again</div>
         </div>
         <div className="home-footer">
           <div className="social">

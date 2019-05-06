@@ -154,7 +154,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   font-family: 'Moderat Regular';
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   align-items: center;
 }
@@ -181,6 +181,14 @@ nav {
 }
 .eaten {
   width: 25px;
+}
+.reset-button {
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+.reset-button:hover {
+  cursor: pointer;
+  transform: translateY(2px);
 }
 
 /* ---------- PROJECTS ---------- */
