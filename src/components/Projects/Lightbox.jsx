@@ -39,8 +39,9 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
         <div onClick={hideProject}>
           Back
         </div>
-        <div onClick={nextProject}>
-          Next Project <img src={`${url}arrow_white.png`} className="next-arrow"/>
+        <div onClick={nextProject} className="next-arrow-container">
+          Next Project
+          <span className="next-arrow arrow-white" />
         </div>
       </div>
     </div>

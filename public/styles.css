@@ -307,9 +307,24 @@ h1 {
 .lightbox-exit:hover {
   cursor: pointer;
 }
+.next-arrow-container {
+  display: flex;
+}
+.arrow-white {
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_white.png');
+}
+.arrow-black {
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png');  
+}
 .next-arrow {
   width: 20px;
-  padding-left: 5px;
+  height: 20px;
+  margin-left: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.next-arrow-container:hover .next-arrow {
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_red.png');
 }
 /* ----- MOBILE HOME ----- */
 .small-home-nav img {

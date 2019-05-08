@@ -412,9 +412,9 @@ class Home extends React.Component {
             </div>
             <div>code by Cherri Hartigan</div>
           </div>
-          <div className="projects" onClick={toggleProjects}>
+          <div className="projects next-arrow-container" onClick={toggleProjects}>
             Projects
-            <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png"/>
+            <span className="next-arrow arrow-black" />
           </div>
         </div>
       </div>
