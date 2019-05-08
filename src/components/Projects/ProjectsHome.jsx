@@ -13,8 +13,18 @@ const ProjectsHome = ({
         projectsStyle={projectsStyle}
     />
     <div className="projects-footer">
-      <div><a href="https://linkedin.com/in/cherri-hartigan" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
-      <div><a href="https://github.com/cherrih" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+      <div className="link-arrow-container">
+        <a className="link-container" href="https://linkedin.com/in/cherri-hartigan" target="_blank" rel="noopener noreferrer">
+          LinkedIn 
+          <div className="link-arrow link-arrow-black" />
+        </a>
+      </div>
+      <div className="link-arrow-container">
+        <a className="link-container" href="https://github.com/cherrih" target="_blank" rel="noopener noreferrer">
+          GitHub
+          <div className="link-arrow link-arrow-black" />
+        </a>
+      </div>
     </div>
   </div>
 );

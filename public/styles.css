@@ -102,6 +102,9 @@ nav {
   display: flex;
   margin-left: 6px;
 }
+.link-container-projects {
+  display: flex;
+}
 .link-arrow {
   height: 8px;
   width: 8px;
