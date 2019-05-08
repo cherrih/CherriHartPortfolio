@@ -14,8 +14,9 @@ const Modal = ({ close, toggleProjects }) => (
           <span className="modal-cherri">Cherri</span>
           " to defeat the code bugs.
           Earn 1000 points and win a meeting with me!
-          Otherwise
-          <span onClick={toggleProjects} className="modal-link"> click through and see my projects.</span>
+        </p>
+        <p>
+          <span onClick={toggleProjects} className="modal-link"> Or just check out my projects.</span>
         </p>
       </div>
     </div>
