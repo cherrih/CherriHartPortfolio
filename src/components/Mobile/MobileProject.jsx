@@ -17,10 +17,11 @@ const Project = ({ project }) => {
           Team:
           { project.team }
         </p>
-        <p>
-          <a href={project.link.link} target="_blank" rel="noopener noreferrer">
+        <p className="link-arrow-container">
+          <a className="link-container-projects" href={project.link.link} target="_blank" rel="noopener noreferrer">
           Link to project 
             { project.link.location }
+            <div className="link-arrow link-arrow-white" />
           </a>
         </p>
       </div>

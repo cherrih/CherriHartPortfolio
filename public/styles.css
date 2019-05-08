@@ -3,6 +3,10 @@
   src: url('fonts/Apercu-Regular.otf');
 }
 @font-face {
+  font-family: 'Apercu Light';
+  src: url('fonts/Apercu-Light.otf');
+}
+@font-face {
   font-family: 'Moderat Regular';
   src: url('fonts/Moderat-Regular.woff');
 }
@@ -26,6 +30,9 @@ a {
 a:hover {
   font-weight: 800;
   color: var(--main-red);
+}
+h3 {
+  font-family: Moderat Regular;
 }
 /* ---- NAV ------- */
 
@@ -314,6 +321,7 @@ h1 {
   height: 80vh;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
+  font-family: Apercu Light;
 }
 .lightbox-text::-webkit-scrollbar { 
   width: 0 !important 
@@ -454,6 +462,7 @@ h1 {
 .small-project-container p {
   margin: 0;
   padding-bottom: 2vh;
+  font-family: Apercu Light;
 }
 .small-project-text {
   padding: 0 10vw 6vh;
