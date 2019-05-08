@@ -49,7 +49,7 @@ nav {
   padding-right: 10vw;
 }
 .about div {
-  padding-right: 20px;
+  padding-right: 5px;
 }
 
 .projects:hover {
@@ -89,13 +89,39 @@ nav {
   color: var(--main-brown);
   text-align: center;
 }
+.designed-container {
+  display: flex;
+}
 .designed a {
   color: inherit;  
 }
 .designed a:hover {
   color: var(--main-red);
 }
-
+.link-container {
+  display: flex;
+  margin-left: 6px;
+}
+.link-arrow {
+  height: 8px;
+  width: 8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  margin-top: 3px;
+}
+.link-arrow-white {
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_white.png');
+}
+.link-arrow-black {
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_black.png');
+}
+.link-arrow-brown {
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_brown.png');
+}
+.link-arrow-container:hover .link-arrow {
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_red.png');
+}
 /* ----------MODAL---------- */
 .modal-wrapper {
   position: absolute;

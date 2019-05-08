@@ -402,13 +402,30 @@ class Home extends React.Component {
         </div>
         <div className="home-footer">
           <div className="social">
-            <div><a href="https://linkedin.com/in/cherri-hartigan" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
-            <div><a href="https://github.com/cherrih" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+            <div className="link-arrow-container">
+              <a className="link-container" href="https://linkedin.com/in/cherri-hartigan" target="_blank" rel="noopener noreferrer">
+                LinkedIn 
+                <div className="link-arrow link-arrow-black" />
+              </a>
+            </div>
+            <div className="link-arrow-container">
+              <a className="link-container" href="https://github.com/cherrih" target="_blank" rel="noopener noreferrer">
+                GitHub
+                <div className="link-arrow link-arrow-black" />
+              </a>
+            </div>
           </div>
           <div className="designed">
-            <div>
-              design and concept by
-              <a href="http://belentenorio.com" target="_blank" rel="noopener noreferrer"> Belen Tenorio</a>
+            <div className="designed-container">
+              <div>
+                design and concept by
+              </div>
+              <div className="link-arrow-container">
+                <a href="http://belentenorio.com" target="_blank" rel="noopener noreferrer" className="link-container">
+                   Belen Tenorio
+                  <div className="link-arrow link-arrow-brown" />
+                </a>
+              </div>
             </div>
             <div>code by Cherri Hartigan</div>
           </div>

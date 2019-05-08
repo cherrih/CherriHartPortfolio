@@ -246,8 +246,18 @@ class App extends React.Component {
           <nav className="home-nav">
             <div className="cherri" onClick={goHome}>Cherri Hartigan</div>
             <div className="about">
-              <div><a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank" rel="noopener noreferrer">Resume</a></div>
-              <div><a href="mailto:cherri.hartigan@gmail.com">Contact </a></div>
+              <div className="link-arrow-container">
+                <a className="link-container" href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank" rel="noopener noreferrer">
+                  Resume
+                  <div className="link-arrow link-arrow-black" />
+                </a>
+              </div>
+              <div className="link-arrow-container">
+                <a className="link-container" href="mailto:cherri.hartigan@gmail.com">
+                  Contact
+                  <div className="link-arrow link-arrow-black" />
+                </a>
+              </div>
             </div>
           </nav>
           {
