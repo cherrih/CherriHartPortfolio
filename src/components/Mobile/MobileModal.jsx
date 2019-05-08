@@ -10,7 +10,7 @@ const MobileModal = ({ close }) => (
         </div>
         <div className="mobile-modal-body">
           <p>
-            To play the exclusive Pac game and for a chance to win a special price, please view this site on a bigger screen. Otherwise, scroll down to peruse my projects.
+            To play the exclusive Pac game and for a chance to win a special prize, please view this site on a bigger screen. Otherwise, scroll down to peruse my projects.
           </p>
         </div>
       </div>
