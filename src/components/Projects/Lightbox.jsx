@@ -46,7 +46,7 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default Lightbox;
