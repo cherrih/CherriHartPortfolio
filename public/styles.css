@@ -601,6 +601,29 @@ h1 {
 }
 @media screen and (max-width: 1100px), screen and (max-height: 720px) {
   #pac img, .ghost img {
+    height: 35px;
+  }
+  .ghost {
+    width: 20px;
+  }
+  #pacdies img {
+    height: 39px;
+  }
+  .cherry img {
+    width: 25px;
+  }
+  #world {
+    font-size: 35px;
+  }
+  .space {
+    width: 8px;
+  }
+  .eaten {
+    width: 18px;
+  }
+}
+@media screen and (max-width: 900px), screen and (max-height: 595px) {
+  #pac img, .ghost img {
     height: 28px;
   }
   #pacdies img {
@@ -612,10 +635,12 @@ h1 {
   #world {
     font-size: 30px;
   }
-  .space {
-    width: 10px;
-  }
   .eaten {
     width: 15px;
+  }
+}
+@media screen and (max-height: 645px) {
+  .designed {
+    display: none;
   }
 }
