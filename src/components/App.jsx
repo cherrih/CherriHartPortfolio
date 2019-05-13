@@ -62,7 +62,7 @@ class App extends React.Component {
           title: 'Watch.io',
           id: 'Watch',
           description: 'Full-stack retail product app for watch company',
-          techStack: ' Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme, Git',
+          techStack: ' Javascript, React, HTML, CSS, MySQL, Express, AWS, Node.js, Webpack, Jest/Enzyme',
           date: 'Dec 2018 - Jan 2019',
           fullDescription: '',
           photoText: [
@@ -82,7 +82,7 @@ class App extends React.Component {
         {
           title: 'FindTables',
           description: 'System design of an online restaurant reservation service',
-          techStack: ' Javascript, MongoDB, Mongoose.js, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io, Git',
+          techStack: ' Javascript, MongoDB, Mongoose.js, PostgreSQL, Express, AWS, Node.js, Webpack, NGINX, K6, New Relic, loader.io',
           date: 'Jan 2019 - Feb 2019',
           fullDescription: 'I built out and optimized the backend of a photos component of a restaurant reservation application. The goal was to extend the capabilities of the database and server layer to support production-level traffic. I defined success as achieving 1000 RPS with an error rate of less than 1% and latency of less than 200ms.',
           photoText: [
