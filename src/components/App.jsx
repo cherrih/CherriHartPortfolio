@@ -31,7 +31,7 @@ class App extends React.Component {
           date: 'Feb 2018 - launching Summer 2019',
           fullDescription: 'Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.',
           photoText: [
-            'The landing page with interactive menu items is built in React, with physics provided by Matter.js',
+            'The landing page with interactive menu items is built in React, with physics provided by Matter.js.',
           ],
           team: ' Belen Tenorio (concept / design), Cherri Hartigan (concept / development), Eli VanAlsburg (model), Isioma Iyamah (model)',
           link: {
@@ -109,8 +109,8 @@ class App extends React.Component {
           date: 'Apr 2018 - May 2018',
           fullDescription: '',
           photoText: [
-            'We architected responsive design to ensure user-friendly interaction across multiple devices.',
-            'We created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.'
+            'Portfolio development for product/brand designer Belen Tenorio.',
+            'Created a parallax scrolling effect and other unique UI/UX design elements resulting in being featured as site of the day on Typewolf and Wow-Web.',
           ],
           team: ' Belen Tenorio (design), Cherri Hartigan (front end engineer)',
           link: {
