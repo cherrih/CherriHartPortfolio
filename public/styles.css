@@ -105,6 +105,9 @@ nav {
 .designed a:hover {
   color: var(--main-red);
 }
+.designed-right {
+  margin-left: 5px;
+}
 .link-container {
   display: flex;
   margin-left: 6px;
