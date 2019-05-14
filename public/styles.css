@@ -98,6 +98,7 @@ nav {
 }
 .designed-container {
   display: flex;
+  margin: 0 auto;
 }
 .designed a {
   color: inherit;  
@@ -453,6 +454,18 @@ h1 {
   transform: rotate(-40deg);
 }
 
+.designed-mobile {
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.designed-email {
+  margin: 0 auto;
+  justify-content: center;
+}
 /* ----- PROJECT PAGE ----- */
 .small-project-container {
   background-color: #000;

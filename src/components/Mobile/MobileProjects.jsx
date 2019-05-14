@@ -13,6 +13,27 @@ const MobileProjects = ({ projects, toggleMobileProjects }) => {
           ))
         }
       </div>
+      <div className="designed-mobile">
+        <div>
+          Design, concept and code by
+        </div>
+        <div className="designed-container">
+          <div className="link-arrow-container">
+            <a href="http://belentenorio.com" target="_blank" rel="noopener noreferrer" className="link-container">
+                Belen Tenorio
+              <div className="link-arrow link-arrow-white" />
+            </a>
+          </div>
+          <div className="designed-right">and Cherri Hartigan</div>
+        </div>
+        <div className="link-arrow-container designed-email">
+          <a href="mailto:bele.tv@gmail.com" className="link-container">
+            Available for projects!
+            <div className="link-arrow link-arrow-white" />
+          </a>
+        </div>
+      </div>
+      
     </div>
   );
 };

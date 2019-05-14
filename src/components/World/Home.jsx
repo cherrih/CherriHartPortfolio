@@ -418,7 +418,7 @@ class Home extends React.Component {
           <div className="designed">
             <div className="designed-container">
               <div>
-                design, concept and code by
+                Design, concept and code by
               </div>
               <div className="link-arrow-container">
                 <a href="http://belentenorio.com" target="_blank" rel="noopener noreferrer" className="link-container">
@@ -428,8 +428,11 @@ class Home extends React.Component {
               </div>
               <div className="designed-right">and Cherri Hartigan</div>
             </div>
-            <div>
-              <a href="mailto:bele.tv@gmail.com">Available for projects!</a>
+            <div className="link-arrow-container">
+              <a href="mailto:bele.tv@gmail.com" className="link-container designed-email">
+                Available for projects!
+                <div className="link-arrow link-arrow-brown" />
+              </a>
             </div>
           </div>
           <div className="projects next-arrow-container" onClick={toggleProjects}>
