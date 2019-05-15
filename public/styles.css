@@ -609,6 +609,9 @@ h1 {
   .social {
     padding: 0 6vw 3vh 5vw;
   }
+  .eaten {
+    width: 22px;
+  }
 }
 @media screen and (max-width: 1366px), screen and (max-height: 780px) {
   #world {
