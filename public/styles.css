@@ -590,27 +590,30 @@ h1 {
     width: 30px;
   }
 }
-@media screen and (max-width: 1500px), screen and (max-height: 1100px) {
+@media screen and (max-width: 1500px), screen and (max-height: 1050px) {
   body {
-    font-size: 15px;
+    font-size: 17px;
   }
   #pac img, .ghost img {
-    height: 40px;
+    height: 48px;
   }
   #pacdies img {
-    height: 46px;
+    height: 51px;
   }
   .cherry img {
-    width: 35px;
+    width: 40px;
   }
   .social {
     padding: 0 6vw 3vh 5vw;
   }
   .eaten {
-    width: 22px;
+    width: 27px;
   }
 }
-@media screen and (max-width: 1366px), screen and (max-height: 1000px) {
+@media screen and (max-width: 1366px), screen and (max-height: 900px) {
+  body {
+    font-size: 16px;
+  }
   #world {
     font-size: 45px;
   }
@@ -633,7 +636,10 @@ h1 {
     width: 23px;
   }
 }
-@media screen and (max-width: 1200px), screen and (max-height: 900px) {
+@media screen and (max-width: 1200px), screen and (max-height: 800px) {
+  body {
+    font-size: 15px;
+  }
   #world {
     font-size: 42px;
   }
@@ -656,7 +662,7 @@ h1 {
     width: 20px;
   }
 }
-@media screen and (max-width: 1100px), screen and (max-height: 860px) {
+@media screen and (max-width: 1100px), screen and (max-height: 600px) {
   #pac img, .ghost img {
     height: 35px;
   }
@@ -696,7 +702,7 @@ h1 {
     width: 15px;
   }
 }
-@media screen and (max-height: 720px), screen and (max-width: 835px) {
+@media screen and (max-height: 734px), screen and (max-width: 835px) {
   .designed {
     display: none;
   }
