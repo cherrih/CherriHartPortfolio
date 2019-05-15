@@ -13,7 +13,7 @@ const Modal = ({ close, toggleProjects }) => (
           Power up with "
           <span className="modal-cherri">Cherri</span>
           " to defeat the code bugs.
-          Earn 1000 points and win a meeting with me!
+          Earn 1000 points and win a beer with me!
         </p>
         <p>
           <span onClick={toggleProjects} className="modal-link"> Or just check out my projects.</span>
