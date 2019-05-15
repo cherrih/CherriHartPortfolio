@@ -633,7 +633,30 @@ h1 {
     width: 23px;
   }
 }
-@media screen and (max-width: 1100px), screen and (max-height: 870px) {
+@media screen and (max-width: 1200px), screen and (max-height: 900px) {
+  #world {
+    font-size: 42px;
+  }
+  #pac img, .ghost img {
+    height: 37px;
+  }
+  .ghost {
+    width: 22px;
+  }
+  #pacdies img {
+    height: 41px;
+  }
+  .cherry img {
+    width: 27px;
+  }
+  .space {
+    width: 10px;
+  }
+  .eaten {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 1100px), screen and (max-height: 860px) {
   #pac img, .ghost img {
     height: 35px;
   }
