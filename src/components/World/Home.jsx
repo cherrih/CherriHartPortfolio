@@ -84,20 +84,21 @@ class Home extends React.Component {
   buildMatrix() {
     const text = [
       '33333333333333333333333333333333333333333333',
-      '3333332 Hailing from 1 the land of3333333339',
-      '333333sheep and kiwis (New Zealand),33333333',
-      '333333I am a San Francisco-based 13333333333',
-      '333333Full-Stack developer, Creator and33333',
-      '333333Collaborator. 1 Currently seeking a333',
-      '333333user-focused Creative Technologist /33',
-      '333333Front-End Developer role.3133333333373',
-      '333333Fancy a collaboration or interested333',
-      "333333in chatting? Let's talk!33333333333333",
-      '33333333333333333333333333333338333333333333',
+      '3333332 Hailing from the land of sheep 33339',
+      '333333and kiwis (New Zealand), 1 I am a 3333',
+      '3333331 San Francisco-based Full-Stack333333',
+      '333333Developer, Collaborator & Creator.3333',
+      '333333Currently seeking a user-focused 13333',
+      '333333Creative Technologist / Front-End33333',
+      '333333Developer role. Fancy collaborating373',
+      '333333or interested in chatting? 13333333333',
+      "333333Let's talk!333333333333333333333333333",
+      '13333333333333333333333333333338333333333333',
     ];
 
     const matrix = [];
-    text.forEach((line) => {
+    text.forEach((line, i) => {
+      console.log(i, line.length)
       matrix.push(line.split(''));
     });
     this.setState({
