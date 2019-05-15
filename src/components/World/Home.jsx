@@ -430,7 +430,7 @@ class Home extends React.Component {
             </div>
             <div className="link-arrow-container">
               <a href="mailto:bele.tv@gmail.com" className="link-container designed-email">
-                Available for projects!
+                Accepting new projects!
                 <div className="link-arrow link-arrow-brown" />
               </a>
             </div>

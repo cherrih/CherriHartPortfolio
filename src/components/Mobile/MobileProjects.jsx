@@ -28,7 +28,7 @@ const MobileProjects = ({ projects, toggleMobileProjects }) => {
         </div>
         <div className="link-arrow-container designed-email">
           <a href="mailto:bele.tv@gmail.com" className="link-container">
-            Available for projects!
+            Accepting new projects!
             <div className="link-arrow link-arrow-white" />
           </a>
         </div>
