@@ -655,7 +655,7 @@ h1 {
     width: 15px;
   }
 }
-@media screen and (max-height: 645px) {
+@media screen and (max-height: 645px), screen and (max-width: 835px) {
   .designed {
     display: none;
   }
