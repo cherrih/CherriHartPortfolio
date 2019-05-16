@@ -87,18 +87,17 @@ class Home extends React.Component {
       '3333332 Hailing from the land of sheep 33339',
       '333333and kiwis (New Zealand), 1 I am a 3333',
       '3333331 San Francisco-based Full-Stack333333',
-      '333333Developer, Collaborator & Creator.3333',
-      '333333Currently seeking a user-focused 13333',
-      '333333Creative Technologist / Front-End33333',
-      '333333Developer role. Fancy collaborating373',
-      '333333or interested in chatting? 13333333333',
-      "333333Let's talk!333333333333333333333333333",
-      '13333333333333333333333333333338333333333333',
+      '333333Developer / Creative Technologist.3333',
+      '333333Currently working at 1 Pinterest and33',
+      '333333accepting freelance projects. Fancy333',
+      '3333331 collaborating or interested in333373',
+      "333333chatting? 1 Let's talk!333333333333333",
+      '33333333333333333333333333333333333333333333',
+      '33333333333333333333333333333338333333333333',
     ];
 
     const matrix = [];
     text.forEach((line, i) => {
-      console.log(i, line.length)
       matrix.push(line.split(''));
     });
     this.setState({
