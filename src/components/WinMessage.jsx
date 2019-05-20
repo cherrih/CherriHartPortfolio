@@ -9,7 +9,7 @@ const WinMessage = ({ close, toggleProjects }) => (
       </div>
       <div className="modal-body">
         <p>
-          You won a meet and greet with me! 
+          You won a beer with me! 
           <a href="mailto:cherri.hartigan@gmail.com"> Email me </a>
            to compare schedules or
           <span onClick={toggleProjects} className="modal-link"> check out my projects.</span>
