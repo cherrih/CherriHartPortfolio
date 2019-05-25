@@ -52,7 +52,7 @@ class App extends React.Component {
           ],
           team: ' Belen Tenorio (concept / design), Cherri Hartigan (concept / full-stack engineer)',
           link: {
-            link: 'https://github.com/cherrih/hrsf107-mvp',
+            link: 'https://github.com/cherrih/queertrip',
             location: ' on GitHub',
           },
           video: 'Queertrip',
