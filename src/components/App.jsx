@@ -29,7 +29,7 @@ class App extends React.Component {
           description: 'Digital experiential "low fashion" magazine',
           techStack:
             " Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL",
-          date: "Feb 2018 - launching Summer 2019",
+          date: "Feb 2018 - 2019",
           fullDescription:
             "Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.",
           photoText: [

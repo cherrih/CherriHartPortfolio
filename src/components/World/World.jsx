@@ -12,7 +12,7 @@ const World = ({
     {matrix.map((row, i) => (
       <Row
         row={row}
-        key={`row${i}`} 
+        key={`row${i}`}
         rowIndex={i}
         left={left}
         pacLives={pacLives}

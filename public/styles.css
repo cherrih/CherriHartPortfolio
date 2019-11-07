@@ -350,6 +350,7 @@ h1 {
 }
 .next-arrow-container {
   display: flex;
+  align-items: center;
 }
 .arrow-white {
   background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_white.png');
@@ -557,17 +558,28 @@ h1 {
   body {
     font-size: 21px;
   }
+  #pac {
+    width: 50px;
+  }
+  .ghost {
+    width: 40px;
+  }
   #pac img, .ghost img {
-    height: 65px;
+    height: 60px;
   }
   #pacdies img {
-    height: 75px;
+    height: 70px;
   }
   .cherry img {
     width: 53px;
   }
+  .eaten {
+    width: 40px;
+    height: 20px;
+  }
   .space {
     width: 20px;
+    height: 20px;
   }
 }
 @media screen and (max-width: 1700px), screen and (max-height: 1200px) {
@@ -608,6 +620,7 @@ h1 {
   }
   .eaten {
     width: 27px;
+    height: 10px;
   }
 }
 @media screen and (max-width: 1366px), screen and (max-height: 900px) {
