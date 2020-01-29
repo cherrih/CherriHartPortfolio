@@ -97,7 +97,7 @@ class Home extends React.Component {
     ];
 
     const matrix = [];
-    text.forEach((line) => {
+    text.forEach(line => {
       matrix.push(line.split(''));
     });
     this.setState({
@@ -270,7 +270,7 @@ class Home extends React.Component {
       matrix,
     });
     setTimeout(toggleDeadMessage.bind(this), 1000);
-    setTimeout(()=> {
+    setTimeout(() => {
       this.setState({
         buttonStyle: {
           color: '#fff',
@@ -296,9 +296,7 @@ class Home extends React.Component {
     let pieceToEat;
     let score = 0;
     const { showWinMessage } = this.props;
-    const {
-      cherriMode, matrix, pac, g7, g8, g9, pacLives,
-    } = this.state;
+    const { cherriMode, matrix, pac, g7, g8, g9, pacLives } = this.state;
 
     if (pacLives) {
       // move pac left
@@ -398,18 +396,34 @@ class Home extends React.Component {
             pacLives={pacLives}
             cherriMode={cherriMode}
           />
-        <div className="reset-button" style={buttonStyle} onClick={handleReset}>Play Again</div>
+          <div
+            className="reset-button"
+            style={buttonStyle}
+            onClick={handleReset}
+          >
+            Play Again
+          </div>
         </div>
         <div className="home-footer">
           <div className="social">
             <div className="link-arrow-container">
-              <a className="link-container" href="https://linkedin.com/in/cherri-hartigan" target="_blank" rel="noopener noreferrer">
-                LinkedIn 
+              <a
+                className="link-container"
+                href="https://linkedin.com/in/cherri-hartigan"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
                 <div className="link-arrow link-arrow-black" />
               </a>
             </div>
             <div className="link-arrow-container">
-              <a className="link-container" href="https://github.com/cherrih" target="_blank" rel="noopener noreferrer">
+              <a
+                className="link-container"
+                href="https://github.com/cherrih"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
                 <div className="link-arrow link-arrow-black" />
               </a>
@@ -417,25 +431,34 @@ class Home extends React.Component {
           </div>
           <div className="designed">
             <div className="designed-container">
-              <div>
-                Design, concept and code by
-              </div>
+              <div>Design, concept and code by</div>
               <div className="link-arrow-container">
-                <a href="http://belentenorio.com" target="_blank" rel="noopener noreferrer" className="link-container">
-                   Belen Tenorio
+                <a
+                  href="http://belentenorio.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-container"
+                >
+                  Belen Tenorio
                   <div className="link-arrow link-arrow-brown" />
                 </a>
               </div>
               <div className="designed-right">and Cherri Hartigan</div>
             </div>
             <div className="link-arrow-container">
-              <a href="mailto:bele.tv@gmail.com" className="link-container designed-email">
+              <a
+                href="mailto:cherri.hartigan@gmail.com"
+                className="link-container designed-email"
+              >
                 Accepting new projects!
                 <div className="link-arrow link-arrow-brown" />
               </a>
             </div>
           </div>
-          <div className="projects next-arrow-container" onClick={toggleProjects}>
+          <div
+            className="projects next-arrow-container"
+            onClick={toggleProjects}
+          >
             Projects
             <span className="next-arrow arrow-black" />
           </div>
