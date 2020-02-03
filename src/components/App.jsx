@@ -273,7 +273,7 @@ class App extends React.Component {
               <div className="link-arrow-container">
                 <a
                   className="link-container"
-                  href="https://drive.google.com/file/d/13YgXATkROgMlwIQdQ97PrFz1Iv6Um_kQ/view"
+                  href="https://drive.google.com/file/d/1TgYS4aD-_JvRBWdyQCxLAeE5VQg7M9Q0/view"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

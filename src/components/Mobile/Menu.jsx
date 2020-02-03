@@ -13,7 +13,7 @@ const Menu = ({ toggleMenu }) => (
         <h2>Contact</h2>
       </a>
       <a
-        href="https://drive.google.com/file/d/13YgXATkROgMlwIQdQ97PrFz1Iv6Um_kQ/view"
+        href="https://drive.google.com/file/d/1TgYS4aD-_JvRBWdyQCxLAeE5VQg7M9Q0/view"
         target="_blank"
         rel="noopener noreferrer"
       >
