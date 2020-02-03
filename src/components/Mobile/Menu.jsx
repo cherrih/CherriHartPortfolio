@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Menu = ({ toggleMenu }) => (
   <div className="mobile-menu">
@@ -12,7 +12,13 @@ const Menu = ({ toggleMenu }) => (
       <a href="mailto:cherri.hartigan@gmail.com">
         <h2>Contact</h2>
       </a>
-      {/* <a href="https://drive.google.com/open?id=1iPh_-SpDFIY4QKKT0TAIIhfV6kg45O3l" target="_blank" rel="noopener noreferrer"><h2>Resume</h2></a> */}
+      <a
+        href="https://drive.google.com/file/d/13YgXATkROgMlwIQdQ97PrFz1Iv6Um_kQ/view"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h2>Resume</h2>
+      </a>
       <a
         href="https://github.com/cherrih"
         target="_blank"
