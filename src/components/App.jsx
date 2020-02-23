@@ -25,24 +25,24 @@ class App extends React.Component {
       isChampion: false,
       projects: [
         {
-          title: 'Rogue',
-          description: 'Digital experiential "low fashion" magazine',
-          techStack:
-            ' Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL',
-          date: 'Feb 2018 - 2019',
+          title: 'Pinterest Campaign Builder',
+          id: 'propromote',
+          description: "Rework of Pinterest's ad creation flow",
+          techStack: ' React, Python, Gestalt',
+          date: 'July 2019',
           fullDescription:
-            'Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.',
+            'As part of an internal two day "makeathon" at Pinterest, our team reworked the exisiting ad creation flow to be more in line with the new Pinterest design that launched last year.',
           photoText: [
-            'The landing page with interactive menu items is built in React, with physics provided by Matter.js.',
+            'I was responsible for the notoriously finicky masonry component, including the functionality of selecting/deselecting pins and the ad closeup.',
           ],
           team:
-            ' Belen Tenorio (concept / design), Cherri Hartigan (concept / development), Eli VanAlsburg (model), Isioma Iyamah (model)',
+            ' Koraldo Kajanaku (concept / design), Meera Srinivasan (product manager), Peter Zed (full-stack engineer), Terell Brown (full-stack engineer), Cherri Hartigan (full-stack engineer)',
           link: {
-            link: 'https://github.com/cherrih/rogue',
-            location: ' on GitHub',
+            link: 'https://6wl14.csb.app/',
+            location: '',
           },
-          video: 'RogueHome',
-          img: 'Rogue',
+          video: 'propromote',
+          img: 'propromote',
         },
         {
           title: 'Queertrip',
@@ -63,6 +63,26 @@ class App extends React.Component {
           },
           video: 'Queertrip',
           img: 'QueerTrip',
+        },
+        {
+          title: 'Rogue',
+          description: 'Digital experiential "low fashion" magazine',
+          techStack:
+            ' Javascript, HTML, CSS, React, Webpack, Matter.js, Three.js, WebGL',
+          date: 'Feb 2018 - 2019',
+          fullDescription:
+            'Rogue is an online experiential magazine that explores timeless issues in the context of today. Rogue focuses on storytelling in an interactive way explored through digital experiences.',
+          photoText: [
+            'The landing page with interactive menu items is built in React, with physics provided by Matter.js.',
+          ],
+          team:
+            ' Belen Tenorio (concept / design), Cherri Hartigan (concept / development), Eli VanAlsburg (model), Isioma Iyamah (model)',
+          link: {
+            link: 'https://github.com/cherrih/rogue',
+            location: ' on GitHub',
+          },
+          video: 'RogueHome',
+          img: 'Rogue',
         },
         {
           title: 'Watch.io',
@@ -332,23 +352,26 @@ class App extends React.Component {
               {isMobileModal && <MobileModal close={toggleModalMobile} />}
               {isMenu && <Menu toggleMenu={toggleMenu} />}
               {currentView === 'home' && <MobileHome />}
-              {currentView === 'smallRogue' && (
+              {currentView === 'smallpropromote' && (
                 <MobileProject project={projects[0]} />
+              )}
+              {currentView === 'smallRogue' && (
+                <MobileProject project={projects[2]} />
               )}
               {currentView === 'smallQueertrip' && (
                 <MobileProject project={projects[1]} />
               )}
               {currentView === 'smallWatch' && (
-                <MobileProject project={projects[2]} />
-              )}
-              {currentView === 'smallFindTables' && (
                 <MobileProject project={projects[3]} />
               )}
-              {currentView === 'smallBelen' && (
+              {currentView === 'smallFindTables' && (
                 <MobileProject project={projects[4]} />
               )}
-              {currentView === 'smallAnna' && (
+              {currentView === 'smallBelen' && (
                 <MobileProject project={projects[5]} />
+              )}
+              {currentView === 'smallAnna' && (
+                <MobileProject project={projects[6]} />
               )}
             </div>
             <MobileProjects

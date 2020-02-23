@@ -12,7 +12,7 @@
 }
 :root {
   --main-background: rgb(248, 245, 243);
-  --main-green: #4FDCD2;
+  --main-green: #4fdcd2;
   --main-red: rgb(255, 51, 53);
   --main-brown: rgb(222, 210, 192);
 }
@@ -45,7 +45,9 @@ nav {
 nav {
   padding: 2vh 6vw 0 5vw;
 }
-.cherri:hover, .about div:hover, .modal-link:hover {
+.cherri:hover,
+.about div:hover,
+.modal-link:hover {
   font-weight: 800;
   cursor: pointer;
   color: var(--main-red);
@@ -101,7 +103,7 @@ nav {
   margin: 0 auto;
 }
 .designed a {
-  color: inherit;  
+  color: inherit;
 }
 .designed a:hover {
   color: var(--main-red);
@@ -203,10 +205,18 @@ nav {
 #world {
   font-size: 3em;
 }
-#pac, #pacdies, .ghost, .world-char, .world-letter, .space, .cherry, .eaten {
+#pac,
+#pacdies,
+.ghost,
+.world-char,
+.world-letter,
+.space,
+.cherry,
+.eaten {
   display: inline-block;
 }
-#pac img, .ghost img {
+#pac img,
+.ghost img {
   height: 50px;
 }
 .ghost {
@@ -290,7 +300,6 @@ h1 {
   z-index: 998;
 }
 
-
 /* ---------- PROJECT LIGHTBOX ------- */
 
 .lightbox-container {
@@ -327,8 +336,8 @@ h1 {
   -ms-overflow-style: none;
   font-family: Apercu Light;
 }
-.lightbox-text::-webkit-scrollbar { 
-  width: 0 !important 
+.lightbox-text::-webkit-scrollbar {
+  width: 0 !important;
 }
 .lightbox-text h1 {
   padding-top: 5vh;
@@ -356,7 +365,7 @@ h1 {
   background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_white.png');
 }
 .arrow-black {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png');  
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png');
 }
 .next-arrow {
   width: 20px;
@@ -399,7 +408,8 @@ h1 {
   font-family: 'Apercu Regular';
   text-align: center;
 }
-.small-projects-body h3, .small-project-container h3 {
+.small-projects-body h3,
+.small-project-container h3 {
   padding: 4vh 0;
   font-size: 24px;
   margin: 0;
@@ -422,31 +432,45 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-.smallRogue:hover, .smallFindTables:hover, .smallQueertrip:hover, .smallWatch:hover, .smallBelen:hover, .smallAnna:hover {
+.smallpropromote:hover:not(h4),
+.smallRogue:hover:not(h4),
+.smallFindTables:hover:not(h4),
+.smallQueertrip:hover:not(h4),
+.smallWatch:hover:not(h4),
+.smallBelen:hover:not(h4),
+.smallAnna:hover:not(h4) {
   color: #fff;
   background-color: #000;
   border: 1px solid #fff;
   cursor: pointer;
 }
-.smallRogue {
+.smallpropromote {
   background-color: var(--main-red);
+}
+.smallRogue {
+  background-color: rgb(140, 215, 146);
 }
 .smallQueertrip {
   background-color: rgb(242, 106, 106);
 }
 .smallWatch {
-  background-color: rgb(140, 215, 146);
-}
-.smallFindTables {
   background-color: rgb(252, 164, 61);
 }
-.smallBelen {
+.smallFindTables {
   background-color: var(--main-green);
 }
-.smallAnna {
+.smallBelen {
   background-color: rgb(153, 167, 255);
 }
-.smallRogue h4:hover, .smallFindTables h4:hover, .smallQueertrip h4:hover, .smallWatch h4:hover, .smallBelen h4:hover, .smallAnna h4:hover {
+.smallAnna {
+  background-color: rgb(219, 249, 155);
+}
+.smallRogue h4:hover,
+.smallFindTables h4:hover,
+.smallQueertrip h4:hover,
+.smallWatch h4:hover,
+.smallBelen h4:hover,
+.smallAnna h4:hover {
   border: none;
 }
 .small-projects-container div h4 {
@@ -564,7 +588,8 @@ h1 {
   .ghost {
     width: 40px;
   }
-  #pac img, .ghost img {
+  #pac img,
+  .ghost img {
     height: 60px;
   }
   #pacdies img {
@@ -586,7 +611,8 @@ h1 {
   body {
     font-size: 20px;
   }
-  #pac img, .ghost img {
+  #pac img,
+  .ghost img {
     height: 60px;
   }
   #pacdies img {
@@ -606,7 +632,8 @@ h1 {
   body {
     font-size: 17px;
   }
-  #pac img, .ghost img {
+  #pac img,
+  .ghost img {
     height: 48px;
   }
   #pacdies img {
@@ -630,7 +657,8 @@ h1 {
   #world {
     font-size: 45px;
   }
-  #pac img, .ghost img {
+  #pac img,
+  .ghost img {
     height: 42px;
   }
   .ghost {
@@ -656,7 +684,8 @@ h1 {
   #world {
     font-size: 42px;
   }
-  #pac img, .ghost img {
+  #pac img,
+  .ghost img {
     height: 37px;
   }
   .ghost {
@@ -676,7 +705,8 @@ h1 {
   }
 }
 @media screen and (max-width: 1100px), screen and (max-height: 600px) {
-  #pac img, .ghost img {
+  #pac img,
+  .ghost img {
     height: 35px;
   }
   .ghost {
@@ -699,7 +729,8 @@ h1 {
   }
 }
 @media screen and (max-width: 900px), screen and (max-height: 595px) {
-  #pac img, .ghost img {
+  #pac img,
+  .ghost img {
     height: 28px;
   }
   #pacdies img {

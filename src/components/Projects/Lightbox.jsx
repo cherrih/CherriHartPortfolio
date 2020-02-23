@@ -6,40 +6,54 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
   return (
     <div className="lightbox-container">
       <div>
-        {isVideo ?
-          <video src={`${url}${project.video}.mov`} autoPlay className="lightbox-hero" loop>
+        {isVideo ? (
+          <video
+            src={`${url}${project.video}.mov`}
+            autoPlay
+            className="lightbox-hero"
+            loop
+          >
             <img className="lightbox-hero" src={`${url}${project.img}.png`} />
-          </video> 
-          :
+          </video>
+        ) : (
           <img className="lightbox-hero" src={`${url}${project.img}.png`} />
-        }
+        )}
       </div>
       <div className="lightbox-text">
-        <div className="lightbox-exit" onClick={hideProject}><img src={`${url}xWhite.png`}/></div>
+        <div className="lightbox-exit" onClick={hideProject}>
+          <img src={`${url}xWhite.png`} />
+        </div>
         <h1>{project.title}</h1>
         <h3>{project.date}</h3>
         <p>{project.fullDescription}</p>
-        <div>{project.photoText.map(text => <p key={text}>{text}</p>)}</div>
+        <div>
+          {project.photoText.map(text => (
+            <p key={text}>{text}</p>
+          ))}
+        </div>
         <p>
           Full tech-stack:
-          { project.techStack }
+          {project.techStack}
         </p>
         <div>
           Team:
-          { project.team }
+          {project.team}
         </div>
         <p className="link-arrow-container">
-          <a className="link-container-projects" href={project.link.link} target="_blank" rel="noopener noreferrer">
+          <a
+            className="link-container-projects"
+            href={project.link.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Link to project
-            { project.link.location }
+            {project.link.location}
             <span className="link-arrow link-arrow-white" />
           </a>
         </p>
       </div>
       <div className="lightbox-footer">
-        <div onClick={hideProject}>
-          Back
-        </div>
+        <div onClick={hideProject}>Back</div>
         <div onClick={nextProject} className="next-arrow-container">
           Next Project
           <span className="next-arrow arrow-white" />

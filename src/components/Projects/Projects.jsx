@@ -19,24 +19,43 @@ class Projects extends React.Component {
   }
 
   mouseEnterProject(e) {
+    const { className } = e.target;
     let background = 'none';
     const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
-    if (e.target.className === 'Belen Tenorio Portfolio 4' || e.target.className === 'Belen Tenorio Portfolio grid-element 4') {
+    if (
+      className === 'Pinterest Campaign Builder 0' ||
+      className === 'Pinterest Campaign Builder grid-element 0'
+    ) {
+      background = `url(${url}propromote.png)`;
+    }
+    if (
+      className === 'Belen Tenorio Portfolio 5' ||
+      className === 'Belen Tenorio Portfolio grid-element 5'
+    ) {
       background = `url(${url}BelenTenorioPortfolio.png)`;
     }
-    if (e.target.className === 'Anna Degenaar Portfolio 5' || e.target.className === 'Anna Degenaar Portfolio grid-element 5') {
+    if (
+      className === 'Anna Degenaar Portfolio 6' ||
+      className === 'Anna Degenaar Portfolio grid-element 6'
+    ) {
       background = `url(${url}AnnaDegenaarPortfolio.png)`;
     }
-    if (e.target.className === 'FindTables 3' || e.target.className === 'FindTables grid-element 3') {
+    if (
+      className === 'FindTables 4' ||
+      className === 'FindTables grid-element 4'
+    ) {
       background = `url(${url}findtables.png)`;
     }
-    if (e.target.className === 'Rogue 0' || e.target.className === 'Rogue grid-element 0') {
+    if (className === 'Rogue 2' || className === 'Rogue grid-element 2') {
       background = `url(${url}Rogue.png)`;
     }
-    if (e.target.className === 'Queertrip 1' || e.target.className === 'Queertrip grid-element 1') {
+    if (
+      className === 'Queertrip 1' ||
+      className === 'Queertrip grid-element 1'
+    ) {
       background = `url(${url}QueerTrip.png)`;
     }
-    if (e.target.className === 'Watch.io 2' || e.target.className === 'Watch.io grid-element 2') {
+    if (className === 'Watch.io 3' || className === 'Watch.io grid-element 3') {
       background = `url(${url}Watch.io.png)`;
     }
     this.setState({
@@ -82,9 +101,7 @@ class Projects extends React.Component {
   }
 
   render() {
-    const {
-      background, currentView, display, index,
-    } = this.state;
+    const { background, currentView, display, index } = this.state;
     const projectsStyle = {
       backgroundImage: background,
       backgroundSize: 'cover',
@@ -96,8 +113,7 @@ class Projects extends React.Component {
     const { projects } = this.props;
     return (
       <div>
-        {currentView === 'projectsHome'
-          && (
+        {currentView === 'projectsHome' && (
           <ProjectsHome
             projects={projects}
             mouseEnterProject={this.mouseEnterProject}
@@ -105,8 +121,14 @@ class Projects extends React.Component {
             projectsStyle={projectsStyle}
             showProject={this.showProject}
           />
-          )}
-        {currentView !== 'projectsHome' && <Lightbox hideProject={hideProject} project={projects[index]} nextProject={nextProject} />}
+        )}
+        {currentView !== 'projectsHome' && (
+          <Lightbox
+            hideProject={hideProject}
+            project={projects[index]}
+            nextProject={nextProject}
+          />
+        )}
       </div>
     );
   }
