@@ -28,9 +28,9 @@ const Project = ({ project }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Link to project
+            Link to
             {project.link.location}
-            <div className="link-arrow link-arrow-white" />
+            <span className="link-arrow link-arrow-white" />
           </a>
         </p>
       </div>

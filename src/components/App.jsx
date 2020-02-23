@@ -39,7 +39,7 @@ class App extends React.Component {
             ' Koraldo Kajanaku (concept / design), Meera Srinivasan (product manager), Peter Zed (full-stack engineer), Terell Brown (full-stack engineer), Cherri Hartigan (full-stack engineer)',
           link: {
             link: 'https://6wl14.csb.app/',
-            location: '',
+            location: ' project',
           },
           video: 'propromote',
           img: 'propromote',
@@ -49,7 +49,7 @@ class App extends React.Component {
           description: 'Full-stack travel app for the LGBTQIA+ community',
           techStack:
             ' Javascript, React, HTML, CSS, MongoDB, Mongoose.js, Express, Node.js, Webpack, Google Maps API',
-          date: 'Jan 2019 - Feb 2019',
+          date: 'Jan 2019 - Ongoing',
           fullDescription:
             'Traveling internationally while queer can sometimes be a scary experience. With Queertrip you can find experiences and people across the globe who will accept you for who you are. Browse through safe spots around the world and share your own tips!',
           photoText: [
@@ -58,8 +58,8 @@ class App extends React.Component {
           team:
             ' Belen Tenorio (concept / design), Cherri Hartigan (concept / full-stack engineer)',
           link: {
-            link: 'https://github.com/cherrih/queertrip',
-            location: ' on GitHub',
+            link: 'https://queertrip.world',
+            location: ' Queertrip V2',
           },
           video: 'Queertrip',
           img: 'QueerTrip',
@@ -79,7 +79,7 @@ class App extends React.Component {
             ' Belen Tenorio (concept / design), Cherri Hartigan (concept / development), Eli VanAlsburg (model), Isioma Iyamah (model)',
           link: {
             link: 'https://github.com/cherrih/rogue',
-            location: ' on GitHub',
+            location: ' project on GitHub',
           },
           video: 'RogueHome',
           img: 'Rogue',
@@ -102,7 +102,7 @@ class App extends React.Component {
             ' Aaron Deane (full-stack engineer, photo component), Cherri Hartigan (full-stack engineer, summary/cart component), George Qian (full-stack engineer, details component), Linden Chiu (full-stack engineer, reviews component)',
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
-            location: ' on GitHub',
+            location: ' project on GitHub',
           },
           video: 'Watch',
           img: 'Watch.io',
@@ -128,7 +128,7 @@ class App extends React.Component {
             ' Cherri Hartigan (back end engineer, photos service), Ed Wu (back end engineer, menu cards service), Johnson Kwok (back end engineer, reviews service), Mike Lau (back end engineer, reservations service)',
           link: {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
-            location: ' on GitHub',
+            location: ' project on GitHub',
           },
           img: 'findtables',
         },
@@ -147,7 +147,7 @@ class App extends React.Component {
           team: ' Belen Tenorio (design), Cherri Hartigan (front end engineer)',
           link: {
             link: 'http://belentenorio.com',
-            location: '',
+            location: ' project',
           },
           video: 'belentenorio',
           img: 'BelenTenorioPortfolio',
@@ -167,7 +167,7 @@ class App extends React.Component {
           team: ' Cherri Hartigan (design / front end engineer)',
           link: {
             link: 'http://www.annadegenaar.com',
-            location: '',
+            location: ' project',
           },
           video: 'annadegenaar',
           img: 'AnnaDegenaarPortfolio',

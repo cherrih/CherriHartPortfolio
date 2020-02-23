@@ -46,7 +46,7 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Link to project
+            Link to
             {project.link.location}
             <span className="link-arrow link-arrow-white" />
           </a>
