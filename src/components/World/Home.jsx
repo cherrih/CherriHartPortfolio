@@ -100,6 +100,7 @@ class Home extends React.Component {
     text.forEach(line => {
       matrix.push(line.split(''));
     });
+    console.log(matrix);
     this.setState({
       matrix,
     });
@@ -292,7 +293,6 @@ class Home extends React.Component {
   }
 
   handleKeyDown(e) {
-    e.preventDefault();
     let pieceToEat;
     let score = 0;
     const { showWinMessage } = this.props;
