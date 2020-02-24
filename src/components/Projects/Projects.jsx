@@ -104,9 +104,6 @@ class Projects extends React.Component {
     const { background, currentView, display, index } = this.state;
     const projectsStyle = {
       backgroundImage: background,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
       display,
     };
     const { hideProject, nextProject } = this;

@@ -257,7 +257,7 @@ h1 {
   grid-template-columns: 25% 25%;
   justify-content: center;
   grid-gap: 0 5vw;
-  height: 90vh;
+  min-height: 90vh;
 }
 .grid-element {
   font-size: 16px;
@@ -292,12 +292,15 @@ h1 {
   bottom: 5vh;
 }
 .projects-photo-preview {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100%;
   z-index: 998;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ---------- PROJECT LIGHTBOX ------- */
@@ -308,6 +311,7 @@ h1 {
   height: 100vh;
   display: flex;
   flex-direction: row-reverse;
+  position: fixed;
 }
 .lightbox-footer {
   padding: 2vh 6vw;
