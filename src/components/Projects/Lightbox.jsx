@@ -1,24 +1,10 @@
 import React from 'react';
 
 const Lightbox = ({ project, hideProject, nextProject }) => {
-  const isVideo = project.video ? true : false;
+  const isVideo = !!project.video;
   const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
   return (
     <div className="lightbox-container">
-      <div>
-        {isVideo ? (
-          <video
-            src={`${url}${project.video}.mov`}
-            autoPlay
-            className="lightbox-hero"
-            loop
-          >
-            <img className="lightbox-hero" src={`${url}${project.img}.png`} />
-          </video>
-        ) : (
-          <img className="lightbox-hero" src={`${url}${project.img}.png`} />
-        )}
-      </div>
       <div className="lightbox-text">
         <div className="lightbox-exit" onClick={hideProject}>
           <img src={`${url}xWhite.png`} />
@@ -51,6 +37,20 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
             <span className="link-arrow link-arrow-white" />
           </a>
         </p>
+      </div>
+      <div>
+        {isVideo ? (
+          <video
+            src={`${url}${project.video}.mov`}
+            autoPlay
+            className="lightbox-hero"
+            loop
+          >
+            <img className="lightbox-hero" src={`${url}${project.img}.png`} />
+          </video>
+        ) : (
+          <img className="lightbox-hero" src={`${url}${project.img}.png`} />
+        )}
       </div>
       <div className="lightbox-footer">
         <div onClick={hideProject}>Back</div>

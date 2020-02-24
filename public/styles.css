@@ -307,6 +307,7 @@ h1 {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: row-reverse;
 }
 .lightbox-footer {
   padding: 2vh 6vw;

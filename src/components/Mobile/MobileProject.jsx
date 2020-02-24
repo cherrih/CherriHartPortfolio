@@ -4,7 +4,11 @@ const Project = ({ project }) => {
   const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
   return (
     <div className="small-project-container">
-      <img className="project-hero" src={`${url}${project.img}.png`} />
+      <img
+        className="project-hero"
+        src={`${url}${project.img}-min.png`}
+        alt={`${project.img} project preview`}
+      />
       <div className="small-project-text">
         <h3>{project.title}</h3>
         <p>{project.fullDescription}</p>
