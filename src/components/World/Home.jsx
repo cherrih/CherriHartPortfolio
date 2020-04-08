@@ -97,10 +97,9 @@ class Home extends React.Component {
     ];
 
     const matrix = [];
-    text.forEach(line => {
+    text.forEach((line) => {
       matrix.push(line.split(''));
     });
-    console.log(matrix);
     this.setState({
       matrix,
     });
@@ -353,7 +352,7 @@ class Home extends React.Component {
       if (pieceToEat && pieceToEat !== '3') {
         score += 5;
       }
-      this.setState(state => ({
+      this.setState((state) => ({
         score: state.score + score,
         matrix,
       }));

@@ -94,7 +94,7 @@ class Projects extends React.Component {
   nextProject() {
     const { index } = this.state;
     let newIndex = JSON.parse(index);
-    newIndex = newIndex === 5 ? 0 : newIndex + 1;
+    newIndex = newIndex === 6 ? 0 : newIndex + 1;
     this.setState({
       index: newIndex,
     });
