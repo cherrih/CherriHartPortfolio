@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Menu = ({ toggleMenu }) => (
   <div className="mobile-menu">
@@ -6,6 +7,7 @@ const Menu = ({ toggleMenu }) => (
       <img
         src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/xBlack.png"
         onClick={toggleMenu}
+        alt="exit"
       />
     </div>
     <div>
@@ -36,5 +38,9 @@ const Menu = ({ toggleMenu }) => (
     </div>
   </div>
 );
+
+Menu.propTypes = {
+  toggleMenu: PropTypes.func.isRequired,
+}
 
 export default Menu;

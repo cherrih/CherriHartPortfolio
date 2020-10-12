@@ -51,16 +51,13 @@ class Home extends React.Component {
     this.handleReset = this.handleReset.bind(this);
   }
 
-  componentWillMount() {
-    window.addEventListener('keydown', this.handleKeyDown);
-  }
-
   componentDidMount() {
     this.buildMatrix();
     const { g7, g8, g9 } = this.state;
     this.interval1 = setInterval(() => this.moveGhost(g7), 500);
     this.interval2 = setInterval(() => this.moveGhost(g8), 500);
     this.interval3 = setInterval(() => this.moveGhost(g9), 500);
+    window.addEventListener('keydown', this.handleKeyDown);
   }
 
   componentWillUnmount() {
@@ -86,9 +83,9 @@ class Home extends React.Component {
       '33333333333333333333333333333333333333333333',
       '3333332 Hailing from the land of sheep 33339',
       '333333and kiwis (New Zealand), 1 I am a 3333',
-      '3333331 San Francisco-based Full-Stack333333',
+      '3333331 Brooklyn, NY-based Full-Stack3333333',
       '333333Developer / Creative Technologist.3333',
-      '333333Currently working at 1 Pinterest and33',
+      '333333Currently working at 1 AKQA and3333333',
       '333333accepting freelance projects. Fancy333',
       '3333331 collaborating or interested in333373',
       "333333chatting? 1 Let's talk!333333333333333",
