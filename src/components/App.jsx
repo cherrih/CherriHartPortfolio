@@ -25,6 +25,26 @@ class App extends React.Component {
       isChampion: false,
       projects: [
         {
+          title: 'SPACE10 Residency Program',
+          id: 'space10',
+          description: 'Website development for IKEA\'s research/design lab',
+          techStack: ' Three.js, React, PHP, Timber',
+          date: 'June 2020 - Ongoing',
+          fullDescription:
+            'I was initially contracted to implement the new Residency Program subsite including 3D web animation and component library updates.',
+          photoText: [
+            'Following the successful launch, my contract was converted to a retainer to update and modernize the site\'s tech stack, url mapping and analytics.',
+          ],
+          team:
+            ' Morten Bjørn (digital coordinator), Mitsuko Sato (designer), Jana Perkovic (editor / copywriter), Cherri Hartigan (full-stack engineer)',
+          link: {
+            link: 'https://space10.com/residencies/',
+            location: ' subsite',
+          },
+          video: 'space10',
+          img: 'space10',
+        },
+        {
           title: 'Pinterest Campaign Builder',
           id: 'propromote',
           description: "Rework of Pinterest's ad creation flow",
@@ -293,7 +313,7 @@ class App extends React.Component {
               <div className="link-arrow-container">
                 <a
                   className="link-container"
-                  href="https://drive.google.com/file/d/1TgYS4aD-_JvRBWdyQCxLAeE5VQg7M9Q0/view"
+                  href="https://drive.google.com/file/d/1QSqtAUQOSEjXy6E26ANiOwHmelXt6GfZ/view"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -352,26 +372,29 @@ class App extends React.Component {
               {isMobileModal && <MobileModal close={toggleModalMobile} />}
               {isMenu && <Menu toggleMenu={toggleMenu} />}
               {currentView === 'home' && <MobileHome />}
-              {currentView === 'smallpropromote' && (
+              {currentView === 'smallspace10' && (
                 <MobileProject project={projects[0]} />
               )}
-              {currentView === 'smallRogue' && (
-                <MobileProject project={projects[2]} />
-              )}
-              {currentView === 'smallQueertrip' && (
+              {currentView === 'smallpropromote' && (
                 <MobileProject project={projects[1]} />
               )}
-              {currentView === 'smallWatch' && (
+              {currentView === 'smallRogue' && (
                 <MobileProject project={projects[3]} />
               )}
-              {currentView === 'smallFindTables' && (
+              {currentView === 'smallQueertrip' && (
+                <MobileProject project={projects[2]} />
+              )}
+              {currentView === 'smallWatch' && (
                 <MobileProject project={projects[4]} />
               )}
-              {currentView === 'smallBelen' && (
+              {currentView === 'smallFindTables' && (
                 <MobileProject project={projects[5]} />
               )}
-              {currentView === 'smallAnna' && (
+              {currentView === 'smallBelen' && (
                 <MobileProject project={projects[6]} />
+              )}
+              {currentView === 'smallAnna' && (
+                <MobileProject project={projects[7]} />
               )}
             </div>
             <MobileProjects

@@ -23,39 +23,45 @@ class Projects extends React.Component {
     let background = 'none';
     const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
     if (
-      className === 'Pinterest Campaign Builder 0' ||
-      className === 'Pinterest Campaign Builder grid-element 0'
+      className === 'SPACE10 Residency Program 0'
+      || className === 'SPACE10 Residency Program grid-element 0'
+    ) {
+      background = `url(${url}space10.png)`;
+    }
+    if (
+      className === 'Pinterest Campaign Builder 1'
+      || className === 'Pinterest Campaign Builder grid-element 1'
     ) {
       background = `url(${url}propromote.png)`;
     }
     if (
-      className === 'Belen Tenorio Portfolio 5' ||
-      className === 'Belen Tenorio Portfolio grid-element 5'
+      className === 'Belen Tenorio Portfolio 6'
+      || className === 'Belen Tenorio Portfolio grid-element 6'
     ) {
       background = `url(${url}BelenTenorioPortfolio.png)`;
     }
     if (
-      className === 'Anna Degenaar Portfolio 6' ||
-      className === 'Anna Degenaar Portfolio grid-element 6'
+      className === 'Anna Degenaar Portfolio 7'
+      || className === 'Anna Degenaar Portfolio grid-element 7'
     ) {
       background = `url(${url}AnnaDegenaarPortfolio.png)`;
     }
     if (
-      className === 'FindTables 4' ||
-      className === 'FindTables grid-element 4'
+      className === 'FindTables 5'
+      || className === 'FindTables grid-element 5'
     ) {
       background = `url(${url}findtables.png)`;
     }
-    if (className === 'Rogue 2' || className === 'Rogue grid-element 2') {
+    if (className === 'Rogue 3' || className === 'Rogue grid-element 3') {
       background = `url(${url}Rogue.png)`;
     }
     if (
-      className === 'Queertrip 1' ||
-      className === 'Queertrip grid-element 1'
+      className === 'Queertrip 2'
+      || className === 'Queertrip grid-element 2'
     ) {
       background = `url(${url}QueerTrip.png)`;
     }
-    if (className === 'Watch.io 3' || className === 'Watch.io grid-element 3') {
+    if (className === 'Watch.io 4' || className === 'Watch.io grid-element 4') {
       background = `url(${url}Watch.io.png)`;
     }
     this.setState({
@@ -94,7 +100,7 @@ class Projects extends React.Component {
   nextProject() {
     const { index } = this.state;
     let newIndex = JSON.parse(index);
-    newIndex = newIndex === 6 ? 0 : newIndex + 1;
+    newIndex = newIndex === 7 ? 0 : newIndex + 1;
     this.setState({
       index: newIndex,
     });

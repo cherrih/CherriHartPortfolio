@@ -438,6 +438,7 @@ h1 {
   justify-content: center;
 }
 .smallpropromote:hover:not(h4),
+.smallspace10:hover:not(h4),
 .smallRogue:hover:not(h4),
 .smallFindTables:hover:not(h4),
 .smallQueertrip:hover:not(h4),
@@ -470,12 +471,17 @@ h1 {
 .smallAnna {
   background-color: rgb(219, 249, 155);
 }
+.smallspace10 {
+  background-color: rgb(188, 162, 212);
+}
 .smallRogue h4:hover,
 .smallFindTables h4:hover,
 .smallQueertrip h4:hover,
 .smallWatch h4:hover,
 .smallBelen h4:hover,
-.smallAnna h4:hover {
+.smallAnna h4:hover,
+.smallpropromote h4:hover,
+.smallspace10 h4:hover {
   border: none;
 }
 .small-projects-container div h4 {
