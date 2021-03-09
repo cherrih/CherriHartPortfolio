@@ -304,7 +304,7 @@ class App extends React.Component {
     } = this.state;
     return (
       <BreakpointProvider>
-        <Breakpoint medium up>
+        <Breakpoint large up>
           <nav className="home-nav">
             <div className="cherri" onClick={goHome}>
               Cherri Hartigan
