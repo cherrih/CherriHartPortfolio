@@ -23,45 +23,42 @@ class Projects extends React.Component {
     let background = 'none';
     const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
     if (
-      className === 'SPACE10 Residency Program 0'
-      || className === 'SPACE10 Residency Program grid-element 0'
+      className.includes('SPACE10 Residency Program')
     ) {
       background = `url(${url}space10.png)`;
     }
+    if (className.includes('Pinterest Experiences')) {
+      background = `url(${url}pinterest-experience-framework.png)`;
+    }
     if (
-      className === 'Pinterest Campaign Builder 1'
-      || className === 'Pinterest Campaign Builder grid-element 1'
+      className.includes('Pinterest Campaign Builder')
     ) {
       background = `url(${url}propromote.png)`;
     }
     if (
-      className === 'Belen Tenorio Portfolio 6'
-      || className === 'Belen Tenorio Portfolio grid-element 6'
+      className.includes('Belen Tenorio Portfolio')
     ) {
       background = `url(${url}BelenTenorioPortfolio.png)`;
     }
     if (
-      className === 'Anna Degenaar Portfolio 7'
-      || className === 'Anna Degenaar Portfolio grid-element 7'
+      className.includes('Anna Degenaar Portfolio')
     ) {
       background = `url(${url}AnnaDegenaarPortfolio.png)`;
     }
     if (
-      className === 'FindTables 5'
-      || className === 'FindTables grid-element 5'
+      className.includes('FindTables')
     ) {
       background = `url(${url}findtables.png)`;
     }
-    if (className === 'Rogue 3' || className === 'Rogue grid-element 3') {
+    if (className.includes('Rogue')) {
       background = `url(${url}Rogue.png)`;
     }
     if (
-      className === 'Queertrip 2'
-      || className === 'Queertrip grid-element 2'
+      className.includes('Queertrip')
     ) {
       background = `url(${url}QueerTrip.png)`;
     }
-    if (className === 'Watch.io 4' || className === 'Watch.io grid-element 4') {
+    if (className.includes('Watch.io grid-element')) {
       background = `url(${url}Watch.io.png)`;
     }
     this.setState({
@@ -99,8 +96,9 @@ class Projects extends React.Component {
 
   nextProject() {
     const { index } = this.state;
+    const { projects } = this.props;
     let newIndex = JSON.parse(index);
-    newIndex = newIndex === 7 ? 0 : newIndex + 1;
+    newIndex = newIndex === projects.length - 1 ? 0 : newIndex + 1;
     this.setState({
       index: newIndex,
     });

@@ -25,18 +25,21 @@ const Project = ({ project }) => {
           Team:
           {project.team}
         </p>
-        <p className="link-arrow-container">
-          <a
-            className="link-container-projects"
-            href={project.link.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Link to
-            {project.link.location}
-            <span className="link-arrow link-arrow-white" />
-          </a>
-        </p>
+        {project.link && 
+          (
+          <p className="link-arrow-container">
+            <a
+              className="link-container-projects"
+              href={project.link.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Link to
+              {project.link.location}
+              <span className="link-arrow link-arrow-white" />
+            </a>
+          </p>
+          )}
       </div>
     </div>
   );

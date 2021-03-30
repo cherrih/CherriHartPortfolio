@@ -45,6 +45,35 @@ class App extends React.Component {
           img: 'space10',
         },
         {
+          title: 'Pinterest Experiences',
+          id: 'pinterest-experience-framework',
+          description: 'Reusable experiences, product and marketing collab',
+          techStack: ' Kotlin, Java, React, Python, Gestalt',
+          date: 'March - June 2020',
+          fullDescription:
+            'The Growth Platform team undertook an overhaul of Pinterest\'s Experience Framework with a goal to allow non-engineers to create product features at different stages of a user\'s lifecycle across web, mobile web, and the iOS and Android applications.',
+          photoText: [
+            'I volunteered to jump into Pinterest\'s Android application. Here you see our "banner" experience in three different configurations: No image, thumbnail image and full width image.',
+          ],
+          team:
+            ' Graham Roth (product manager), Sophia (Feiyang) Feng (engineering manager), Danny Alvarez (web developer), Brian Harris (mobile web developer) Chidinma Egbukichi (iOS developer), Cherri Hartigan (Android developer)',
+          videos: [
+            {
+              video: 'pinterest-you-got-this',
+              img: 'pinterest-you-got-this',
+            },
+            {
+              video: 'pinterest-how-we-feel',
+              img: 'pinterest-how-we-feel',
+            },
+            {
+              video: 'pinterest-easter',
+              img: 'pinterest-easter',
+            },
+          ],
+          img: 'pinterest-experience-framework',
+        },
+        {
           title: 'Pinterest Campaign Builder',
           id: 'propromote',
           description: "Rework of Pinterest's ad creation flow",
@@ -375,26 +404,29 @@ class App extends React.Component {
               {currentView === 'smallspace10' && (
                 <MobileProject project={projects[0]} />
               )}
-              {currentView === 'smallpropromote' && (
+              {currentView === 'smallpinterest-experience-framework' && (
                 <MobileProject project={projects[1]} />
               )}
-              {currentView === 'smallRogue' && (
-                <MobileProject project={projects[3]} />
-              )}
-              {currentView === 'smallQueertrip' && (
+              {currentView === 'smallpropromote' && (
                 <MobileProject project={projects[2]} />
               )}
-              {currentView === 'smallWatch' && (
+              {currentView === 'smallRogue' && (
                 <MobileProject project={projects[4]} />
               )}
-              {currentView === 'smallFindTables' && (
+              {currentView === 'smallQueertrip' && (
+                <MobileProject project={projects[3]} />
+              )}
+              {currentView === 'smallWatch' && (
                 <MobileProject project={projects[5]} />
               )}
-              {currentView === 'smallBelen' && (
+              {currentView === 'smallFindTables' && (
                 <MobileProject project={projects[6]} />
               )}
-              {currentView === 'smallAnna' && (
+              {currentView === 'smallBelen' && (
                 <MobileProject project={projects[7]} />
+              )}
+              {currentView === 'smallAnna' && (
+                <MobileProject project={projects[8]} />
               )}
             </div>
             <MobileProjects

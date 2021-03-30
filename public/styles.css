@@ -331,6 +331,15 @@ h1 {
   padding: 12vh 2vw;
   max-width: 65vw;
 }
+.multi-video-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.multi-video-hero-video {
+  max-width: 16vw;
+  padding: 8px;
+}
 .lightbox-text {
   color: #fff;
   padding: 4vh 4vw 4vh 2vw;
@@ -437,6 +446,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+.smallpinterest-experience-framework:hover:not(h4),
 .smallpropromote:hover:not(h4),
 .smallspace10:hover:not(h4),
 .smallRogue:hover:not(h4),
@@ -451,29 +461,33 @@ h1 {
   cursor: pointer;
 }
 .smallpropromote {
-  background-color: var(--main-red);
-}
-.smallRogue {
-  background-color: rgb(140, 215, 146);
-}
-.smallQueertrip {
   background-color: rgb(242, 106, 106);
 }
-.smallWatch {
+.smallRogue {
   background-color: rgb(252, 164, 61);
 }
-.smallFindTables {
-  background-color: var(--main-green);
+.smallQueertrip {
+  background-color: rgb(140, 215, 146);
 }
-.smallBelen {
+.smallWatch {
   background-color: rgb(153, 167, 255);
 }
-.smallAnna {
+.smallFindTables {
+  background-color: rgb(110, 170, 225);
+}
+.smallBelen {
   background-color: rgb(219, 249, 155);
+}
+.smallAnna {
+  background-color: var(--main-green);
 }
 .smallspace10 {
   background-color: rgb(188, 162, 212);
 }
+.smallpinterest-experience-framework {
+  background-color: rgb(223, 110, 225);
+}
+.smallpinterest-experience-framework h4:hover,
 .smallRogue h4:hover,
 .smallFindTables h4:hover,
 .smallQueertrip h4:hover,
