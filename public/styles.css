@@ -173,7 +173,8 @@ nav {
   color: var(--main-red);
 }
 .close-modal-btn {
-  float: right;
+  position: absolute;
+  right: 0;
   cursor: pointer;
   padding: 25px 30px;
 }
