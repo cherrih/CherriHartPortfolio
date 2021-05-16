@@ -2,6 +2,7 @@ import React from 'react';
 
 const Lightbox = ({ project, hideProject, nextProject }) => {
   const isVideo = !!project.video;
+  const isMultiVideo = !!(project.videos && project.videos.length);
   const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
   return (
     <div className="lightbox-container">
@@ -25,30 +26,51 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
           Team:
           {project.team}
         </div>
-        <p className="link-arrow-container">
-          <a
-            className="link-container-projects"
-            href={project.link.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Link to
-            {project.link.location}
-            <span className="link-arrow link-arrow-white" />
-          </a>
-        </p>
+        {project.link &&
+          (
+          <p className="link-arrow-container">
+            <a
+              className="link-container-projects"
+              href={project.link.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Link to
+              {project.link.location}
+              <span className="link-arrow link-arrow-white" />
+            </a>
+          </p>
+          )}
       </div>
       <div>
-        {isVideo ? (
+        {isVideo && (
           <video
             src={`${url}${project.video}.mov`}
             autoPlay
             className="lightbox-hero"
             loop
+            muted
           >
             <img className="lightbox-hero" src={`${url}${project.img}.png`} />
           </video>
-        ) : (
+        )}
+        {isMultiVideo && (
+          <div className="lightbox-hero multi-video-hero">
+            {project.videos.map(video => (
+              <video
+                src={`${url}${video.video}.mov`}
+                autoPlay
+                key={video.video}
+                className="multi-video-hero-video"
+                loop
+                muted
+              >
+                <img className="multi-video-hero-video" src={`${url}${video.img}.png`} />
+              </video>
+            ))}
+          </div>
+        )}
+        {!isVideo && !isMultiVideo && (
           <img className="lightbox-hero" src={`${url}${project.img}.png`} />
         )}
       </div>
