@@ -85,7 +85,7 @@ class Home extends React.Component {
       '333333and kiwis (New Zealand), 1 I am a 3333',
       '3333331 Brooklyn, NY-based Full-Stack3333333',
       '333333Developer / Creative Technologist.3333',
-      '333333Currently working at 1 AKQA and3333333',
+      '333333Currently working at 1 Square and33333',
       '333333accepting freelance projects. Fancy333',
       '3333331 collaborating or interested in333373',
       "333333chatting? 1 Let's talk!333333333333333",

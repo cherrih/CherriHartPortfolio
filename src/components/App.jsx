@@ -25,11 +25,70 @@ class App extends React.Component {
       isChampion: false,
       projects: [
         {
+          title: 'otto',
+          id: 'otto',
+          description: 'Making motion design accessible to all Squares',
+          techStack: ' GSAP, React, AWS Lambda, Kubernetes',
+          date: 'July 2021 - March 2022',
+          fullDescription:
+            'Otto is Square\'s web-based rapid prototyping motion tool, built in partnership with New York-based branding agency Athletics. I was the technical lead, working alongside Athletics to create the modular, scalable framework.',
+          photoText: [
+            'My role included defining and reviewing technical requirements, in-depth code reviews to maintain Square\'s high code standard, and incorporating Athletic\'s codebase into Square\'s ecosystem. It was my responsibility to guarantee a safe, secure, successful system as well as ensure that the tool was able to continue to evolve post-delivery so other engineers at Square could modify, maintain, and extend the tool for future use cases.',
+          ],
+          team:
+            ' Square (Aaron Poe, Akira Kimata, Alicia Cagnoli, Amy Schacter, Anand Doshi, Carl Sturgess, Cherri Hartigan, Chris Ereneta, Christopher Mah, Claudia Ng, Eileen Tjan, Jack Ferrante, Justin Whaley, Philippe Gauthier, Tore Holmberg) + Athletics (Allison Connell, Jameson Proctor, Jason Gnewikow, Kathryn Farwell, Malcolm Buick, Richard Lehmann, Ross Luebe)',
+          link: {
+            link: 'https://design.squareup.com/ca/en/articles/motion-design-accessible',
+            location: ' blog write up',
+          },
+          video: 'otto.mp4',
+          img: 'otto',
+        },
+        {
+          title: 'Squareup.com',
+          id: 'squareup',
+          description: 'Experimenting with and building delightful top of funnel user experiences to drive sign ups',
+          techStack: ' Contentful, Svelte, HTML/CSS/Javascript, GSAP, Ruby on Rails',
+          date: 'July 2021 - ongoing',
+          fullDescription:
+            'Technical lead working closely with product, insights, design and other engineers to build delightful top of funnel user experiences that drive sign ups across squareup.com. The example shown is the Commerce Campaign launched with the Brand team in February 2022.',
+          photoText: [
+            'Proactively finding opportunities to experiment with new ways of engaging users, building prototypes and conducting A/B tests to validate hypotheses.',
+            'Other responsibilities include improving process together with production and design leads, recruiting and onboarding for the design technology team, scaling up others\' skills through coaching and mentorship, project scoping and estimates, proposal and technical writing.',
+          ],
+          team:
+            ' Brand, Marketing, Ecosystem Discovery, Demand Generation, User Research',
+          link: {
+            link: 'https://squareup.com/commerce',
+            location: ' Square\'s commerce campaign',
+          },
+          video: 'commerce.mp4',
+          img: 'squareup',
+        },
+        {
+          title: 'MyHSS Android App',
+          id: 'hss',
+          description: 'Hospital for Special Surgeries custom MyChart app',
+          techStack: ' Java, Kotlin, React',
+          date: 'September 2020 - March 2021',
+          fullDescription:
+            'Alongside the talented team, I built the Android version of a custom healthcare application for HSS, leveraging MyChart\'s infrastructure and webviews (reused in the iOS and web app).',
+          photoText: [
+          ],
+          team:
+            ' Kate Scally (product designer), Gabriel Beck (UX designer), Keath Chan (technical director), Jessica Donahue (lead web developer), Cherri Hartigan (lead android developer)',
+          img: 'hss',
+          link: {
+            link: 'https://play.google.com/store/apps/details?id=edu.hss.myhss&hl=en_US&gl=US',
+            location: ' MyHSS App on Google Play',
+          },
+        },
+        {
           title: 'SPACE10 Residency Program',
           id: 'space10',
           description: 'Website development for IKEA\'s research/design lab',
           techStack: ' Three.js, React, PHP, Timber',
-          date: 'June 2020 - Ongoing',
+          date: 'June 2020 - June 2021',
           fullDescription:
             'I was initially contracted to implement the new Residency Program subsite including 3D web animation and component library updates.',
           photoText: [
@@ -39,9 +98,9 @@ class App extends React.Component {
             ' Morten Bjørn (digital coordinator), Mitsuko Sato (designer), Jana Perkovic (editor / copywriter), Cherri Hartigan (full-stack engineer)',
           link: {
             link: 'https://space10.com/residencies/',
-            location: ' subsite',
+            location: ' residency program subsite',
           },
-          video: 'space10',
+          video: 'space10.mov',
           img: 'space10',
         },
         {
@@ -54,20 +113,21 @@ class App extends React.Component {
             'The Growth Platform team undertook an overhaul of Pinterest\'s Experience Framework with a goal to allow non-engineers to create product features at different stages of a user\'s lifecycle across web, mobile web, and the iOS and Android applications.',
           photoText: [
             'I volunteered to jump into Pinterest\'s Android application. Here you see our "banner" experience in three different configurations: No image, thumbnail image and full width image.',
+            'This project won our team an internal award for addressing common pain points, increasing usability and driving millions of additional WAU.',
           ],
           team:
             ' Graham Roth (product manager), Sophia (Feiyang) Feng (engineering manager), Danny Alvarez (web developer), Brian Harris (mobile web developer) Chidinma Egbukichi (iOS developer), Cherri Hartigan (Android developer)',
           videos: [
             {
-              video: 'pinterest-you-got-this',
+              video: 'pinterest-you-got-this.mov',
               img: 'pinterest-you-got-this',
             },
             {
-              video: 'pinterest-how-we-feel',
+              video: 'pinterest-how-we-feel.mov',
               img: 'pinterest-how-we-feel',
             },
             {
-              video: 'pinterest-easter',
+              video: 'pinterest-easter.mov',
               img: 'pinterest-easter',
             },
           ],
@@ -90,14 +150,14 @@ class App extends React.Component {
             link: 'https://6wl14.csb.app/',
             location: ' project',
           },
-          video: 'propromote',
+          video: 'propromote.mov',
           img: 'propromote',
         },
         {
           title: 'Queertrip',
           description: 'Full-stack travel app for the LGBTQIA+ community',
           techStack:
-            ' Javascript, React, HTML, CSS, MongoDB, Mongoose.js, Express, Node.js, Webpack, Google Maps API',
+            ' HTML/CSS/Javascript, React, MongoDB, Mongoose.js, Express, Node, Webpack, Google Maps API',
           date: 'Jan 2019 - Ongoing',
           fullDescription:
             'Traveling internationally while queer can sometimes be a scary experience. With Queertrip you can find experiences and people across the globe who will accept you for who you are. Browse through safe spots around the world and share your own tips!',
@@ -110,7 +170,7 @@ class App extends React.Component {
             link: 'https://queertrip.world',
             location: ' Queertrip V2',
           },
-          video: 'Queertrip',
+          video: 'Queertrip.mov',
           img: 'QueerTrip',
         },
         {
@@ -130,7 +190,7 @@ class App extends React.Component {
             link: 'https://github.com/cherrih/rogue',
             location: ' project on GitHub',
           },
-          video: 'RogueHome',
+          video: 'RogueHome.mov',
           img: 'Rogue',
         },
         {
@@ -153,7 +213,7 @@ class App extends React.Component {
             link: 'https://github.com/TheEventHandlers/MVMT-details-specs',
             location: ' project on GitHub',
           },
-          video: 'Watch',
+          video: 'Watch.mov',
           img: 'Watch.io',
         },
         {
@@ -186,7 +246,7 @@ class App extends React.Component {
           id: 'Belen',
           shortTitle: 'Belen T Portfolio',
           description: 'Portfolio development for product/brand designer',
-          techStack: ' Javascript, HTML, CSS, Sketch',
+          techStack: ' Javascript, HTML, CSS',
           date: 'Apr 2018 - May 2018',
           fullDescription: '',
           photoText: [
@@ -198,7 +258,7 @@ class App extends React.Component {
             link: 'http://belentenorio.com',
             location: ' project',
           },
-          video: 'belentenorio',
+          video: 'belentenorio.mov',
           img: 'BelenTenorioPortfolio',
         },
         {
@@ -207,7 +267,7 @@ class App extends React.Component {
           shortTitle: 'Anna D Portfolio',
           description:
             'Portfolio design and development for photographer/writer',
-          techStack: ' Javascript, jQuery, HTML, CSS, Sketch',
+          techStack: ' Javascript, jQuery, HTML, CSS',
           date: 'Feb 2018 - Mar 2018',
           fullDescription: '',
           photoText: [
@@ -215,10 +275,10 @@ class App extends React.Component {
           ],
           team: ' Cherri Hartigan (design / front end engineer)',
           link: {
-            link: 'http://www.annadegenaar.com',
+            link: 'https://anna-degenaar.superhi.com',
             location: ' project',
           },
-          video: 'annadegenaar',
+          video: 'annadegenaar.mov',
           img: 'AnnaDegenaarPortfolio',
         },
       ],
@@ -342,7 +402,7 @@ class App extends React.Component {
               <div className="link-arrow-container">
                 <a
                   className="link-container"
-                  href="https://drive.google.com/file/d/1QSqtAUQOSEjXy6E26ANiOwHmelXt6GfZ/view"
+                  href="https://drive.google.com/file/d/10Drb95AjwOp1iuH8jJJFGaTnSLfr8ZBP/view"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -370,7 +430,7 @@ class App extends React.Component {
           ) : (
             <Projects projects={projects} />
           )}
-          {isModal && (
+          {isModal && !isDead && (
             <Modal close={toggleModal} toggleProjects={toggleProjects} />
           )}
           {isDead && (
@@ -401,32 +461,41 @@ class App extends React.Component {
               {isMobileModal && <MobileModal close={toggleModalMobile} />}
               {isMenu && <Menu toggleMenu={toggleMenu} />}
               {currentView === 'home' && <MobileHome />}
-              {currentView === 'smallspace10' && (
+              {currentView === 'smallotto' && (
                 <MobileProject project={projects[0]} />
               )}
-              {currentView === 'smallpinterest-experience-framework' && (
+              {currentView === 'smallsquareup' && (
                 <MobileProject project={projects[1]} />
               )}
-              {currentView === 'smallpropromote' && (
+              {currentView === 'smallhss' && (
                 <MobileProject project={projects[2]} />
               )}
-              {currentView === 'smallRogue' && (
-                <MobileProject project={projects[4]} />
-              )}
-              {currentView === 'smallQueertrip' && (
+              {currentView === 'smallspace10' && (
                 <MobileProject project={projects[3]} />
               )}
-              {currentView === 'smallWatch' && (
+              {currentView === 'smallpinterest-experience-framework' && (
+                <MobileProject project={projects[4]} />
+              )}
+              {currentView === 'smallpropromote' && (
                 <MobileProject project={projects[5]} />
               )}
-              {currentView === 'smallFindTables' && (
+              {currentView === 'smallQueertrip' && (
                 <MobileProject project={projects[6]} />
               )}
-              {currentView === 'smallBelen' && (
+              {currentView === 'smallRogue' && (
                 <MobileProject project={projects[7]} />
               )}
-              {currentView === 'smallAnna' && (
+              {currentView === 'smallWatch' && (
                 <MobileProject project={projects[8]} />
+              )}
+              {currentView === 'smallFindTables' && (
+                <MobileProject project={projects[9]} />
+              )}
+              {currentView === 'smallBelen' && (
+                <MobileProject project={projects[10]} />
+              )}
+              {currentView === 'smallAnna' && (
+                <MobileProject project={projects[11]} />
               )}
             </div>
             <MobileProjects

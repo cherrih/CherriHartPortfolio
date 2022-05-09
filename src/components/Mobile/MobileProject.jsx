@@ -2,11 +2,14 @@ import React from 'react';
 
 const Project = ({ project }) => {
   const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
+  const imageSrc = project.title === 'otto'
+    ? `${url}${project.img}-min.webp`
+    : `${url}${project.img}-min.png`;
   return (
     <div className="small-project-container">
       <img
         className="project-hero"
-        src={`${url}${project.img}-min.png`}
+        src={imageSrc}
         alt={`${project.img} project preview`}
       />
       <div className="small-project-text">
@@ -25,7 +28,7 @@ const Project = ({ project }) => {
           Team:
           {project.team}
         </p>
-        {project.link && 
+        {project.link &&
           (
           <p className="link-arrow-container">
             <a

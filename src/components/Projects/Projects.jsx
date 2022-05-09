@@ -23,6 +23,21 @@ class Projects extends React.Component {
     let background = 'none';
     const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
     if (
+      className.includes('otto')
+    ) {
+      background = `url(${url}otto.webp)`;
+    }
+    if (
+      className.includes('Squareup.com')
+    ) {
+      background = `url(${url}squareup.png)`;
+    }
+    if (
+      className.includes('MyHSS Android App')
+    ) {
+      background = `url(${url}hss.png)`;
+    }
+    if (
       className.includes('SPACE10 Residency Program')
     ) {
       background = `url(${url}space10.png)`;

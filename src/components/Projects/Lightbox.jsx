@@ -45,7 +45,7 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
       <div>
         {isVideo && (
           <video
-            src={`${url}${project.video}.mov`}
+            src={`${url}${project.video}`}
             autoPlay
             className="lightbox-hero"
             loop
@@ -58,7 +58,7 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
           <div className="lightbox-hero multi-video-hero">
             {project.videos.map(video => (
               <video
-                src={`${url}${video.video}.mov`}
+                src={`${url}${video.video}`}
                 autoPlay
                 key={video.video}
                 className="multi-video-hero-video"

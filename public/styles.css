@@ -447,6 +447,9 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+.smallhss:hover:not(h4),
+.smallotto:hover:not(h4),
+.smallsquareup:hover:not(h4),
 .smallpinterest-experience-framework:hover:not(h4),
 .smallpropromote:hover:not(h4),
 .smallspace10:hover:not(h4),
@@ -473,13 +476,13 @@ h1 {
 .smallWatch {
   background-color: rgb(153, 167, 255);
 }
-.smallFindTables {
+.smallFindTables, .smallotto {
   background-color: rgb(110, 170, 225);
 }
-.smallBelen {
+.smallBelen, .smallsquareup {
   background-color: rgb(219, 249, 155);
 }
-.smallAnna {
+.smallAnna, .smallhss {
   background-color: var(--main-green);
 }
 .smallspace10 {
@@ -488,6 +491,9 @@ h1 {
 .smallpinterest-experience-framework {
   background-color: rgb(223, 110, 225);
 }
+.smallhss h4:hover,
+.smallotto h4:hover,
+.smallsquareup h4:hover,
 .smallpinterest-experience-framework h4:hover,
 .smallRogue h4:hover,
 .smallFindTables h4:hover,
