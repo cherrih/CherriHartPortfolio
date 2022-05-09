@@ -50,6 +50,7 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
             className="lightbox-hero"
             loop
             muted
+            poster={`${url}${project.img}.png`}
           >
             <img className="lightbox-hero" src={`${url}${project.img}.png`} />
           </video>
@@ -64,6 +65,7 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
                 className="multi-video-hero-video"
                 loop
                 muted
+                poster={`${url}${project.img}.png`}
               >
                 <img className="multi-video-hero-video" src={`${url}${video.img}.png`} />
               </video>
