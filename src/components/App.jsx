@@ -311,6 +311,11 @@ class App extends React.Component {
         images.push(`${url}${proj.img}${fileType}`);
         images.push(`${url}${proj.img}-min${fileType}`);
       }
+      if (proj.videos) {
+        proj.videos.forEach((vidObj) => {
+          images.push(`${url}${vidObj.img}.png`);
+        });
+      }
     });
 
     const promises = images.map(src => new Promise(((res, rej) => {
