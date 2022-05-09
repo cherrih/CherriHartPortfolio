@@ -27,7 +27,7 @@ class App extends React.Component {
         {
           title: 'otto',
           id: 'otto',
-          description: 'Making motion design accessible to all Squares',
+          description: 'Making on-brand motion design accessible to all Squares',
           techStack: ' GSAP, React, AWS Lambda, Kubernetes',
           date: 'July 2021 - March 2022',
           fullDescription:
@@ -48,7 +48,7 @@ class App extends React.Component {
           title: 'Squareup.com',
           id: 'squareup',
           description: 'Experimenting with and building delightful top of funnel user experiences to drive sign ups',
-          techStack: ' Contentful, Svelte, HTML/CSS/Javascript, GSAP, Ruby on Rails',
+          techStack: ' Contentful, Svelte, GSAP, Ruby',
           date: 'July 2021 - ongoing',
           fullDescription:
             'Technical lead working closely with product, insights, design and other engineers to build delightful top of funnel user experiences that drive sign ups across squareup.com. The example shown is the Commerce Campaign launched with the Brand team in February 2022.',
