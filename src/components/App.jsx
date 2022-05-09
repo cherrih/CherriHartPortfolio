@@ -76,7 +76,7 @@ class App extends React.Component {
           photoText: [
           ],
           team:
-            ' Kate Scally (product designer), Gabriel Beck (UX designer), Keath Chan (technical director), Jessica Donahue (lead web developer), Cherri Hartigan (lead android developer)',
+            ' Kate Scally (product designer), Gabriel Beck (UX designer), Keath Chan (technical director), Jessica Donahue (lead web developer), Sergio Baptista (lead iOS developer), Cherri Hartigan (lead Android developer)',
           img: 'hss',
           link: {
             link: 'https://play.google.com/store/apps/details?id=edu.hss.myhss&hl=en_US&gl=US',
@@ -347,7 +347,11 @@ class App extends React.Component {
     this.setState({
       currentView: e.target.className,
     });
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   toggleModalMobile() {
@@ -453,7 +457,7 @@ class App extends React.Component {
                 Cherri Hartigan
               </div>
               <img
-                src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.png"
+                src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/hamburger.svg"
                 onClick={toggleMenu}
               />
             </nav>

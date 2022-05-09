@@ -8,7 +8,7 @@ const Lightbox = ({ project, hideProject, nextProject }) => {
     <div className="lightbox-container">
       <div className="lightbox-text">
         <div className="lightbox-exit" onClick={hideProject}>
-          <img src={`${url}xWhite.png`} />
+          <img src={`${url}xWhite.svg`} />
         </div>
         <h1>{project.title}</h1>
         <h3>{project.date}</h3>

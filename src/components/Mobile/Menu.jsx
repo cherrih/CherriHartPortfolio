@@ -5,7 +5,7 @@ const Menu = ({ toggleMenu }) => (
   <div className="mobile-menu">
     <div className="mobile-menu-exit">
       <img
-        src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/xBlack.png"
+        src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/xBlack.svg"
         onClick={toggleMenu}
         alt="exit"
       />

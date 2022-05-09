@@ -13,7 +13,7 @@ class Row extends React.Component {
         innerHTML.push(
           <div key={rowIndex + id} className="world-char">
             <div className="cherry">
-              <img src={`${url}cherris.png`} alt="cherry" />
+              <img src={`${url}cherris.svg`} alt="cherry" />
             </div>
           </div>,
         );
@@ -21,7 +21,7 @@ class Row extends React.Component {
         innerHTML.push(
           <div key={rowIndex + id} className="world-char">
             <div id="pac">
-              <img src={left ? `${url}pac-left.png` : `${url}pac.png`} alt="pacman facing left" />
+              <img src={left ? `${url}pac-left.svg` : `${url}pac.svg`} alt="pacman facing left" />
             </div>
           </div>,
         );
@@ -51,7 +51,7 @@ class Row extends React.Component {
           <div key={rowIndex + id} className="world-char">
             <div className="ghost" id="badlogic">
               <img
-                src={`${url}badlogic_${cherriMode ? 'deadmode' : 'normal'}.png`}
+                src={`${url}badlogic_${cherriMode ? 'deadmode' : 'normal'}.svg`}
                 alt={`bad logic bug ${cherriMode ? 'deadmode' : 'normal'}`}
               />
             </div>
@@ -64,7 +64,7 @@ class Row extends React.Component {
               <img
                 src={`${url}syntacticerror_${
                   cherriMode ? 'deadmode' : 'normal'
-                }.png`}
+                }.svg`}
                 alt={`syntactic error ${
                   cherriMode ? 'deadmode' : 'normal'
                 }`}
@@ -77,7 +77,7 @@ class Row extends React.Component {
           <div key={rowIndex + id} className="world-char">
             <div className="ghost" id="codebug">
               <img
-                src={`${url}codebug_${cherriMode ? 'deadmode' : 'normal'}.png`}
+                src={`${url}codebug_${cherriMode ? 'deadmode' : 'normal'}.svg`}
                 alt={`code bug ${cherriMode ? 'deadmode' : 'normal'}`}
               />
             </div>

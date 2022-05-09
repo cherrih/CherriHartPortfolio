@@ -4,7 +4,7 @@ const DeadMessage = ({ close, toggleProjects }) => (
   <div className="modal-wrapper" onClick={close}>
     <div className="modal">
       <div className="close-modal-btn"onClick={close}>
-        <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/xBlack.png"/>
+        <img src="https://s3-us-west-1.amazonaws.com/cherri-portfolio/xBlack.svg"/>
       </div>
       <div className="modal-title">
         Oh Sh*t!

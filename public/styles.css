@@ -127,16 +127,16 @@ nav {
   margin-top: 3px;
 }
 .link-arrow-white {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_white.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_white.svg');
 }
 .link-arrow-black {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_black.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_black.svg');
 }
 .link-arrow-brown {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_brown.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_brown.svg');
 }
 .link-arrow-container:hover .link-arrow {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_red.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/external_link_red.svg');
 }
 /* ----------MODAL---------- */
 .modal-wrapper {
@@ -275,7 +275,7 @@ h1 {
   margin: 5px 0;
 }
 .grid-element:hover {
-  background-image: url(https://s3-us-west-1.amazonaws.com/cherri-portfolio/big_cherri.png);
+  background-image: url(https://s3-us-west-1.amazonaws.com/cherri-portfolio/big_cherri.svg);
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
@@ -377,10 +377,10 @@ h1 {
   align-items: center;
 }
 .arrow-white {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_white.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_white.svg');
 }
 .arrow-black {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow.svg');
 }
 .next-arrow {
   width: 20px;
@@ -391,7 +391,7 @@ h1 {
   background-position: center;
 }
 .next-arrow-container:hover .next-arrow {
-  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_red.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/cherri-portfolio/arrow_red.svg');
 }
 /* ----- MOBILE HOME ----- */
 .small-home-nav img {
