@@ -19,8 +19,8 @@ class App extends React.Component {
       currentView: 'home',
       isMenu: false,
       isProjects: false,
-      isMobileModal: false,
-      isModal: false,
+      isMobileModal: true,
+      isModal: true,
       isDead: false,
       isChampion: false,
       projects: [
@@ -293,11 +293,33 @@ class App extends React.Component {
     this.hideWinMessage = this.hideWinMessage.bind(this);
     this.toggleMobileProjects = this.toggleMobileProjects.bind(this);
     this.toggleModalMobile = this.toggleModalMobile.bind(this);
+    this.cacheImages = this.cacheImages.bind(this);
   }
 
   componentDidMount() {
-    setTimeout(this.toggleModal, 2000);
-    setTimeout(this.toggleModalMobile, 2000);
+    this.cacheImages();
+  }
+
+  cacheImages() {
+    const images = [];
+    const url = 'https://s3-us-west-1.amazonaws.com/cherri-portfolio/';
+    this.state.projects.forEach((proj) => {
+      if (proj.img) {
+        const fileType = proj.title === 'otto'
+          ? '.webp'
+          : '.png';
+        images.push(`${url}${proj.img}${fileType}`);
+        images.push(`${url}${proj.img}-min${fileType}`);
+      }
+    });
+
+    const promises = images.map(src => new Promise(((res, rej) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = res();
+      img.onerror = rej();
+    })));
+    Promise.all(promises);
   }
 
   toggleProjects() {

@@ -8,7 +8,7 @@ class Projects extends React.Component {
     this.state = {
       background: 'none',
       currentView: 'projectsHome',
-      display: 'none',
+      opacity: 0,
       index: 0,
     };
     this.mouseEnterProject = this.mouseEnterProject.bind(this);
@@ -78,14 +78,14 @@ class Projects extends React.Component {
     }
     this.setState({
       background,
-      display: 'block',
+      opacity: 1,
     });
   }
 
   mouseLeaveProject() {
     this.setState({
       background: 'none',
-      display: 'none',
+      opacity: 0,
     });
   }
 
@@ -96,7 +96,7 @@ class Projects extends React.Component {
     this.setState({
       currentView,
       background: 'none',
-      display: 'none',
+      opacity: 0,
       index,
     });
   }
@@ -105,7 +105,7 @@ class Projects extends React.Component {
     this.setState({
       currentView: 'projectsHome',
       background: 'none',
-      display: 'none',
+      opacity: 0,
     });
   }
 
@@ -120,10 +120,10 @@ class Projects extends React.Component {
   }
 
   render() {
-    const { background, currentView, display, index } = this.state;
+    const { background, currentView, opacity, index } = this.state;
     const projectsStyle = {
       backgroundImage: background,
-      display,
+      opacity,
     };
     const { hideProject, nextProject } = this;
     const { projects } = this.props;

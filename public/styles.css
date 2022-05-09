@@ -302,6 +302,8 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  pointer-events: none;
+  transition: opacity 0.8s;
 }
 
 /* ---------- PROJECT LIGHTBOX ------- */
