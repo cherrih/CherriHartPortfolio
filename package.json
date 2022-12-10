@@ -24,7 +24,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gh-pages": "^2.2.0",
     "nodemon": "^1.19.4",
     "prop-types": "^15.7.2",
